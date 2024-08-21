@@ -14,7 +14,7 @@ Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thin
 > - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
 > - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
 
-## Objetivos
+## Objetivo
 
 O objetivo principal deste projeto é facilitar o acesso a serviços psicológicos de qualidade para indivíduos de baixa renda, ao mesmo tempo proporciona a psicólogos, especialmente aqueles recém-formados ou em início de carreira, a oportunidade de ganhar experiência prática e contribuir socialmente.
 A plataforma visa conectar psicólogos com pacientes, criando uma rede colaborativa que promove tanto o bem-estar emocional das pessoas quanto o desenvolvimento profissional dos psicólogos.
