@@ -19,17 +19,11 @@ Diante desse cenário desafiador, este projeto será desenvolvido com o objetivo
 
 ## Problema
 
-Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, não é a hora de comentar sobre a aplicação.
+* Dificuldade da população em buscar psicoterapia: Os brasileiros enfrentam diversas dificuldades ao buscar terapia, como dificuldades financeiras e de localização geográfica. De acordo com um levantamento feito pela SulAmérica em 2021, em parceria com o Instituto FSB Pesquisa, a principal preocupação da população atualmente é a saúde mental, porém, apenas 10% das pessoas ouvidas tiram proveito da psicoterapia. 
 
-Descreva também o contexto em que essa aplicação será usada, se houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
+* Falta de informação sobre profissionais: na maioria das vezes, pacientes possuem dificuldades em encontrar informações importantes sobre os profissionais, como suas especializações, abordagens terapêuticas, experiências, público atendido, e etc. Assim, a falta dessas informações pode levar à escolha de terapeutas que não correspondem a suas necessidades específicas, levando ao abandono da terapia.
 
-Nesse momento, o grupo pode optar por fazer uso de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
->
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+* Escassez de oportunidades para psicólogos recém-formados: psicólogos no início de carreira encontram muitos problemas em encontrar clientes, e de dar continuidade aos tratamentos.
 
 ## Objetivo
 
