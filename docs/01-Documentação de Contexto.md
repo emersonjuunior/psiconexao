@@ -1,6 +1,21 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+A saúde mental é um direito fundamental e a acessibilidade ao atendimento psicológico representa uma questão 
+central nas políticas de saúde pública. Desde 2013, os Estados Membros da Organização Mundial da Saúde (OMS) 
+adotaram o Plano de Ação Global para a Saúde Mental até 2030, comprometendo-se a alcançar metas globais para 
+a melhoria da saúde mental, com foco no fortalecimento da liderança e governança, no cuidado comunitário, na 
+promoção e prevenção, além de sistemas de informação e pesquisa (OMS, 2022). No entanto, o progresso tem sido 
+lento e os sistemas e serviços de saúde mental ainda enfrentam grandes desafios para atender às necessidades 
+da população.
+A OMS ressalta a importância da saúde mental para todos, em qualquer lugar, e a urgência dessa questão. Embora 
+a maioria das pessoas demonstre notável resiliência, aquelas expostas a circunstâncias desfavoráveis, como 
+pobreza, violência e desigualdade, estão em maior risco de desenvolver condições de saúde mental (OMS, 2022). 
+A pandemia de COVID-19 exacerbou essa situação, criando uma crise global que alimentou estresses de curto e 
+longo prazo, comprometendo a saúde mental de milhões. Estimativas indicam que o aumento nos transtornos de 
+ansiedade e depressão superou 25% durante esse período. Além disso, os serviços de saúde mental foram severamente
+interrompidos, ampliando a lacuna no tratamento para essas condições (OMS, 2022).
+Diante desse cenário desafiador, este projeto será desenvolvido com o objetivo de oferecer solidariedade 
+àqueles que mais precisam de apoio psicológico.
 
 ## Problema
 Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
