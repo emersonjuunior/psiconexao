@@ -11,6 +11,7 @@ democratizando o acesso ao atendimento psicológico.
 
 ## Integrantes
 
+* Emerson Junior
 * Karina Nunes
 * Matheus Bacelar
 * Nayana Loivos
