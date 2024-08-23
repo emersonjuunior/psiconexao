@@ -69,10 +69,15 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| A aplicação deve ser responsiva | MÉDIA | 
-|RNF-002| A aplicação deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+| ID      | Descrição do Requisito                                                                                                                                  | Prioridade |
+|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
+| RNF-001 | O sistema deve funcionar em plataformas web e mobile.                                                                                                   | ALTA       | 
+| RNF-002 | As informações de perfil profissional devem estar disponíveis para todos os interessados e potenciais interessados no serviço oferecido pela aplicação. | ALTA       | 
+| RNF-003 | O sistema deve fornecer um texto que aos potenciais pacientes devem concordar antes de marcar uma consulta com o profissional.                          | ALTA       |
+| RNF-004 | O sistema deve descrever os termos de política e privacidade da aplicação.                                                                              | MÉDIA      |
+| RNF-005 | O sistema deve apresentar acessibilidade.                                                                                                               | MÉDIA      |
+| RNF-006 | O sistema deve permitir as dúvidas mais frequentes relacionadas às consultas com os profissionais.                                                      | BAIXA      |
+| RNF-007 | O sistema deve retornar <=10 por página de pesquisa.                                                                                                    | BAIXA      |
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
