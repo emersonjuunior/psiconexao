@@ -41,7 +41,7 @@ Os objetivos da plataforma foram escolhidos para simplificar a divulgação de s
 Estabeleceu-se como público alvo desta aplicação, atingir pessoas que possuem limitado poder aquisitivo e conhecimento sobre o universo da psicologia e como ele pode auxiliar a população, afim de conectar pacientes e profissionais da saúde mental.
 Diante disso, é possível identificar algumas  necessidades dos usuários: 
 
-1-Um ambiente virtual que auxilie como uma ferramenta de apoio para questões psíquicas; 
+1-Um ambiente virtual que viabilize o apoio às para questões psíquicas; 
 
 2-Uma ferramenta que auxilie a  população de baixa renda que não possui alto investimento para manutenção de sua saúde mental;
 
