@@ -1,23 +1,27 @@
-# TÍTULO DO PROJETO
+# Psiconexão
 
-`CURSO`
+`Análise e Desenvolvimento de Sistemas - PUC Minas`
 
-`DISCIPLINA`
+`Desenvolvimento de aplicação web back-end`
 
-`SEMESTRE`
+`2º semestre/2024`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O objetivo deste projeto é desenvolver uma aplicação que conecte psicólogos a quem busca ajuda, 
+democratizando o acesso ao atendimento psicológico.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Emerson Junior
+* Karina Nunes
+* Matheus Bacelar
+* Nayana Loivos
+* Patrick Breno
+* Safira Garcia
+* Vanessa André
 
 ## Orientador
 
-* Nome completo do professor 1
+* José Wilson da Costa
 
 ## Instruções de utilização
 
