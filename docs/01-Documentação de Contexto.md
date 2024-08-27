@@ -38,11 +38,11 @@ Os objetivos da plataforma foram escolhidos para simplificar a divulgação de s
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
+Estabeleceu-se como público alvo desta aplicação, atingir pessoas que buscam um acolhimento psicólogo virtual, afim de conversar pacientes e profissionais da saúde mental.
+Diante disso, é possível identificar algumas  necessidades dos usuários: 
 
-> **Links Úteis**:
->
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+1-Apresentar um ambiente virtual que auxilie como uma ferramenta de apoio para questões psíquicas;
+2- Atingir a população de baixa renda que não possui alto investimento para manutenção de sua saúde mental;
+3-Auxiliar psicólogos recém-formados na divulgação do seu trabalho.
+
+
