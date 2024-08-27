@@ -45,6 +45,6 @@ Diante disso, é possível identificar algumas  necessidades dos usuários:
 
 2-Uma ferramenta que auxilie a  população de baixa renda que não possui alto investimento para manutenção de sua saúde mental;
 
-3- Escassaz oportunidades de trabalho  para psicólogos recém-formados.
+3- Escassas oportunidades de trabalho  para psicólogos recém-formados.
 
 
