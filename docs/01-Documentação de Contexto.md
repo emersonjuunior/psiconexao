@@ -38,7 +38,7 @@ Os objetivos da plataforma foram escolhidos para simplificar a divulgação de s
 
 ## Público-Alvo
 
-Estabeleceu-se como público alvo desta aplicação, atingir pessoas que buscam um acolhimento psicólogo virtual, afim de conversar pacientes e profissionais da saúde mental.
+Estabeleceu-se como público alvo desta aplicação, atingir pessoas que possuem limitado poder aquisitivo e conhecimento sobre o universo da psicologia e como ele pode auxiliar a população, afim de conectar pacientes e profissionais da saúde mental.
 Diante disso, é possível identificar algumas  necessidades dos usuários: 
 
 1-Apresentar um ambiente virtual que auxilie como uma ferramenta de apoio para questões psíquicas; 
