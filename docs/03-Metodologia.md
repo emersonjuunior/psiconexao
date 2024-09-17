@@ -39,39 +39,30 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 
 ### Divisão de Papéis
 
-Apresente a divisão de papéis entre os membros do grupo.
-
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu 
-> Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
+- **Scrum Master**: Karina Nunes.
+- **Product Owner**: Nayane Loivos.
+- **Equipe de Desenvolvimento**: Emerson Junior, Karina Nunes, Mather Bacelar, Nayana Loivos, Patrick Breno, Safira Garcia, Vanessa André.
+- **Equipe de Design**: Karina Nunes.
 
 ### Processo
 
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
- 
-> **Links Úteis**:
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
-> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
+Nossa equipe adota uma metodologia ágil de desenvolvimento de software, utilizando o Scrum para gerenciar o projeto de maneira eficiente. Durante o ciclo de desenvolvimento, realizamos reuniões semanais para acompanhar o progresso, discutir impedimentos e garantir a colaboração contínua entre os membros da equipe.
+
+Nosso quadro Kanban está estruturado da seguinte forma:
+
+- **To Do**: Esta lista contém todos os itens que precisam ser realizados.
+- **In Progress**: Quando uma tarefa é iniciada, ela é movida para esta coluna.
+- **Done**: Aqui são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontas para ser entregues ao usuário.
+
+Etiquetas:
+
+- `bug`: erros
+- `design`: interface
+- `documentation`: documentação
+- `enhacement`: melhoria do código
 
 ### Ferramentas
 
 As ferramentas empregadas no projeto são:
 
-- Editor de código.
-- Ferramentas de comunicação
-- Ferramentas de desenho de tela (_wireframing_)
-
-O editor de código foi escolhido porque ele possui uma integração com o
-sistema de versão. As ferramentas de comunicação utilizadas possuem
-integração semelhante e por isso foram selecionadas. Por fim, para criar
-diagramas utilizamos essa ferramenta por melhor captar as
-necessidades da nossa solução.
-
-Liste quais ferramentas foram empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível.
- 
-> **Possíveis Ferramentas que auxiliarão no gerenciamento**: 
-> - [Slack](https://slack.com/)
-> - [Github](https://github.com/)
+O Visual Studio foi escolhido como editor de código, pois ele possui uma integração completa com o GitHub, permitindo um controle eficiente de versões e facilitando a colaboração entre os desenvolvedores. As ferramentas de comunicação, Microsoft Teams e WhatsApp, foram selecionadas devido à sua integração com o fluxo de trabalho da equipe. O Teams se destaca por oferecer integração com outras ferramentas da Microsoft, além de permitir reuniões, compartilhamento de arquivos e colaboração em tempo real. O WhatsApp é utilizado para comunicações rápidas e imediatas. Por fim, para a criação de wireframes e diagramas, utilizamos o Figma, que foi escolhido por captar melhor as necessidades visuais do projeto, permitindo a criação de interfaces e fluxos de forma colaborativa e acessível a todos os membros da equipe.
