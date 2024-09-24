@@ -2,7 +2,7 @@
 
 ### Fontes
 
-  <img src="https://github.com/user-attachments/assets/793bb49c-2c09-4c5d-a044-bb60b5b10df8" alt="Fontes" width="900" />
+  <img src="https://github.com/user-attachments/assets/f4b95d32-b23e-4c95-b720-79b0c4ea71f4" alt="Fontes" width="900" />
   
 ### Cores e Inputs
 
