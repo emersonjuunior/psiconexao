@@ -1,12 +1,19 @@
 # Template Padrão da Aplicação
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>
+### Fontes
 
-Layout padrão da aplicação que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
+  <img src="https://github.com/user-attachments/assets/793bb49c-2c09-4c5d-a044-bb60b5b10df8" alt="Fontes" width="900" />
+  
+### Cores e Inputs
 
-> **Links Úteis**:
->
-> - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
-> - [Website Page Layouts](http://www.cellbiol.com/bioinformatics_web_development/chapter-3-your-first-web-page-learning-html-and-css/website-page-layouts/)
-> - [Perfect Liquid Layout](https://matthewjamestaylor.com/perfect-liquid-layouts)
-> - [How and Why Icons Improve Your Web Design](https://usabilla.com/blog/how-and-why-icons-improve-you-web-design/)
+<div style="display: flex;">
+  <img src="https://github.com/user-attachments/assets/c405bc11-d815-46eb-b0f6-6f3490205d1c" alt="Cores" width="350"/>
+  <img src="https://github.com/user-attachments/assets/ca77b358-41d7-4e5c-a255-973f41533327" alt="Inputs" width="500"/>
+</div>
+
+### Ícones e Botões
+
+<div style="display: flex;">
+  <img src="https://github.com/user-attachments/assets/79d5e8f3-2b9e-4bc9-9bd6-f97bf0e9992d" alt="Ícones" width="350"/>
+  <img src="https://github.com/user-attachments/assets/05057d30-62e8-4e93-bc0b-c0d036c5bf71" alt="Botões" width="350"/>
+</div>
