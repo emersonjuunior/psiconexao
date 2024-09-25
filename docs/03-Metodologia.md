@@ -50,6 +50,7 @@ Nossa equipe adota uma metodologia ágil de desenvolvimento de software, utiliza
 
 Nosso quadro Kanban está estruturado da seguinte forma:
 
+- **Backlog**: Esta lista contém todas as ideias, funcionalidades e melhorias que ainda precisam ser desenvolvidas e designadas. 
 - **To Do**: Esta lista contém todos os itens que precisam ser realizados.
 - **In Progress**: Quando uma tarefa é iniciada, ela é movida para esta coluna.
 - **Done**: Aqui são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontas para ser entregues ao usuário.
