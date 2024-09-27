@@ -30,10 +30,24 @@ O projeto da base de dados corresponde à representação das entidades e relaci
 Para mais informações, consulte o microfundamento "Modelagem de Dados".
 
 ## Tecnologias Utilizadas
+### Linguagens:
+Para o desenvolvimento do projeto PsiConexão, utilizamos as seguintes linguagens:
+- **HTML**: para a estrutura do front-end.
+- **CSS**: para o design e estilização da interface.
+- **JavaScript**: para a criação de interações dinâmicas no front-end.
+- **C#**: para o desenvolvimento do back-end, garantindo a lógica de negócio e a manipulação dos dados.
+### Serviços Web:
+O site está hospedado via **GitHub Pages**, uma solução gratuita e eficaz para hospedar sites estáticos diretamente a partir de um repositório GitHub.
+### Frameworks:
+- **ASP.NET**: foi escolhido como framework para o desenvolvimento de aplicações web dinâmicas, permitindo a criação de um ambiente robusto e escalável.
+### Bibliotecas:
+- **.NET**: plataforma escolhida para a base do projeto, oferecendo suporte a múltiplas tecnologias e garantindo a performance necessária.
+### IDEs de Desenvolvimento:
+O **Visual Studio** foi a ferramenta de desenvolvimento escolhida devido à sua integração completa com o GitHub, facilitando o desenvolvimento e o controle de versão.
+### Ferramentas:
+Para o controle de versão e colaboração, utilizamos o **GitHub**, o que garante um fluxo de trabalho eficiente e seguro entre os membros da equipe de desenvolvimento.
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+<img src="../docs/img/tecnologias.jpg" alt="tecnologias"/>
 
 ## Hospedagem
 
