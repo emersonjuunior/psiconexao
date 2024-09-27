@@ -1,35 +1,51 @@
 # Plano de Testes de Software
 
 # Introdução 
-
 O objetivo deste plano de teste é garantir que o sistema funcione conforme os 
 requisitos funcionais. 
-Estratégia de Teste 
+# Estratégia de Teste 
 A estratégia inclui a execução de testes funcionais, testes de integração e testes de 
 usabilidade para verificar se o sistema atende às expectativas dos usuários. 
-Tipos de Teste 
-Teste Funcional: Para verificar o funcionamento de cada requisito. 
-Teste de Integração: Para validar a integração com WhatsApp e outras 
+# Tipos de Teste 
+Teste Funcional: 
+Para verificar o funcionamento de cada requisito. 
+Teste de Integração: 
+Para validar a integração com WhatsApp e outras 
 funcionalidades externas. 
-Teste de Usabilidade: Para garantir uma boa experiência de usuário. 
-Teste de Segurança: Para garantir que o sistema implemente corretamente a 
+Teste de Usabilidade: 
+Para garantir uma boa experiência de usuário. 
+Teste de Segurança:
+Para garantir que o sistema implemente corretamente a 
 autenticação e autorização. 
-Plano de Testes Detalhado 
-Requisitos Funcionais 
+# Plano de Testes Detalhado
+
+Requisitos Funcionais
+
 RF-001: Cadastro de U suários (Profissionais) 
+
 Objetivo: Verificar se o sistema permite o cadastro de usuários com nome, CPR, e-mail 
 e senha, e se realiza a autenticação via e-mail. 
+
 Situação de teste: Usuário tenta se cadastrar com todos os campos válidos. 
+
 Teste: Preencher nome, CPR, e-mail e senha corretamente. 
+
 Resultado Esperado: Usuário cadastrado com sucesso e e-mail de confirmação 
 enviado. 
-Situação de teste: Usuário tenta se cadastrar com e-mail inválido. 
-Teste: Inserir um e-mail no formato incorreto. 
+
+Situação de teste: Usuário tenta se cadastrar com e-mail inválido.
+
+Teste: Inserir um e-mail no formato incorreto.
+
 Resultado Esperado: Exibição de uma mensagem de erro informando que o e-mail é 
-inválido. 
+inválido.
+
 Situação de teste: Tentativa de cadastro com senha muito curta. 
-Teste: Inserir uma senha com menos de 8 caracteres. 
+
+Teste: Inserir uma senha com menos de 8 caracteres.
+
 Resultado Esperado: Mensagem de erro indicando o comprimento mínimo da senha. 
+
 RF-002: Criação e Edição de Perfil de Usuário 
 Objetivo: Verificar se o usuário pode criar e editar seu perfil detalhado. 
 Situação de teste: Usuário cria perfil completo com foto, biografia, WhatsApp e outros 
