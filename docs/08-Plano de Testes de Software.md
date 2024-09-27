@@ -48,145 +48,145 @@ inválido.
 
 **RF-002: Criação e Edição de Perfil de Usuário** 
 
-Objetivo: Verificar se o usuário pode criar e editar seu perfil detalhado. 
+**Objetivo:** Verificar se o usuário pode criar e editar seu perfil detalhado. 
 
-Situação de teste: Usuário cria perfil completo com foto, biografia, WhatsApp e outros 
+**Situação de teste:** Usuário cria perfil completo com foto, biografia, WhatsApp e outros 
 dados. 
 
-Teste: Preencher todos os campos e salvar o perfil. 
+**Teste:** Preencher todos os campos e salvar o perfil. 
 
-Resultado Esperado: Perfil criado com sucesso. 
+**Resultado Esperado:** Perfil criado com sucesso. 
 
-Situação de teste: Usuário edita o perfil e altera a foto e a biografia. 
+**Situação de teste:** Usuário edita o perfil e altera a foto e a biografia. 
 
-Teste: Alterar os campos e salvar novamente. 
+**Teste**: Alterar os campos e salvar novamente. 
 
-Resultado Esperado: Alterações salvas corretamente. 
+**Resultado Esperado:** Alterações salvas corretamente. 
 
-RF-003: Login de Usuário 
+**RF-003: Login de Usuário** 
 
-Objetivo: Garantir que os usuários consigam fazer login com e-mail e senha. 
+**Objetivo:** Garantir que os usuários consigam fazer login com e-mail e senha. 
 
-Situação de teste: Login com credenciais corretas. 
+**Situação de teste:** Login com credenciais corretas. 
 
-Teste: Inserir e-mail e senha corretos. 
+**Teste:** Inserir e-mail e senha corretos. 
 
-Resultado Esperado: Usuário autenticado com sucesso. 
+**Resultado Esperado:** Usuário autenticado com sucesso. 
 
-Situação de teste: Tentativa de login com senha incorreta. 
+**Situação de teste:** Tentativa de login com senha incorreta. 
 
-Teste: Inserir e-mail correto e senha incorreta. 
+**Teste:** Inserir e-mail correto e senha incorreta. 
 
-Resultado Esperado: Mensagem de erro informando falha de autenticação. 
+**Resultado Esperado:** Mensagem de erro informando falha de autenticação. 
 
-RF-004: Recuperação de Senha 
+**RF-004: Recuperação de Senha** 
 
-Objetivo: Testar a função de recuperação de senha. 
+**Objetivo:** Testar a função de recuperação de senha. 
 
-Situação de teste: Usuário solicita recuperação de senha com e-mail válido. 
+**Situação de teste:** Usuário solicita recuperação de senha com e-mail válido. 
 
-Teste: Inserir e-mail cadastrado e solicitar redefinição de senha. 
+**Teste:** Inserir e-mail cadastrado e solicitar redefinição de senha. 
 
-Resultado Esperado: E-mail de redefinição enviado. 
+**Resultado Esperado:** E-mail de redefinição enviado. 
 
-Situação de teste: Tentativa de recuperação com e-mail não cadastrado. 
+**Situação de teste:** Tentativa de recuperação com e-mail não cadastrado. 
 
-Teste: Inserir um e-mail que não está registrado. 
+**Teste:** Inserir um e-mail que não está registrado. 
 
-Resultado Esperado: Mensagem informando que o e-mail não está cadastrado. 
+**Resultado Esperado:** Mensagem informando que o e-mail não está cadastrado. 
 
-RF-005: Pesquisa por Profissionais 
+**RF-005: Pesquisa por Profissionais**
 
-Objetivo: Verificar se o sistema permite a busca por profissionais de psicologia. 
+**Objetivo:** Verificar se o sistema permite a busca por profissionais de psicologia. 
 
-Situação de teste: Pesquisa por profissionais sem filtro. 
+**Situação de teste:** Pesquisa por profissionais sem filtro. 
 
-Teste: Realizar pesquisa simples sem aplicar filtros. 
+**Teste:** Realizar pesquisa simples sem aplicar filtros. 
 
-Resultado Esperado: Lista de profissionais exibida. 
+**Resultado Esperado:** Lista de profissionais exibida. 
 
-Situação de teste: Pesquisa com filtros aplicados (ex: abordagem terapêutica).
+**Situação de teste:** Pesquisa com filtros aplicados (ex: abordagem terapêutica).
 
-Teste: Aplicar um filtro específico e pesquisar. 
+**Teste:** Aplicar um filtro específico e pesquisar. 
 
-Resultado Esperado: Lista de profissionais filtrada de acordo com os critérios. 
+**Resultado Esperado:** Lista de profissionais filtrada de acordo com os critérios. 
 
-RF-006: Aplicação de Filtros na Pesquisa 
+**RF-006: Aplicação de Filtros na Pesquisa** 
 
-Objetivo: Verificar se os filtros funcionam corretamente. 
+**Objetivo:** Verificar se os filtros funcionam corretamente. 
 
-Situação de teste: Aplicar filtros como faixa de valores e temas de interesse. 
+**Situação de teste:** Aplicar filtros como faixa de valores e temas de interesse. 
 
-Teste: Selecionar valores e temas específicos e realizar a pesquisa. 
+**Teste:** Selecionar valores e temas específicos e realizar a pesquisa. 
 
-Resultado Esperado: Resultados retornados conforme os filtros aplicados. 
+**Resultado Esperado:** Resultados retornados conforme os filtros aplicados. 
 
-RF-007: Envio de Mensagens via WhatsApp 
+**RF-007: Envio de Mensagens via WhatsApp** 
 
-Objetivo: Verificar a integração com o WhatsApp. 
+**Objetivo:** Verificar a integração com o WhatsApp. 
 
-Situação de teste: Usuário envia mensagem diretamente para o profissional. 
+**Situação de teste:** Usuário envia mensagem diretamente para o profissional. 
 
-Teste: Clicar no botão de enviar mensagem via WhatsApp. 
+**Teste:** Clicar no botão de enviar mensagem via WhatsApp. 
 
-Resultado Esperado: WhatsApp aberto com o número do profissional preenchido. 
+**Resultado Esperado:** WhatsApp aberto com o número do profissional preenchido. 
 
-RF-008: Agendamento de Datas no Calendário 
+**RF-008: Agendamento de Datas no Calendário** 
 
-Objetivo: Verificar se o paciente pode selecionar uma data no calendário do 
+**Objetivo:** Verificar se o paciente pode selecionar uma data no calendário do 
 profissional. 
 
-Situação de teste: Paciente seleciona uma data disponível. 
+**Situação de teste:** Paciente seleciona uma data disponível. 
 
-Teste: Escolher uma data e confirmar o agendamento. 
+**Teste:** Escolher uma data e confirmar o agendamento. 
 
-Resultado Esperado: Data confirmada com sucesso. 
+**Resultado Esperado:** Data confirmada com sucesso. 
 
-RF-009: Confirmação de Data por E-mail 
+**RF-009: Confirmação de Data por E-mail** 
 
-Objetivo: Garantir que o paciente receba a confirmação do agendamento por e-mail. 
+**Objetivo:** Garantir que o paciente receba a confirmação do agendamento por e-mail. 
 
-Situação de teste: Paciente agenda uma consulta e recebe e-mail de confirmação. 
+**Situação de teste:** Paciente agenda uma consulta e recebe e-mail de confirmação. 
 
-Teste: Verificar caixa de entrada após o agendamento. 
+**Teste:** Verificar caixa de entrada após o agendamento. 
 
-Resultado Esperado: E-mail de confirmação recebido com os detalhes da consulta. 
+**Resultado Esperado:** E-mail de confirmação recebido com os detalhes da consulta. 
 
-RF-010: Notificação 2 Horas Antes da Sessão 
+**RF-010: Notificação 2 Horas Antes da Sessão**
 
-Objetivo: Verificar se o sistema envia a notificação antes da sessão. 
+**Objetivo:** Verificar se o sistema envia a notificação antes da sessão. 
 
-Situação de teste: Envio automático de notificação duas horas antes da sessão. 
+**Situação de teste:** Envio automático de notificação duas horas antes da sessão. 
 
-Teste: Simular uma sessão agendada e verificar o recebimento da notificação. 
+**Teste:** Simular uma sessão agendada e verificar o recebimento da notificação. 
 
-Resultado Esperado: Notificação recebida a tempo. 
+**Resultado Esperado:** Notificação recebida a tempo. 
 
-RF-011: Escrita de Textos no Blog 
+**RF-011: Escrita de Textos no Blog** 
 
-Objetivo: Verificar se os profissionais podem escrever e publicar textos no blog. 
+**Objetivo:** Verificar se os profissionais podem escrever e publicar textos no blog. 
 
-Situação de teste: Publicação de um texto no blog. 
+**Situação de teste:** Publicação de um texto no blog. 
 
-Teste: Escrever um texto e publicá-lo. 
+**Teste:** Escrever um texto e publicá-lo. 
 
-Resultado Esperado: Texto publicado corretamente. 
+**Resultado Esperado:** Texto publicado corretamente. 
 
-RF-012: Destaque com Pagamento 
+**RF-012: Destaque com Pagamento** 
 
-Objetivo: Testar a funcionalidade de pagamento para destacar-se nos filtros de 
+**Objetivo:** Testar a funcionalidade de pagamento para destacar-se nos filtros de 
 pesquisa. 
 
-Situação de teste: Profissional realiza pagamento para destaque. 
+**Situação de teste:** Profissional realiza pagamento para destaque. 
 
-Teste: Realizar o pagamento e verificar se o perfil aparece em destaque nos filtros. 
+**Teste:** Realizar o pagamento e verificar se o perfil aparece em destaque nos filtros. 
 
-Resultado Esperado: Perfil destacado conforme o pagamento realizado. 
+**Resultado Esperado:** Perfil destacado conforme o pagamento realizado. 
 
-Ferramentas de Teste 
+**Ferramentas de Teste** 
 
-Ferramentas de Automação: Selenium para testes de interface. 
+**Ferramentas de Automação:** Selenium para testes de interface. 
 
-Ferramentas de Teste de Integração: Postman para testar as APIs. 
+**Ferramentas de Teste de Integração:** Postman para testar as APIs. 
 
-Ambiente de Teste: Dispositivos mobile e navegadores web (Chrome, Firefox). 
+**Ambiente de Teste:** Dispositivos mobile e navegadores web (Chrome, Firefox). 
