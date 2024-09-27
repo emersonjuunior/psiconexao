@@ -1,6 +1,7 @@
 # Plano de Testes de Software
 
-Introdução 
+# Introdução 
+
 O objetivo deste plano de teste é garantir que o sistema funcione conforme os 
 requisitos funcionais. 
 Estratégia de Teste 
