@@ -21,32 +21,32 @@ autenticação e autorização.
 
 Requisitos Funcionais
 
-RF-001: Cadastro de U suários (Profissionais) 
+**RF-001: Cadastro de U suários (Profissionais)** 
 
-Objetivo: Verificar se o sistema permite o cadastro de usuários com nome, CPR, e-mail 
+**Objetivo:** Verificar se o sistema permite o cadastro de usuários com nome, CPR, e-mail 
 e senha, e se realiza a autenticação via e-mail.
 
-Situação de teste: Usuário tenta se cadastrar com todos os campos válidos. 
+**Situação de teste:** Usuário tenta se cadastrar com todos os campos válidos. 
 
-Teste: Preencher nome, CPR, e-mail e senha corretamente. 
+**Teste:** Preencher nome, CPR, e-mail e senha corretamente. 
 
-Resultado Esperado: Usuário cadastrado com sucesso e e-mail de confirmação 
+**Resultado Esperado:** Usuário cadastrado com sucesso e e-mail de confirmação 
 enviado.
 
-Situação de teste: Usuário tenta se cadastrar com e-mail inválido.
+**Situação de teste:** Usuário tenta se cadastrar com e-mail inválido.
 
-Teste: Inserir um e-mail no formato incorreto.
+**Teste:** Inserir um e-mail no formato incorreto.
 
-Resultado Esperado: Exibição de uma mensagem de erro informando que o e-mail é 
+**Resultado Esperado:** Exibição de uma mensagem de erro informando que o e-mail é 
 inválido.
 
-Situação de teste: Tentativa de cadastro com senha muito curta. 
+**Situação de teste:** Tentativa de cadastro com senha muito curta. 
 
-Teste: Inserir uma senha com menos de 8 caracteres.
+**Teste:** Inserir uma senha com menos de 8 caracteres.
 
-Resultado Esperado: Mensagem de erro indicando o comprimento mínimo da senha. 
+**Resultado Esperado:** Mensagem de erro indicando o comprimento mínimo da senha. 
 
-RF-002: Criação e Edição de Perfil de Usuário 
+**RF-002: Criação e Edição de Perfil de Usuário** 
 
 Objetivo: Verificar se o usuário pode criar e editar seu perfil detalhado. 
 
