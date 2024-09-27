@@ -7,14 +7,14 @@ requisitos funcionais.
 A estratégia inclui a execução de testes funcionais, testes de integração e testes de 
 usabilidade para verificar se o sistema atende às expectativas dos usuários. 
 # Tipos de Teste 
-Teste Funcional: 
+**Teste Funcional:** 
 Para verificar o funcionamento de cada requisito. 
-Teste de Integração: 
+**Teste de Integração:** 
 Para validar a integração com WhatsApp e outras 
 funcionalidades externas. 
-Teste de Usabilidade: 
+**Teste de Usabilidade:** 
 Para garantir uma boa experiência de usuário. 
-Teste de Segurança:
+**Teste de Segurança:**
 Para garantir que o sistema implemente corretamente a 
 autenticação e autorização. 
 # Plano de Testes Detalhado
@@ -183,7 +183,7 @@ pesquisa.
 
 **Resultado Esperado:** Perfil destacado conforme o pagamento realizado. 
 
-**Ferramentas de Teste** 
+# Ferramentas de Teste
 
 **Ferramentas de Automação:** Selenium para testes de interface. 
 
