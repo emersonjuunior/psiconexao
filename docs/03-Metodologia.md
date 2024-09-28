@@ -62,6 +62,9 @@ Etiquetas:
 - `documentation`: documentação
 - `enhacement`: melhoria do código
 
+![Kanban](https://github.com/user-attachments/assets/3346b696-8513-401a-8cb6-cab42f644e82)
+![Kanban2](https://github.com/user-attachments/assets/ab2608de-85b7-4d65-9bc5-94da378671b6)
+
 ### Ferramentas
 
 As ferramentas empregadas no projeto são:
