@@ -23,7 +23,11 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 <img width="1664" alt="Frame 43" src="https://github.com/user-attachments/assets/ba7c7808-d111-4d53-876c-6fd862ecb647">
 <img width="1584" alt="Frame 46" src="https://github.com/user-attachments/assets/03ba6e85-e850-46f1-b3ab-442bbc323ff1">
 <img width="1672" alt="Frame 12" src="https://github.com/user-attachments/assets/8855c7b3-87ad-4c35-bff7-aae291820e7e">
- <img width="1672" alt="Frame 13" src="https://github.com/user-attachments/assets/9245100c-fe13-4cc7-a8c0-be1aae94d5de">
+<img width="1672" alt="Frame 13" src="https://github.com/user-attachments/assets/9245100c-fe13-4cc7-a8c0-be1aae94d5de">
+<img width="1655" alt="Frame 14" src="https://github.com/user-attachments/assets/92e45e9d-742b-42ed-8cd5-4726364259f7">
+<img width="2768" alt="Frame 48" src="https://github.com/user-attachments/assets/8f63f934-204d-46f2-a631-5ef606847d12">
+
+
 
  > **Links Úteis**
 
