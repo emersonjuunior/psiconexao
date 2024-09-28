@@ -18,10 +18,11 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 ![Diagrama de fluxo](./img/user-flow.png)
 
 ## Wireframes
+<img width="1108" alt="Pagina inicial" src="https://github.com/user-attachments/assets/372898a7-ebbc-4cac-8ca0-ba502ff1051b">
 
-![Exemplo de Wireframe](img/wireframe-example.png)
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
+
+
 
 > **Links Úteis**:
 >
