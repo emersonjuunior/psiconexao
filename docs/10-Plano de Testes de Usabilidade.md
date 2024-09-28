@@ -77,7 +77,7 @@ A ordem das tarefas será definida para simular o fluxo de uso esperado pelos us
 
 - Tarefa 2: Navegue para a página de login e simule a entrada com e-mail e senha. 
 
-#### Perguntas: 
+Perguntas: 
 
 - Foi fácil encontrar o botão de cadastro e login? 
 
@@ -93,7 +93,7 @@ A ordem das tarefas será definida para simular o fluxo de uso esperado pelos us
 
 - Tarefa 2: Simule a edição do perfil, alterando a biografia ou valores. 
 
-#### Perguntas: 
+Perguntas: 
 
 - Foi fácil entender o layout da página de perfil? 
 
@@ -111,7 +111,7 @@ A ordem das tarefas será definida para simular o fluxo de uso esperado pelos us
 
  
 
-#### Perguntas: 
+Perguntas: 
 
 - O layout da página de busca e filtros foi claro e fácil de entender? 
 
@@ -125,7 +125,7 @@ A ordem das tarefas será definida para simular o fluxo de uso esperado pelos us
 
 - Tarefa 1: Navegue até o perfil de um profissional e simule o agendamento de uma consulta escolhendo uma data no calendário. 
 
-#### Perguntas: 
+Perguntas: 
 
 - O calendário estava fácil de visualizar e usar? 
 
