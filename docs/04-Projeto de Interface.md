@@ -11,6 +11,9 @@
 <img width="500" alt="Página Editar Perfil" src="https://github.com/user-attachments/assets/9dfb9e40-bde4-491d-a08f-4848f5fbf754">
 <img width="500" alt="Página Área do Profissional - Profissional Premium" src="https://github.com/user-attachments/assets/6d3fc197-fa73-4f94-af4b-1297ca9c4366">
 
+- [Interfaces - Desktop](https://www.figma.com/design/PwpcCW3HL5v6EaedC2yNbK/Projeto-PUC?node-id=0-1&node-type=canvas&t=2AnTaCPYb3yNe0Wm-0)
+- [Interfaces - Mobile](https://www.figma.com/design/PwpcCW3HL5v6EaedC2yNbK/Projeto-PUC?node-id=27-114&node-type=canvas&t=2AnTaCPYb3yNe0Wm-0)
+
 ## Diagrama de Fluxo
 
 O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema interativo e muitas vezes sem a necessidade do desenho do design das telas da interface. Isso permite que o design das interações seja bem planejado e gere impacto na qualidade no design do wireframe interativo que será desenvolvido logo em seguida.
@@ -18,6 +21,7 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 ![Diagrama de fluxo](./img/user-flow.png)
 
 ## Wireframes
+
 <img width="500" alt="Pagina inicial" src="https://github.com/user-attachments/assets/372898a7-ebbc-4cac-8ca0-ba502ff1051b">
 <img width="500" alt="Frame 42 (1)" src="https://github.com/user-attachments/assets/b7ec04bf-d2f1-48d9-b66c-bde41c5225ed">
 <img width="500" alt="Frame 43" src="https://github.com/user-attachments/assets/ba7c7808-d111-4d53-876c-6fd862ecb647">
@@ -25,20 +29,6 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 <img width="500" alt="Frame 12" src="https://github.com/user-attachments/assets/8855c7b3-87ad-4c35-bff7-aae291820e7e">
 <img width="500" alt="Frame 13" src="https://github.com/user-attachments/assets/9245100c-fe13-4cc7-a8c0-be1aae94d5de">
 <img width="500" alt="Frame 14" src="https://github.com/user-attachments/assets/92e45e9d-742b-42ed-8cd5-4726364259f7">
-<img width="500" alt="Frame 48" src="https://github.com/user-attachments/assets/8f63f934-204d-46f2-a631-5ef606847d12">
-<img width="2812" alt="Frame 49" src="https://github.com/user-attachments/assets/b71d7dda-33e8-4109-b88f-cbe897e6baf0">
+<img width="500" alt="Frame 49" src="https://github.com/user-attachments/assets/b71d7dda-33e8-4109-b88f-cbe897e6baf0">
 
-
-
- > **Links Úteis**
-
-
->
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)![Uploading Frame 42 (1).png…]()
-
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+- [Wireframes](https://www.figma.com/design/YsG80hGMRX6OS24aX1OH7v/Untitled?node-id=0-1&node-type=canvas&t=FFoMJ3UmFMaeMcqm-0)
