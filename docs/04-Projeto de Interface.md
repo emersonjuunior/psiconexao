@@ -26,6 +26,7 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 <img width="500" alt="Frame 13" src="https://github.com/user-attachments/assets/9245100c-fe13-4cc7-a8c0-be1aae94d5de">
 <img width="500" alt="Frame 14" src="https://github.com/user-attachments/assets/92e45e9d-742b-42ed-8cd5-4726364259f7">
 <img width="500" alt="Frame 48" src="https://github.com/user-attachments/assets/8f63f934-204d-46f2-a631-5ef606847d12">
+<img width="2812" alt="Frame 49" src="https://github.com/user-attachments/assets/b71d7dda-33e8-4109-b88f-cbe897e6baf0">
 
 
 
