@@ -22,9 +22,12 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 <img width="1410" alt="Frame 42 (1)" src="https://github.com/user-attachments/assets/b7ec04bf-d2f1-48d9-b66c-bde41c5225ed">
 <img width="1664" alt="Frame 43" src="https://github.com/user-attachments/assets/ba7c7808-d111-4d53-876c-6fd862ecb647">
 <img width="1584" alt="Frame 46" src="https://github.com/user-attachments/assets/03ba6e85-e850-46f1-b3ab-442bbc323ff1">
+<img width="1672" alt="Frame 12" src="https://github.com/user-attachments/assets/8855c7b3-87ad-4c35-bff7-aae291820e7e">
+ <img width="1672" alt="Frame 13" src="https://github.com/user-attachments/assets/9245100c-fe13-4cc7-a8c0-be1aae94d5de">
+
+ > **Links Úteis**
 
 
-> **Links Úteis**:
 >
 > - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
 > - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
