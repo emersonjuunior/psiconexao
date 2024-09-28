@@ -19,7 +19,7 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 
 ## Wireframes
 <img width="1108" alt="Pagina inicial" src="https://github.com/user-attachments/assets/372898a7-ebbc-4cac-8ca0-ba502ff1051b">
-
+<img width="1410" alt="Frame 42 (1)" src="https://github.com/user-attachments/assets/b7ec04bf-d2f1-48d9-b66c-bde41c5225ed">
 
 
 
@@ -31,5 +31,6 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 > - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
 > - [Figma](https://www.figma.com/)
 > - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
+> - [Axure](https://www.axure.com/edu) (Licença Educacional)![Uploading Frame 42 (1).png…]()
+
 > - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
