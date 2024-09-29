@@ -31,6 +31,6 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 <img width="500" alt="Frame 14" src="https://github.com/user-attachments/assets/92e45e9d-742b-42ed-8cd5-4726364259f7">
 <img width="500" alt="Frame 49" src="https://github.com/user-attachments/assets/b71d7dda-33e8-4109-b88f-cbe897e6baf0">
 <img width="500" alt="Frame 50" src="https://github.com/user-attachments/assets/e67db301-36cd-4338-9d1a-e4f455bbf85f">
-
+<img width="500" alt="Frame 51" src="https://github.com/user-attachments/assets/c887fbcc-c321-40ca-81fc-7bf35f062ae7">
 
 - [Wireframes](https://www.figma.com/design/YsG80hGMRX6OS24aX1OH7v/Untitled?node-id=0-1&node-type=canvas&t=FFoMJ3UmFMaeMcqm-0)
