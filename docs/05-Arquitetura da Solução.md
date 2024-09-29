@@ -6,10 +6,28 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 ## Diagrama de Classes
 
-O diagrama de classes ilustra graficamente como será a estrutura do software, e como cada uma das classes da sua estrutura estarão interligadas. Essas classes servem de modelo para materializar os objetos que executarão na memória.
+![img.png](img.png)
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Classes”.
-
+- O  psicologo pode se cadastrar no sistema com apenas nome, cpf, email e senha. Em seguida recebe um link por email para completar um perfil que corresponda aos seus interesses e direção profissional.
+- O profissional poderá clicar o botão de recuperar senha e inserir seu email e após confirmar receberá do sistema um link para redefinir senha.
+- A entrada no sistema se dará por meio de email e senha de cadastro (login).
+- Ao entrar no sistema o usuário tem como página principal o seu perfil preenchido podendo editar todos os campos necessários.
+- O profissional pode casdastrar , editar ou excluir os textos de sua autoria dentro do Blog.
+- O profissional pode optar por efetuar o pagamento via pix para se destarcar nas pesquisas dos potenciais clientes.
+- O profissional receberá um email de aviso de uma nova consulta agendada.
+- O profissional pode editar as datas de calendário disponíveis para atendimento.
+- O profissional terá acesso a uma lista atualizada e de fácil visualização das suas consultas agendadas.
+- O profissional pode ter acesso a cancelar uma consulta se necessário.
+- O profissional receberá lembrete no email 30 min antes da consulta agendada.
+- O paciente tem acesso a página inicial do site sem necessidade de login.
+- O paciente poderá bsucar por profissionais.
+- O paciente poderá realizar pesquisas de acordo com critérios específicos.
+- O paciente poderá escolher pelo site uma data disponípivel no calendario do profissional.
+- O paciente deverá aceitar os termos e condições do contrato de utilização da plataforma.
+- O paciente poderá entrar em contato diretamente com o profissional por meio do whatsapp após confirmar uma data de consulta para tirar eventuais dúvidas.
+- O paciente receberá um email de confirmação da consulta agendada.
+- O paciente receberá lembrete no email 2h antes da consulta.
+- O paciente poderá ter acesso as dúvidas mais frequentes (FAQ).
 > - [Diagramas de Classes - Documentação da IBM](https://www.ibm.com/docs/pt-br/rational-soft-arch/9.6.1?topic=diagrams-class)
 > - [O que é um diagrama de classe UML? | Lucidchart](https://www.lucidchart.com/pages/pt/o-que-e-diagrama-de-classe-uml)
 
