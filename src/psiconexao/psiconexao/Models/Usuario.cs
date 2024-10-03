@@ -1,0 +1,28 @@
+﻿
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace psiconexao.Models
+{
+    [Table("Usuarios")]
+    public class Usuario
+    {
+        [Key]
+        public int Id { get; set; }
+
+        [Required(ErrorMessage = "Obrigatório informar o CPF")]
+        public string CPF { get; set; }
+
+        [Required(ErrorMessage = "Obrigatório informar o nome")]
+        public string Nome { get; set; }
+
+        [Required(ErrorMessage = "Obrigatório informar o email")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "Obrigatório informar o contato")]
+        public string Contato { get; set; }
+
+        [Required(ErrorMessage = "Obrigatório informar uma senha")]
+        public string Password { get; set; }
+    }  
+}
