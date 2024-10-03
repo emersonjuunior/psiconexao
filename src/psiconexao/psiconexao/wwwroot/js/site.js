@@ -1,4 +1,14 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿const abrirMenu = () => {
+    const botao = document.querySelector(".menu-button");
+    const menu = document.querySelector(".menu");
 
-// Write your JavaScript code.
+    if (menu.classList.contains("open-menu")) {
+        menu.classList.remove("open-menu");
+        menu.classList.add("close-menu");
+        botao.style.display = "block";
+    } else {
+        menu.classList.remove("close-menu");
+        menu.classList.add("open-menu");
+        botao.style.display = "none";
+    }
+};
