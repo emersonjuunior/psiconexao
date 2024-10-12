@@ -12,7 +12,7 @@ Definição de como o software é estruturado em termos dos componentes que faze
 - O profissional poderá clicar o botão de recuperar senha e inserir seu email e após confirmar receberá do sistema um link para redefinir senha.
 - A entrada no sistema se dará por meio de email e senha de cadastro (login).
 - Ao entrar no sistema o usuário tem como página principal o seu perfil preenchido podendo editar todos os campos necessários.
-- O profissional pode casdastrar , editar ou excluir os textos de sua autoria dentro do Blog.
+- O profissional pode cadastrar, editar ou excluir os textos de sua autoria dentro do Blog.
 - O profissional pode optar por efetuar o pagamento via pix para se destarcar nas pesquisas dos potenciais clientes.
 - O profissional receberá um email de aviso de uma nova consulta agendada.
 - O profissional pode editar as datas de calendário disponíveis para atendimento.
@@ -37,8 +37,10 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 
 ## Projeto da Base de Dados
+Projeto da Base de Dados levando em conta o Diagrama de Classes e o Modelo Entidade Relacionamento (MER), detalhando os tipos de dados de cada tabela, as chaves primárias e estrangeiras e as cardinalidades entre os relacionamentos.
 
-![base-de-dados-psiconexao](https://github.com/user-attachments/assets/c0583c19-0a68-4115-b0bb-15e1cac1b3e7)
+![projeto-banco-de-dados-psiconexao](https://github.com/user-attachments/assets/a37c0ca6-8430-490a-b807-f772ad257bc4)
+
 
 
 ## Tecnologias Utilizadas
