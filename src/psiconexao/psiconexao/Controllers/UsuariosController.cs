@@ -56,7 +56,7 @@ namespace psiconexao.Controllers
         [HttpPost]
         public async Task<ActionResult> Edit(int id, Usuario usuario)
         {
-            if(id != usuario.Id) 
+            if(id != usuario.UsuarioId) 
             {
                 return NotFound();
             }
