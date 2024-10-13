@@ -6,8 +6,8 @@ namespace psiconexao.Models
     [Table("Psicologos")]
     public class Psicologo : Usuario {
 
-        [ForeignKey("UsuarioId")]
-        public int UsuarioId { get; set; }
+        /*[ForeignKey("UsuarioId")]
+        public int UsuarioId { get; set; }*/
 
         [Required]
         [StringLength(11)]
