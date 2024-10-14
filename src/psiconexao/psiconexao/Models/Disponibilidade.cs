@@ -12,9 +12,8 @@ namespace psiconexao.Models
         public DateTime DataHora { get; set; }
         public bool Estado { get; set; }
 
-        [ForeignKey("UsuarioId")]
-        [Column("PsicologoId")]
-        public int UsuarioId { get; set; }
+        [ForeignKey("PsicologoId")]
+        public int PsicologoId { get; set; }
 
         [InverseProperty("Disponibilidades")]
         public virtual Psicologo Psicologo { get; set; }
