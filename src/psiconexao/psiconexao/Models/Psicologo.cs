@@ -53,6 +53,8 @@ namespace psiconexao.Models
             Grupo,
             Midfullness
         }
+        [InverseProperty("Psicologo")]
+        public virtual ICollection<Disponibilidade> Disponibilidades { get; set; } = new List<Disponibilidade>();
 
     }
 }
