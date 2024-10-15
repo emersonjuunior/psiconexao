@@ -21,5 +21,14 @@ namespace psiconexao.Models
 
         [Required(ErrorMessage = "Obrigatório informar uma senha")]
         public string Password { get; set; }
-    }  
+
+        public Perfil Perfil { get; set; }
+    }
+
+    public enum Perfil
+    {
+        Admin,
+        Psicologo, 
+        Paciente
+    }
 }
