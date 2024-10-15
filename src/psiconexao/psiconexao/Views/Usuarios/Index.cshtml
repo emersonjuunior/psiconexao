@@ -4,14 +4,14 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Lista de Usuários</h1>
+<h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Criar novo usuário</a>
+    <a asp-action="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
-        <tr>            
+        <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
@@ -24,12 +24,15 @@
             <th>
                 @Html.DisplayNameFor(model => model.Password)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Perfil)
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr>            
+        <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Nome)
             </td>
@@ -43,9 +46,12 @@
                 @Html.DisplayFor(modelItem => item.Password)
             </td>
             <td>
-                    <a asp-action="Edit" asp-route-id="@item.UsuarioId">Editar</a> |
-                    <a asp-action="Details" asp-route-id="@item.UsuarioId">Visualizar</a> |
-                    <a asp-action="Delete" asp-route-id="@item.UsuarioId">Deletar</a>
+                @Html.DisplayFor(modelItem => item.Perfil)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.UsuarioId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.UsuarioId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.UsuarioId">Delete</a>
             </td>
         </tr>
 }
