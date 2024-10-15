@@ -13,9 +13,14 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="DataHora" class="control-label"></label>
-                <input asp-for="DataHora" class="form-control" />
-                <span asp-validation-for="DataHora" class="text-danger"></span>
+                <label asp-for="Data" class="control-label"></label>
+                <input asp-for="Data" class="form-control" />
+                <span asp-validation-for="Data" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hora" class="control-label"></label>
+                <input asp-for="Hora" class="form-control" />
+                <span asp-validation-for="Hora" class="text-danger"></span>
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
@@ -23,7 +28,7 @@
                 </label>
             </div>
             <div class="form-group">
-                <label asp-for="PsicologoId" class="control-label">Nome do Psicologo</label>
+                <label asp-for="PsicologoId" class="control-label">Nome do Psicólogo</label>
                 <select asp-for="PsicologoId" class ="form-control" asp-items="ViewBag.PsicologoId"></select>
             </div>
             <div class="form-group">
