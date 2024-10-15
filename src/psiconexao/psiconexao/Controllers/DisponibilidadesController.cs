@@ -56,7 +56,7 @@ namespace psiconexao.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("DisponibilidadeId,DataHora,Estado,PsicologoId")] Disponibilidade disponibilidade)
+        public async Task<IActionResult> Create([Bind("DisponibilidadeId,Data,Hora,Estado,PsicologoId")] Disponibilidade disponibilidade)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +90,7 @@ namespace psiconexao.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("DisponibilidadeId,DataHora,Estado,PsicologoId")] Disponibilidade disponibilidade)
+        public async Task<IActionResult> Edit(int id, [Bind("DisponibilidadeId,Data,Hora,Estado,PsicologoId")] Disponibilidade disponibilidade)
         {
             if (id != disponibilidade.DisponibilidadeId)
             {
@@ -117,7 +117,7 @@ namespace psiconexao.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["PsicologoId"] = new SelectList(_context.Psicologos, "UsuarioId", "Email", disponibilidade.PsicologoId);
+            ViewData["PsicologoId"] = new SelectList(_context.Psicologos, "UsuarioId", "Nome", disponibilidade.PsicologoId);
             return View(disponibilidade);
         }
 
