@@ -8,10 +8,7 @@ namespace psiconexao.Models
     public class Usuario
     {
         [Key]
-        public int Id { get; set; }
-
-        [Required(ErrorMessage = "Obrigatório informar o CPF")]
-        public string CPF { get; set; }
+        public int UsuarioId { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar o nome")]
         public string Nome { get; set; }
@@ -20,9 +17,18 @@ namespace psiconexao.Models
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar o contato")]
-        public string Contato { get; set; }
+        public string Telefone { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar uma senha")]
         public string Password { get; set; }
-    }  
+        public Perfil Perfil { get; set; }
+    }
+
+    public enum Perfil
+    {
+        Admin,
+        Psicologo,
+        Paciente
+    }
+
 }
