@@ -1,0 +1,95 @@
+﻿@model psiconexao.Models.Usuario
+
+@{
+    ViewData["Title"] = "RedefinirSenha";
+}
+
+<link rel="stylesheet" href="~/css/authLogin.css" />
+
+<div>
+    <div class="container container-content">
+        <div class="card-col-4">
+            <h2>Redefinir senha</h2>
+            <h6>
+                Insira seu e-mail e crie uma nova senha para acessar sua conta.
+            </h6>
+        </div>
+    </div>
+</div>
+<div class="container card header-content">
+    <form asp-action="RedefinirSenha" class="card-col-8 login-box">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="card-col-2 login-form">
+            <label asp-for="Email"></label>
+            <input asp-for="Email" type="email" class="input login-input" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="card-col-2 login-form position-relative">
+            <label for="novaSenha">Nova senha</label>
+            <input name="novaSenha"
+                   type="password"
+                   class="input login-input"
+                   id="inputPassword" />
+            <img src="~/images/eyes-closed1.svg"
+                 alt="Ícone de visualização"
+                 width="20px"
+                 class="lock-button position-absolute"
+                 id="trocarVisualizacao"
+                 style="bottom: 10px; right: 20px; transform: translateY(-50%); cursor: pointer;" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <div class="card-col-2 login-form position-relative">
+            <label for="confirmarSenha">Confirmar nova senha</label>
+            <input type="password" name="confirmarSenha" class="input login-input" id="inputConfPassword" />
+            <img src="~/images/eyes-closed1.svg"
+                 alt="Ícone de visualização"
+                 width="20px"
+                 class="lock-button position-absolute"
+                 id="trocarVisualizacaoConf"
+                 style="bottom: 5px; right: 20px; transform: translateY(-50%); cursor: pointer;" />
+        </div> 
+        <input type="submit" value="ATUALIZAR" class="button login-button" />
+    </form>
+    <img src="../images/password-key.png"
+         alt="Regando a mente"
+         width="400px"
+         class="hide-img" />
+</div>
+<div class="separator-2"></div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+<script>
+    const trocarVisualizacao = document.querySelector('#trocarVisualizacao');
+    const inputPassword = document.querySelector('#inputPassword');
+    const trocarVisualizacaoConf = document.querySelector('#trocarVisualizacaoConf');
+    const inputConfPassword = document.querySelector('#inputConfPassword');
+
+    trocarVisualizacao.addEventListener('click', () => {
+
+        if (inputPassword.getAttribute('type') === 'password') {
+            inputPassword.setAttribute('type', 'text')
+            trocarVisualizacao.src = '@Url.Content("~/images/eye-open1.svg")';
+
+        } else if (inputPassword.getAttribute('type') === 'text') {
+            inputPassword.setAttribute('type', 'password')
+            trocarVisualizacao.src = '@Url.Content("~/images/eyes-closed1.svg")';
+        }
+    });
+
+    trocarVisualizacaoConf.addEventListener('click', () => {
+
+        if (inputConfPassword.getAttribute('type') === 'password') {
+            inputConfPassword.setAttribute('type', 'text')
+            trocarVisualizacaoConf.src = '@Url.Content("~/images/eye-open1.svg")';
+
+        } else if (inputConfPassword.getAttribute('type') === 'text') {
+            inputConfPassword.setAttribute('type', 'password')
+            trocarVisualizacaoConf.src = '@Url.Content("~/images/eyes-closed1.svg")';
+        }
+    });
+</script>

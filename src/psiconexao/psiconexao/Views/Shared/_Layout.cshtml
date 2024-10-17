@@ -24,24 +24,19 @@
                 </button>
                 <a href="#comoFunciona">Como funciona?</a>
                 <a href="/profissionais/profissionais.html">Escolher Profissional</a>
-                <a href="/area-profissional/areaProfissional.html">Área do Profissional</a>
+                <a asp-controller="Auth" asp-action="Cadastro">Cadastre-se</a>
             </div>
             <a href="/"><h3>PsiConexão</h3></a>
             <nav class="menu-nav">
                 <a href="#comoFunciona">Como Funciona?</a>
                 <a href="/profissionais/profissionais.html">Escolher Profissional</a>
-                <a href="/area-profissional/areaProfissional.html"
-                   class="white-button">
-                    Área do Profissional
-                </a>
+                <a asp-controller="Auth" asp-action="Cadastro" class="white-button">Cadastre-se</a>
             </nav>
         </div>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    <main>
+        @RenderBody()
+    </main>
     <footer>
         <div class="alert">
             <div class="alert-content">

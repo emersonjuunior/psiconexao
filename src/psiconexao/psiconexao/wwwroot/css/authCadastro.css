@@ -1,0 +1,62 @@
+﻿.section-header {
+    max-width: 550px;
+    text-align: left;
+}
+
+.card-box {
+    padding: 24px;
+}
+
+.register-form {
+    width: 100%;
+    max-width: 465px;
+}
+
+    .register-form label {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+.register-input {
+    width: 100%;
+    max-width: 465px;
+    outline: none;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.register-button {
+    width: 100%;
+    max-width: 465px;
+    margin: auto;
+}
+
+@media (max-width: 1080px) {
+    .register-form,
+    .register-input {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .section-header {
+        max-width: 100%;
+    }
+
+    .container-content {
+        padding: 24px;
+    }
+
+    .card-box {
+        margin: 0;
+        padding: 0;
+    }
+
+    .card-4 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
