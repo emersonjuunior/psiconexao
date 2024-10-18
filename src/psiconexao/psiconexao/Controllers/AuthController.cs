@@ -1,8 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using psiconexao.Models;
+using System.Security.Claims;
 
 namespace psiconexao.Controllers
 {
@@ -70,7 +73,7 @@ namespace psiconexao.Controllers
                             Password = usuario.Password,
                             Perfil = usuario.Perfil,
                             Crp = "xx/xxxxx",
-                            UrlFoto = "Nenhuma foto foi adicionada.",
+                            UrlFoto = "https://i.pinimg.com/736x/21/9e/ae/219eaea67aafa864db091919ce3f5d82.jpg",
                             Biografia = "Nenhuma biografia foi adicionada.",
                             PrecoConsulta = 30,
                             TEspecialidade = Psicologo.TipoEspecialidade.Clínica,
@@ -104,6 +107,25 @@ namespace psiconexao.Controllers
 
             if (usuario != null)
             {
+                var claims = new List<Claim>
+                    {
+                        new Claim(ClaimTypes.Name, usuario.Nome),
+                        new Claim(ClaimTypes.NameIdentifier, usuario.UsuarioId.ToString()),
+                        new Claim(ClaimTypes.Role, usuario.Perfil.ToString())
+                    };
+
+                var usuarioIdentity = new ClaimsIdentity(claims, "cadastro");
+                ClaimsPrincipal principal = new ClaimsPrincipal(usuarioIdentity);
+
+                var props = new AuthenticationProperties
+                {
+                    AllowRefresh = true,
+                    ExpiresUtc = DateTime.UtcNow.ToLocalTime().AddHours(8),
+                    IsPersistent = true,
+                };
+
+                await HttpContext.SignInAsync(principal, props);
+
                 if (usuario.Perfil == Perfil.Psicologo)
                 {
                     return RedirectToAction("Editar", "Psicologo", new { id = usuario.UsuarioId });
@@ -169,6 +191,12 @@ namespace psiconexao.Controllers
             }
 
             return View();
+        }
+
+        public async Task<IActionResult> Sair()
+        {
+            await HttpContext.SignOutAsync();
+            return RedirectToAction("Login");
         }
     }
 }
