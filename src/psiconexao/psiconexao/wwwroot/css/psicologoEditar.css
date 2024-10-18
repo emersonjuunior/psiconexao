@@ -1,0 +1,142 @@
+﻿.profissional-welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-form {
+    max-width: 465px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+/*    align-items: center;*/
+    gap: 12px;
+    position: relative;
+}
+
+.info-textarea {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.info-form label {
+    width: fit-content;
+}
+
+.form-textarea {
+    background-color: transparent;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 10px 20px;
+    width: 100%;
+    min-height: 250px;
+    font-size: 16px;
+}
+
+.lock-button {
+    position: absolute;
+    right: 20px;
+}
+
+.edit-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 4px;
+}
+
+.edit-form {
+    width: 100%;
+    max-width: 465px;
+}
+
+    .edit-form label {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+.edit-input {
+    width: 100%;
+    max-width: 465px;
+    outline: none;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.edit-button {
+    width: 100%;
+    max-width: 465px;
+    margin: auto;
+}
+
+.full-size {
+    max-width: 100%;
+    width: 100%;
+}
+
+.add-article {
+    width: 100%;
+    outline: none;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+    .info-form {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .profissional-welcome {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .button {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .profissional-content {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .info-form {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .edit-input {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .lock-button {
+        bottom: 10px;
+    }
+
+    .edit-photo {
+        align-items: center;
+    }
+
+    .profissional-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .profissional-card-info {
+        gap: 12px;
+    }
+}
