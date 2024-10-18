@@ -198,5 +198,10 @@ namespace psiconexao.Controllers
             await HttpContext.SignOutAsync();
             return RedirectToAction("Login");
         }
+
+        public IActionResult AcessoNegado()
+        {
+            return View();
+        }
     }
 }
