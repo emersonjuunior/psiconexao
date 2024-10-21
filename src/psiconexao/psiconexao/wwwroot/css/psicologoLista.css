@@ -71,6 +71,11 @@
     flex-wrap: wrap;
 }
 
+.button-profile {
+    font-size: 14px;
+    width: 100%;
+}
+
 @media (max-width: 1080px) {
     .profissional {
         margin: 0 20px;

@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using psiconexao.Models;
+using System.Linq;
 
 namespace psiconexao.Controllers
 {
@@ -82,6 +84,49 @@ namespace psiconexao.Controllers
             }
 
             return View(psicologo);
+        }
+
+        [AllowAnonymous]
+        public async Task<IActionResult> Lista(string nome, string abordagem, string especialidade, string crp)
+        {
+            var psicologos = await _context.Psicologos.ToListAsync();
+
+            if (psicologos == null || !psicologos.Any())
+            {
+                return NotFound("Nenhum psicólogo encontrado.");
+            }
+
+            var consulta = _context.Psicologos.AsQueryable();
+
+            if (!string.IsNullOrEmpty(nome))
+            {
+                consulta = consulta.Where(p => p.Nome.Contains(nome));
+                ViewBag.Nome = nome;
+            }
+
+            if (!string.IsNullOrEmpty(crp))
+            {
+                consulta = consulta.Where(p => p.Crp.Contains(crp));
+                ViewBag.Crp = crp;
+            }
+
+            if (!string.IsNullOrEmpty(especialidade))
+            {
+                consulta = consulta.Where(p => p.TEspecialidade.ToString() == especialidade);
+                ViewBag.Especialidade = especialidade;
+            }
+
+            Console.WriteLine(abordagem);
+
+            if (!string.IsNullOrEmpty(abordagem))
+            {
+                consulta = consulta.Where(p => p.TAbordagem.ToString() == abordagem);
+                ViewBag.Abordagem = abordagem;
+            }
+            Console.WriteLine(consulta.ToString());
+            Console.WriteLine(consulta.Where(p => p.TAbordagem.ToString() == abordagem));
+
+            return View(await consulta.ToListAsync());
         }
     }
 }
