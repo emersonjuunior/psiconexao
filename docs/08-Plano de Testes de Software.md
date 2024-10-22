@@ -21,7 +21,7 @@ autenticação e autorização.
 
 Requisitos Funcionais
 
-**RF-001: Cadastro de U suários (Profissionais)** 
+**RF-001: Cadastro de Usuários (Profissionais)** 
 
 **Objetivo:** Verificar se o sistema permite o cadastro de usuários com nome, CPR, e-mail 
 e senha, e se realiza a autenticação via e-mail.
