@@ -112,7 +112,8 @@ namespace psiconexao.Controllers
 
             if (!string.IsNullOrEmpty(especialidade))
             {
-                consulta = consulta.Where(p => p.TEspecialidade.ToString() == especialidade);
+                Psicologo.TipoEspecialidade valorEspecialidade = (Psicologo.TipoEspecialidade)Enum.Parse(typeof(Psicologo.TipoEspecialidade), especialidade);
+                consulta = consulta.Where(p => p.TEspecialidade.Equals(valorEspecialidade));
                 ViewBag.Especialidade = especialidade;
             }
 
@@ -120,7 +121,8 @@ namespace psiconexao.Controllers
 
             if (!string.IsNullOrEmpty(abordagem))
             {
-                consulta = consulta.Where(p => p.TAbordagem.ToString() == abordagem);
+                Psicologo.TipoAbordagem valorAbordagem = (Psicologo.TipoAbordagem)Enum.Parse(typeof(Psicologo.TipoAbordagem), abordagem);
+                consulta = consulta.Where(p => p.TAbordagem.Equals(valorAbordagem));
                 ViewBag.Abordagem = abordagem;
             }
             Console.WriteLine(consulta.ToString());
