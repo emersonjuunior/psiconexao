@@ -42,4 +42,25 @@
             <h6>@Model.Biografia</h6>
         </div>
     </div>
+    <div class="profissional">
+        <div class="card profissional-card">
+            <div class="container card-col-4">
+                <h4>Disponibilidades</h4>
+                <div id='calendar'></div>
+            </div>
+        </div>
+    </div>
 </div>
+
+@section Scripts {
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var calendarEl = document.getElementById('calendar');
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                    initialView: 'dayGridMonth',
+                    events: '/Disponibilidades/GetDisponibilidades?psicologoId=@Model.UsuarioId' // Passar o ID do psicólogo
+                });
+                calendar.render();
+            });
+        </script>
+}
