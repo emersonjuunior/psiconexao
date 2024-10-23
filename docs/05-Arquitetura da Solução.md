@@ -6,7 +6,7 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 ## Diagrama de Classes
 
-![img.png](img.png)
+![image](https://github.com/user-attachments/assets/003a582e-e808-4a9f-88a7-b9804a370482)
 
 - O  psicologo pode se cadastrar no sistema com apenas nome, cpf, email e senha. Em seguida recebe um link por email para completar um perfil que corresponda aos seus interesses e direção profissional.
 - O profissional poderá clicar o botão de recuperar senha e inserir seu email e após confirmar receberá do sistema um link para redefinir senha.
