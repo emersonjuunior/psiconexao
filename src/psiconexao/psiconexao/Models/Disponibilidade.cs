@@ -11,10 +11,16 @@ namespace psiconexao.Models
         public int DisponibilidadeId { get; set; }
 
         [DataType(DataType.Date)]
-        public DateTime Data { get; set; }
+        public DateTime DataInicio { get; set; }
+
+        [DataType(DataType.Date)]
+        public DateTime DataFim { get; set; }
 
         [DataType(DataType.Time)]
-        public TimeSpan Hora { get; set; }
+        public TimeSpan HoraInicio { get; set; }
+
+        [DataType(DataType.Time)]
+        public TimeSpan HoraFim { get; set; }
         public bool Estado { get; set; }
 
         [ForeignKey("PsicologoId")]

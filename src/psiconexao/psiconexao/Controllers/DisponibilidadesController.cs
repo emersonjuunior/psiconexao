@@ -155,6 +155,18 @@ namespace psiconexao.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        //Para obter as disponibilidades
+        public JsonResult GetDisponibilidades()
+        {
+            var disponibilidades = _context.Disponibilidades.Select(d => new {
+                title = d.Estado ? "Disponível" : "Indisponível",
+                start = d.DataInicio.ToString("yyyy-MM-dd") + "T" + d.HoraInicio.ToString(@"hh\:mm\:ss"),
+                end = d.DataFim.ToString("yyyy-MM-dd") + "T" + d.HoraFim.ToString(@"hh\:mm\:ss")
+            }).ToList();
+
+            return new JsonResult(disponibilidades);
+        }
+
         private bool DisponibilidadeExists(int id)
         {
             return _context.Disponibilidades.Any(e => e.DisponibilidadeId == id);
