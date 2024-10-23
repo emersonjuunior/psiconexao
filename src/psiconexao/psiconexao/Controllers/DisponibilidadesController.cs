@@ -56,7 +56,7 @@ namespace psiconexao.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("DisponibilidadeId,Data,Hora,Estado,PsicologoId")] Disponibilidade disponibilidade)
+        public async Task<IActionResult> Create([Bind("DisponibilidadeId,DataInicio,DataFim,HoraInicio,HoraFim,Estado,PsicologoId")] Disponibilidade disponibilidade)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +90,7 @@ namespace psiconexao.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("DisponibilidadeId,Data,Hora,Estado,PsicologoId")] Disponibilidade disponibilidade)
+        public async Task<IActionResult> Edit(int id, [Bind("DisponibilidadeId,DataInicio,DataFim,HoraInicio,HoraFim,Estado,PsicologoId")] Disponibilidade disponibilidade)
         {
             if (id != disponibilidade.DisponibilidadeId)
             {
@@ -156,13 +156,15 @@ namespace psiconexao.Controllers
         }
 
         //Para obter as disponibilidades
-        public JsonResult GetDisponibilidades()
+        public JsonResult GetDisponibilidades(int psicologoId)
         {
-            var disponibilidades = _context.Disponibilidades.Select(d => new {
-                title = d.Estado ? "Disponível" : "Indisponível",
-                start = d.DataInicio.ToString("yyyy-MM-dd") + "T" + d.HoraInicio.ToString(@"hh\:mm\:ss"),
-                end = d.DataFim.ToString("yyyy-MM-dd") + "T" + d.HoraFim.ToString(@"hh\:mm\:ss")
-            }).ToList();
+            var disponibilidades = _context.Disponibilidades
+                .Where(d => d.PsicologoId == psicologoId)
+                .Select(d => new {
+                    title = d.Estado ? "Disponível" : "Indisponível",
+                    start = d.DataInicio.ToString("yyyy-MM-dd") + "T" + d.HoraInicio.ToString(@"hh\:mm\:ss"),
+                    end = d.DataFim.ToString("yyyy-MM-dd") + "T" + d.HoraFim.ToString(@"hh\:mm\:ss")
+                }).ToList();
 
             return new JsonResult(disponibilidades);
         }
