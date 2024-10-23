@@ -1,0 +1,40 @@
+﻿@model psiconexao.Models.Usuario
+
+@{
+    ViewData["Title"] = "Esqueceu a senha";
+}
+
+<link rel="stylesheet" href="~/css/authLogin.css" />
+
+<div>
+    <div class="container container-content">
+        <div class="card-col-4">
+            <h2>Esqueceu a senha?</h2>
+            <h6>
+                Para redefinir sua senha, informe o seu e-mail cadastrado e lhe enviaremos um link com as instruções.
+            </h6>
+        </div>
+    </div>
+</div>
+<div class="container card header-content">
+    <form asp-action="EsqueceuSenha" class="card-col-8 login-box">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="card-col-2 login-form">
+            <label asp-for="Email"></label>
+            <input asp-for="Email" type="email" class="input login-input" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <input type="submit" value="ENVIAR" class="button login-button" />
+    </form>
+    <img src="~/images/message.png"
+         alt="Regando a mente"
+         width="400px"
+         class="hide-img" />
+</div>
+<div class="separator-2"></div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

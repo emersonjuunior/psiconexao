@@ -1,0 +1,103 @@
+﻿@model IEnumerable<psiconexao.Models.Psicologo>
+
+@{
+    ViewData["Title"] = "Lista de Psicólogos";
+}
+
+<link rel="stylesheet" href="~/css/psicologoLista.css" />
+
+@*PROPOTIPO DE FILTRO*@
+<div class="white-container">
+    <div class="container card-col-4">
+        <div class="separator-2"></div>
+        <h3>Encontre o Profissional Certo para Você</h3>
+        <div class="header-content">
+            <form action="Lista" method="get" class="card-wrap-2">
+                <div class="card-col-2 filter-form">
+                    <label for="TAbordagem">Abordagem</label>
+                    <select for="TAbordagem" name="abordagem" class="input filter-input" asp-items="@(new SelectList(Enum.GetValues(typeof(Psicologo.TipoAbordagem))))">
+                        <option value="" class="input">Selecione</option>
+                        @*@foreach (var abordagem in Enum.GetValues(typeof(Psicologo.TipoAbordagem)))
+                        {
+                            <option value="@abordagem">@abordagem</option>
+                        }*@
+                    </select>
+                </div>
+                <div class="card-col-2 filter-form">
+                    <label for="nome">Nome</label>
+                    <input 
+                        type="text"
+                        name="nome"
+                        class="input filter-input"
+                        placeholder="Exemplo: Liliane Pinheiro"
+                        value="@ViewBag.Nome" />
+                </div>
+                <div class="card-col-2 filter-form">
+                    <label for="TEspecialidade">Especialidade</label>
+                    <select for="TEspecialidade" name="especialidade" class="input filter-input" asp-items="@(new SelectList(Enum.GetValues(typeof(Psicologo.TipoEspecialidade))))">
+                        <option value="" class="input">Selecione</option>
+                        @*@foreach (var especialidade in Enum.GetValues(typeof(Psicologo.TipoEspecialidade)))
+                        {
+                            <option value="@especialidade">@especialidade</option>
+                        }*@
+                    </select>
+                </div>
+                <div class="card-col-2 filter-form">
+                    <label for="crp">CRP</label>
+                    <input type="number"
+                           name="crp"
+                           class="input filter-input"
+                           placeholder="Exemplo: 00/123456"
+                           value="@ViewBag.Crp" />
+                </div>
+                <input type="submit" class="button filter-button" value="Filtrar" />
+            </form>
+            <image src="../images/psicologas.png"
+                   alt="Cerebro"
+                   width="280px"
+                   class="hide-img" />
+        </div>
+    </div>
+</div>
+<div class="separator-2"></div>
+
+@if (!Model.Any())
+{
+    <div class="profissional text-center">
+        <h6>Nenhum psicólogo encontrado.</h6>
+    </div>
+}
+else
+{
+    @foreach (var item in Model)
+    {
+        <div class="profissional">
+            <div class="card profissional-card">
+                <div class="card-4 profissional-content">
+                    <img src="@Html.DisplayFor(modelItem => item.UrlFoto)"
+                        alt="Profissional"
+                        class="profissional-img"
+                        style="border-radius: 12px;"/>
+                    <div class="profissional-card-info">
+                        <div>
+                            <div class="profissional-title">
+                                <h4>@Html.DisplayFor(modelItem => item.Nome)</h4>
+                                <h6>CRP: @Html.DisplayFor(modelItem => item.Crp)</h6>
+                            </div>
+                        </div>
+                        <div class="card-col">
+                            <h6>
+                                <b>Abordagem: </b>@Html.DisplayFor(modelItem => item.TAbordagem)
+                            </h6>
+                            <h6><b>Especialidade: </b>@Html.DisplayFor(modelItem => item.TEspecialidade)</h6>
+                            <a href="/Psicologo/Perfil/@Html.DisplayFor(modelItem => item.UsuarioId)" class="button button-profile">
+                                Ver Perfil Completo
+                                <img src="../images/arrow2.svg" alt="Seta" class="min-svg" style="width: 14px;" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}

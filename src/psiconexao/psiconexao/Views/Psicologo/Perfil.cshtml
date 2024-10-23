@@ -1,0 +1,45 @@
+﻿@model psiconexao.Models.Psicologo
+
+@{
+    ViewData["Title"] = "Perfil de " + Model.Nome;
+}
+
+<link rel="stylesheet" href="~/css/psicologoPerfil.css" />
+<link rel="stylesheet" href="~/css/psicologoLista.css" />
+
+<div class="profissional">
+    <div class="card profissional-card">
+        <div class="card-4 profissional-content">
+            <img src="@Model.UrlFoto"
+                 alt="Profissional"
+                 class="profissional-image"
+                 style="border-radius: 12px;"/>
+            <div class="profissional-card-info">
+                <div>
+                    <h2>@Model.Nome</h2>
+                    <h4 class="profissional-subtitle">CRP: @Model.Crp</h4>
+                </div>
+                <button class="button w-auto">Agendar consulta</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container cards p-0">
+    <div class="card card-item">
+        <h6 class="m-0"><b>Especilidade: </b>@Model.TEspecialidade</h6>
+    </div>
+    <div class="card card-item">
+        <h6 class="m-0"><b>Abordagem: </b>@Model.TAbordagem</h6>
+    </div>
+    <div class="card card-item">
+        <h6 class="m-0"><b>Preço: </b>R$@Model.PrecoConsulta,00</h6>
+    </div>
+</div>
+<div class="profissional">
+    <div class="card profissional-card">
+        <div class="container card-col-4">
+            <h4>Biografia</h4>
+            <h6>@Model.Biografia</h6>
+        </div>
+    </div>
+</div>

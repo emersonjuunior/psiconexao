@@ -1,0 +1,87 @@
+﻿@model psiconexao.Models.Usuario
+
+@{
+    ViewData["Title"] = "Cadastro";
+}
+
+
+<link rel="stylesheet" href="~/css/authCadastro.css" />
+
+<div class="separator-2"></div>
+<div>
+    <div class="container container-content">
+        <div class="section-header">
+            <h2>Cadastre-se e faça parte da maior rede de cuidado e conexão!</h2>
+            <div class="card-col-6">
+                <span>
+                    Bem-vindo(a) à plataforma que conecta psicólogos e pacientes de forma simples e segura. Ao se cadastrar, você está a um passo de criar uma rede de apoio emocional, seja oferecendo cuidado profissional ou recebendo o suporte que precisa. Junte-se a nós e comece a construir conexões que transformam vidas!
+                </span>
+                <div class="card-4">
+                    <a href="#cadastrar" class="button">CADASTRE-SE</a>
+                    <a asp-controller="Auth" asp-action="Login" class="button white-button transparent">Já tenho cadastro</a>
+                </div>
+            </div>
+        </div>
+        <image src="/images/psico.png"
+               alt="Psicóloga"
+               width="400px"
+               class="hide-img" />
+    </div>
+</div>
+<div class="container card-col-8" id="cadastrar">
+    <div class="card-2">
+        <image src="../images/arrow.svg"
+               alt="Seta"
+               width="24px"
+               class="min-svg mb-2" />
+        <h4>Cadastre-se e Conecte-se com Mais Pacientes!</h4>
+    </div>
+    <div class="card card-box separator">
+        <form asp-action="Cadastro" class="card-wrap-8 container-content">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="card-col-2 register-form">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="input register-input" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="card-col-2 register-form">
+                <label asp-for="Telefone" class="control-label"></label>
+                <input asp-for="Telefone" class="input register-input" />
+                <span asp-validation-for="Telefone" class="text-danger"></span>
+            </div>
+            <div class="card-col-2 register-form">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="input register-input" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="card-col-2 register-form">
+                <label for="confirmarEmail">Confirmar e-mail</label>
+                <input type="email" id="confirmarEmail" name="confirmarEmail" class="input register-input" required />
+            </div>
+            <div class="card-col-2 register-form">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" type="password" class="input register-input" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="card-col-2 register-form">
+                <label for="confirmarSenha">Confirmar senha</label>
+                <input type="password" id="confirmarSenha" name="confirmarSenha" class="input register-input" />
+            </div>
+            <div class="card-col-2 register-form">
+                <label asp-for="Perfil" class="control-label"></label>
+                <select asp-for="Perfil" class="input register-input" asp-items="@(new SelectList(Enum.GetValues(typeof(Perfil))))">
+                    <option value="">Selecione um perfil</option>
+                </select>
+                <span asp-validation-for="Perfil" class="text-danger"></span>
+            </div>
+            <div class="card-col-2 register-form">
+                <input type="submit" class="button register-button" value="CADASTRE-SE" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

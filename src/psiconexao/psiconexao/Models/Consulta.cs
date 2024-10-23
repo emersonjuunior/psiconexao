@@ -3,9 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace psiconexao.Models
 {
-    [Table("Consultas")]
+    [Table("Consultas")]        
     public class Consulta
-    {
+    {        
         [Key]
         public int ConsultaId { get; set; }
 
@@ -27,7 +27,7 @@ namespace psiconexao.Models
         [InverseProperty("Consultas")]
         public virtual Paciente Paciente { get; set; }
 
-        public Estado Estado { get; set; }
+        public Estado Estado { get; set; }        
 
     }
     public enum Estado

@@ -1,0 +1,60 @@
+﻿.header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.login-box {
+    width: 100%;
+    padding: 48px;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 465px;
+}
+
+    .login-form label {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+.login-input {
+    width: 100%;
+    max-width: 465px;
+    outline: none;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.login-button {
+    width: 100%;
+    max-width: 465px;
+}
+
+@media (max-width: 1024px) {
+    .header-content {
+        margin: 20px;
+    }
+
+    .container {
+        width: auto;
+    }
+
+    .login-form,
+    .login-input {
+        max-width: 100%;
+    }
+
+    .login-box {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-box {
+        padding: 20px 0;
+    }
+}

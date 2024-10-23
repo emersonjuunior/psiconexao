@@ -1,0 +1,73 @@
+﻿@model psiconexao.Models.Usuario
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<link rel="stylesheet" href="~/css/authLogin.css" />
+
+<div>
+    <div class="container container-content">
+        <div class="card-col-4">
+            <h2>Bem-vindo de volta!</h2>
+            <h6>
+                Entre na sua conta e retome sua jornada de apoio emocional. Seja você psicólogo ou paciente, nossa plataforma está aqui para facilitar conexões transformadoras e oferecer o suporte que você precisa. Basta fazer login e continuar fazendo a diferença na vida de quem importa.
+            </h6>
+        </div>
+    </div>
+</div>
+<div class="container card header-content">
+    <form asp-action="Login" class="card-col-8 login-box">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="card-col-2 login-form">
+            <label asp-for="Email"></label>
+            <input asp-for="Email" type="email" class="input login-input" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="card-col-2 login-form position-relative">
+            <label asp-for="Password"></label>
+            <input 
+                asp-for="Password" 
+                type="password"
+                class="input login-input"
+                id="inputPassword"/>
+            <img src="~/images/eyes-closed1.svg"
+                 alt="Ícone de visualização"
+                 width="20px"
+                 class="lock-button position-absolute"
+                 id="trocarVisualizacao"
+                 style="bottom: 10px; right: 20px; transform: translateY(-50%); cursor: pointer;" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <a asp-controller="Auth" asp-action="EsqueceuSenha">Esqueceu a senha?</a>
+        <input type="submit" value="ENTRAR" class="button login-button" />
+    </form>
+    <img src="/images/mind-flower.png"
+         alt="Regando a mente"
+         width="400px"
+         class="hide-img" />
+</div>
+<div class="separator-2"></div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+<script>
+    const trocarVisualizacao = document.querySelector('#trocarVisualizacao');
+    const inputPassword = document.querySelector('#inputPassword');
+
+    trocarVisualizacao.addEventListener('click', () => {
+
+        if(inputPassword.getAttribute('type') === 'password') {
+            inputPassword.setAttribute('type', 'text')
+            trocarVisualizacao.src = '@Url.Content("~/images/eye-open1.svg")';
+
+        } else if (inputPassword.getAttribute('type') === 'text') {
+            inputPassword.setAttribute('type', 'password')
+            trocarVisualizacao.src = '@Url.Content("~/images/eyes-closed1.svg")';
+        }
+    });
+</script>

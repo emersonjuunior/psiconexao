@@ -9,7 +9,7 @@ namespace psiconexao.Models
         [Required]
         [StringLength(11)]
         public string Crp { get; set; }
-
+        
         public string UrlFoto { get; set; }
 
         public string Biografia { get; set; }
@@ -28,9 +28,9 @@ namespace psiconexao.Models
         {
             Clínica,
             Escolar,
-            Saúde,
+            Saúde, 
             Desenvolvimento,
-            Esporte,
+            Esporte, 
             NeuroPsicologia,
             Familiar,
             Casal,
@@ -42,7 +42,7 @@ namespace psiconexao.Models
         {
             CognitivoComportamental,
             Psicanálise,
-            Humanista,
+            Humanista, 
             Sistêmica,
             Gestalt,
             Narrativa,

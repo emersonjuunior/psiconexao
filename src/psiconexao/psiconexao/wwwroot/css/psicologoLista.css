@@ -1,0 +1,110 @@
+﻿.filter-form {
+    width: 100%;
+    max-width: 350px;
+    padding-right: 20px;
+}
+
+    .filter-form label {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+.filter-input {
+    width: 100%;
+    max-width: 350px;
+    outline: none;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.filter-button {
+    margin-top: 35px;
+    width: 100%;
+    max-width: 690px;
+}
+
+.profissional {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 0;
+}
+
+.profissional-card {
+    max-width: 1080px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.profissional-content {
+    position: relative;
+}
+
+.profissional-card-info {
+    width: 100%;
+    max-width: 1080px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profissional-img {
+    width: 140px;
+    height: 140px;
+}
+
+.profissional-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.button-profile {
+    font-size: 14px;
+    width: 100%;
+}
+
+@media (max-width: 1080px) {
+    .profissional {
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .filter-form,
+    .filter-input,
+    .filter-button {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .profissional-title {
+        flex-direction: column;
+        align-items: start;
+        max-width: 165px;
+    }
+
+    .profissional-img {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        right: 0;
+    }
+
+    .profissional-card-info {
+        gap: 48px;
+    }
+}
