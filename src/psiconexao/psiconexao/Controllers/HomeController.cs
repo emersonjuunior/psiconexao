@@ -1,5 +1,3 @@
-//teste
-
 using Microsoft.AspNetCore.Mvc;
 using psiconexao.Models;
 using System.Diagnostics;

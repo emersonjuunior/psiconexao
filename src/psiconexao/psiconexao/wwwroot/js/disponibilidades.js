@@ -1,25 +1,25 @@
 ﻿document.addEventListener('DOMContentLoaded', function () {
     const calendarEl = document.getElementById('calendar');
-    const today = new Date().toISOString().split('T')[0]; // Data atual no formato 'YYYY-MM-DD'
+    const today = new Date().toISOString().split('T')[0]; 
 
     const calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth', // Exibe o calendário mensalmente
 
-        // Impede marcação em datas anteriores à atual
+        //apenas datas a partir de hoje são permitidas
         validRange: {
-            start: today, // Apenas datas a partir de hoje são permitidas
+            start: today, 
         },
 
         selectable: true, // Permite selecionar uma data no calendário
 
         dateClick: function (info) {
-            const selectedDate = info.dateStr.split("-").reverse().join("-");
-            console.log(selectedDate); // Exibe a data clicada
+            const selectedDate = info.dateStr
+            localStorage.setItem("date", selectedDate);
         },
 
     });
 
-    calendar.render(); // Renderiza o calendário
+    calendar.render();
 });
 
-console.log("js funcionando");
+
