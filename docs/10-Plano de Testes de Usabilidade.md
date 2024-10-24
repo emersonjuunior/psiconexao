@@ -3,165 +3,171 @@
 
 ## 1. Objetivos dos Testes de Usabilidade
 
-Avaliar a navegação, layout, clareza e facilidade de uso do protótipo criado, verificando se o fluxo de interação atende às expectativas e necessidades dos usuários. 
+O objetivo dos testes de usabilidade é avaliar a qualidade da interface e a facilidade de uso da plataforma, identificar problemas de navegação e de clareza nas funcionalidades. Os testes vão verificar o cumprimento dos seguintes requisitos funcionais:  
 
-- Cadastro e login de usuários profissionais (RF-001, RF-003) 
+- Cadastro e autenticação de psicólogos e pacientes (RF01, RF02, RF03, RF04) 
 
-- Criação e edição de perfil profissional (RF-002) 
+- Edição de perfil para psicólogos e pacientes (RF05, RF06) 
 
-- Busca e filtros de profissionais (RF-005, RF-006) 
+- Agendamento e gestão de consultas (RF07, RF08, RF09, RF10) 
 
-- Agendamento de consultas (RF-008, RF-009) 
+- Busca e filtros de profissionais (RF11) 
 
-- Publicação no blog por profissionais (RF-011) 
-
- 
+- Gestão de histórico de consultas para psicólogos (RF12 - análise preliminar para verificar clareza da funcionalidade planejada) 
 
 ## 2. Critérios para Seleção dos Participantes 
 
-Os participantes serão selecionados com base em dois perfis principais: 
+Os participantes serão selecionados com base nos seguintes perfis de usuários: 
 
-- Potenciais usuários (pacientes): Usuários que se encaixam no público-alvo de potenciais pacientes. 
+- Psicólogos: Profissionais que utilizariam a plataforma para oferecer serviços de psicologia.  
 
-- Profissionais de psicologia: Usuários que utilizariam o sistema para oferecer serviços de psicologia. 
+- Pacientes: Pessoas que se encaixam no público-alvo de potenciais pacientes, interessados em marcar consultas. 
 
 Critérios: 
 
-- Diversidade de idade e nível de familiaridade com tecnologia (variando de leigos a usuários mais avançados). 
+- Diversidade de experiência com tecnologia (usuários leigos e avançados). 
 
-- Serão convidados 3-6 participantes, conforme as boas práticas de testes de usabilidade para identificação de problemas mais comuns. 
+- Idade variada para refletir diferentes públicos que utilizarão a plataforma. 
 
-Observação: Nenhum dado sensível dos participantes será coletado ou armazenado, seguindo as diretrizes da LGPD. Os participantes serão identificados apenas por códigos (P1, P2, etc.). 
+- Um número mínimo de 4 participantes (2 psicólogos e 2 pacientes).  
 
- 
+Observação: Os dados dos participantes serão anonimizados para atender às diretrizes da LGPD, identificando-os apenas como P1, P2, etc.  
+
 
 ## 3. Procedimentos Adotados pelos Condutores de Teste 
 
 ### Tipo de Teste: 
 
-O teste será realizado de forma remota, por meio de uma videoconferência onde o participante compartilhará sua tela enquanto navega no protótipo do Figma. 
+- Os testes serão realizados presencialmente ou remotamente (dependendo da disponibilidade do participante). Se remoto, o participante compartilhará a tela.  
 
 ### Método: 
 
-- Observação direta: O condutor do teste acompanhará em tempo real a interação do participante com o protótipo, observando como ele navega, identifica elementos e completa as tarefas. 
+- Observação direta: O condutor do teste acompanhará em tempo real a interação do participante com a plataforma, observando como ele navega e completa as tarefas. 
 
-- Medição: Serão coletadas métricas de tempo de execução, cliques necessários e erros cometidos durante as tarefas. 
+- Medição de dados: Tempo de execução, quantidade de cliques, erros cometidos e feedback qualitativo serão coletados. 
 
  
 
 ## 4. Dados a Serem Coletados 
 
-Durante os testes, os seguintes dados e métricas serão coletados: 
+Durante os testes, serão coletadas as seguintes métricas: 
 
-- Tempo de execução: Tempo gasto pelo participante para completar cada tarefa. 
+- Tempo de execução: Quanto tempo o participante leva para completar cada tarefa. 
 
-- Quantidade de cliques: Número de cliques até completar a tarefa. 
+- Quantidade de cliques: Número de cliques para completar cada tarefa. 
 
-- Erros: Número de erros cometidos ou tentativas erradas para completar a tarefa. 
+- Erros: Erros cometidos ou dificuldades relatadas. 
 
-- Dificuldade relatada: O participante será questionado após cada tarefa sobre a dificuldade percebida, utilizando uma escala de 1 (muito fácil) a 5 (muito difícil). 
+- Facilidade de uso: Avaliação subjetiva em uma escala de 1 (muito fácil) a 5 (muito difícil). 
 
-- Feedback qualitativo: Comentários e sugestões espontâneos dos participantes ao longo do teste. 
+- Feedback qualitativo: Comentários e sugestões dos participantes. 
 
- 
 
 ## 5. Tarefas a Serem Executadas 
 
-A ordem das tarefas será definida para simular o fluxo de uso esperado pelos usuários. Cada tarefa corresponde a um requisito funcional, e as tarefas serão apresentadas aos participantes da seguinte maneira: 
+As tarefas foram criadas para testar cada requisito funcional da plataforma. A ordem reflete o fluxo esperado do uso típico: 
 
-### Cenários de Teste e Tarefas 
+### 1- Cadastro de Usuário e Login (RF01, RF02, RF03, RF04) 
 
-#### Teste de Cadastro e Login 
+- Tarefa 1: Realize o cadastro de um novo usuário (psicólogo ou paciente), preenchendo os campos obrigatórios e confirmando o e-mail recebido. 
 
-- Tarefa 1: Encontre a página de cadastro e preencha os campos (nome, CPR, e-mail, senha). 
+- Tarefa 2: Faça login utilizando as credenciais recém-criadas (e-mail e senha). 
 
-- Tarefa 2: Navegue para a página de login e simule a entrada com e-mail e senha. 
+- Tarefa 3: Simule uma recuperação de senha, seguindo as instruções enviadas por e-mail. 
 
-Perguntas: 
+##### Perguntas: 
 
-- Foi fácil encontrar o botão de cadastro e login? 
+- Foi fácil encontrar a opção de cadastro? E o botão de login? 
 
-- O layout da página estava claro? 
+- O layout da página de cadastro estava claro e compreensível? 
 
-- Algum elemento estava confuso ou difícil de localizar? 
+- Alguma parte do fluxo de confirmação de e-mail foi confusa ou problemática? 
+
+- O processo de recuperação de senha foi intuitivo e fácil de seguir? 
+ 
+
+#### 2- Edição de Perfil (RF05, RF06)  
+
+- Tarefa 1: Atualize o perfil de psicólogo, adicionando informações como especializações, foto de perfil, descrição profissional e disponibilidade. 
+
+- Tarefa 2: Atualize o perfil do paciente, preenchendo ou modificando dados pessoais e informações relevantes. 
+
+##### Perguntas: 
+
+- O layout da página de perfil estava claro e fácil de entender? 
+
+- Foi intuitivo localizar e editar as informações do perfil? 
+
+- Alguma funcionalidade de edição estava difícil de encontrar ou utilizar? 
+
+- Houve alguma parte do fluxo de edição que você achou confusa? 
+
+
+#### 3. Busca e Agendamento de Consultas (RF07, RF08, RF09, RF10, RF11)  
+
+- Tarefa 1: Realize uma busca por psicólogos, aplicando filtros como especialidade e faixa de preço. 
+
+- Tarefa 2: Agende uma consulta com um psicólogo, escolhendo uma data e horário disponíveis, e verifique o recebimento do e-mail de confirmação. 
+
+- Tarefa 3: O psicólogo acessa a lista de consultas pendentes e decide entre confirmar ou cancelar a consulta. 
+
+- Tarefa 4: O paciente verifica as atualizações sobre o status da consulta (confirmada ou cancelada). 
+
+##### Perguntas: 
+
+- Foi fácil utilizar os filtros na busca por profissionais? 
+
+- O calendário para agendamento de consultas estava claro e fácil de usar? 
+
+- Você encontrou alguma dificuldade para verificar o status da consulta? 
+
+- O fluxo de confirmação ou cancelamento foi compreensível para ambos (paciente e psicólogo)?
+
+
+#### 4. Gestão de Histórico de Consultas (RF12 - Funcionalidade Planejada para Fases Futuras)  
+
+- Tarefa 1: O psicólogo acessa o histórico de consultas e verifica as anotações sobre os pacientes (caso a funcionalidade esteja disponível em uma versão preliminar). 
+
+##### Perguntas: 
+
+- O histórico de consultas estava bem organizado e fácil de navegar? 
+
+- Foi fácil localizar onde adicionar ou visualizar anotações? 
+
+- O layout das informações do histórico parecia claro e compreensível? 
 
  
 
-#### Teste de Criação e Edição de Perfil 
+### Perguntas Gerais sobre a Plataforma
+Após concluir todas as tarefas, as perguntas gerais são realizadas para avaliar a experiência global com a plataforma: 
 
-- Tarefa 1: Navegue até a página de perfil e preencha as informações obrigatórias (foto, biografia, WhatsApp, valores). 
+1- A navegação entre as diferentes telas foi fluida e fácil de entender? 
 
-- Tarefa 2: Simule a edição do perfil, alterando a biografia ou valores. 
+2- O design e a consistência das telas estavam adequados? 
 
-Perguntas: 
+3- Houve alguma parte que gerou confusão ou dificuldade? 
 
-- Foi fácil entender o layout da página de perfil? 
+4- Você se sentiu perdido ou frustrado em algum momento durante o teste? 
 
-- O processo de edição foi intuitivo? 
+5- Existe algo que você mudaria no layout ou nos fluxos apresentados? 
 
-- Alguma opção estava difícil de encontrar? 
+6- Em uma escala de 1 a 5, qual foi a sua satisfação geral ao utilizar a plataforma? 
 
- 
-
-#### Teste de Pesquisa e Filtros 
-
-- Tarefa 1: Acesse a página de pesquisa e simule a busca por um profissional. 
-
-- Tarefa 2: Aplique filtros (abordagem terapêutica, faixa de valores, consulta social) e verifique os resultados. 
-
- 
-
-Perguntas: 
-
-- O layout da página de busca e filtros foi claro e fácil de entender? 
-
-- Os filtros estavam visíveis e eram fáceis de aplicar? 
-
-- Os resultados da busca estavam bem organizados? 
-
- 
-
-#### Teste de Agendamento de Consulta 
-
-- Tarefa 1: Navegue até o perfil de um profissional e simule o agendamento de uma consulta escolhendo uma data no calendário. 
-
-Perguntas: 
-
-- O calendário estava fácil de visualizar e usar? 
-
-- O fluxo de agendamento estava claro? 
-
-- Houve alguma dificuldade para escolher a data? 
-
- 
-
-### Perguntas Gerais sobre o Protótipo  
-
-- A navegação entre as telas foi fluida e fácil de entender? 
-
-- O design das telas estava claro e consistente? 
-
-- Alguma parte do protótipo pareceu confusa? 
-
-- Houve algum ponto em que você se sentiu perdido ou frustrado durante o teste? 
-
-- Você mudaria algo nas telas ou fluxos apresentados no protótipo? 
-
- 
+Esse plano de teste permitirá avaliar a experiência do usuário em relação às principais funcionalidades da plataforma, fornecendo dados valiosos para futuras melhorias. 
 
  
 
 ## 6. Etapas da Sessão de Teste 
 
-Cada sessão de teste seguirá estas etapas: 
+Cada sessão será estruturada conforme os passos abaixo: 
 
-- Introdução: Explicação breve ao participante sobre o teste e suas etapas. Informar que o foco é avaliar o protótipo. 
+1- Introdução: Apresentar o objetivo do teste e instruir o participante sobre o que será realizado. Explicar que o teste é para avaliar o sistema e não o desempenho do usuário. 
 
-- Execução das tarefas: O participante será guiado pelas tarefas descritas acima, sem intervenção direta do condutor, que apenas observará e tomará notas. 
+2- Execução das Tarefas: O participante será guiado pelas tarefas pré-definidas, e o condutor tomará notas sobre o desempenho e as dificuldades encontradas. 
 
-- Perguntas pós-tarefa: Após cada tarefa, o participante será perguntado sobre a dificuldade de completar a tarefa e se teve alguma sugestão de melhoria. 
+3- Perguntas Pós-Tarefa: Após cada tarefa, será feita uma breve pergunta ao participante sobre a dificuldade da tarefa. 
 
-- Feedback final: Ao final do teste, será feita uma rodada de perguntas gerais sobre a experiência com o protótipo. 
+4- Feedback Final: Conversa para captar a percepção geral do participante sobre a plataforma.  
 
  
 
@@ -169,35 +175,37 @@ Cada sessão de teste seguirá estas etapas:
 
 ### Ferramentas: 
 
-- Protótipo no Figma. 
+- Plataforma desenvolvida e configurada.
+  
+- Ferramentas de videoconferência (se o teste for remoto). 
 
-- Plataforma de videoconferência. 
+- Ferramenta para gravação de tela (opcional, para revisão posterior). 
 
 ### Equipe: 
 
-- 1 moderador que conduzirá o teste e tomará notas. 
+- 1 moderador que conduzirá os testes. 
 
-- 1 ou mais observadores (opcional) para apoiar na coleta de dados. 
-
+- 1 observador (opcional) para apoio na coleta de dados.  
  
 
 ## 8. Métricas Coletadas 
 
-As seguintes métricas serão analisadas para cada tarefa: 
+Serão analisadas as seguintes métricas para cada tarefa: 
 
-- Tempo de conclusão: Tempo médio para completar a tarefa. 
+- Tempo médio para concluir as tarefas. 
 
-- Erros: Número de erros cometidos pelos participantes ao tentar completar a tarefa. 
+- Quantidade de erros ou dificuldades relatadas. 
 
-- Clareza do design: Feedback qualitativo dos participantes sobre a clareza e facilidade de uso do design. 
+- Número médio de cliques para completar as ações. 
 
-- Satisfação do usuário: Avaliação subjetiva sobre a satisfação geral com o protótipo. 
+- atisfação do usuário com base nas avaliações subjetivas. 
 
- 
+- Feedback qualitativo para melhorias no sistema.  
+
 
 ## 9. Conformidade com a LGPD 
 
-Nenhuma informação pessoal ou sensível será coletada dos participantes. Todos os dados serão anonimizados e usados apenas para melhorar a usabilidade da plataforma. Todos os participantes serão informados sobre a natureza dos dados coletados e o consentimento explícito será obtido antes do início do teste.
+O teste será realizado em conformidade com a LGPD, garantindo que nenhuma informação pessoal seja armazenada sem o consentimento do participante. Os dados serão anonimizados e utilizados exclusivamente para melhorar a usabilidade do sistema. 
 
 ## 10. Wireframes
 
