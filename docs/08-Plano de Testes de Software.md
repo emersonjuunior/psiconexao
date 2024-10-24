@@ -20,168 +20,119 @@ autenticação e autorização.
 # Plano de Testes Detalhado
 
 Requisitos Funcionais
-
-**RF-001: Cadastro de Usuários (Profissionais)** 
-
-**Objetivo:** Verificar se o sistema permite o cadastro de usuários com nome, CPR, e-mail 
-e senha, e se realiza a autenticação via e-mail.
-
-**Situação de teste:** Usuário tenta se cadastrar com todos os campos válidos. 
-
-**Teste:** Preencher nome, CPR, e-mail e senha corretamente. 
-
-**Resultado Esperado:** Usuário cadastrado com sucesso e e-mail de confirmação 
-enviado.
-
-**Situação de teste:** Usuário tenta se cadastrar com e-mail inválido.
-
-**Teste:** Inserir um e-mail no formato incorreto.
-
-**Resultado Esperado:** Exibição de uma mensagem de erro informando que o e-mail é 
-inválido.
-
-**Situação de teste:** Tentativa de cadastro com senha muito curta. 
-
-**Teste:** Inserir uma senha com menos de 8 caracteres.
-
-**Resultado Esperado:** Mensagem de erro indicando o comprimento mínimo da senha. 
-
-**RF-002: Criação e Edição de Perfil de Usuário** 
-
-**Objetivo:** Verificar se o usuário pode criar e editar seu perfil detalhado. 
-
-**Situação de teste:** Usuário cria perfil completo com foto, biografia, WhatsApp e outros 
-dados. 
-
-**Teste:** Preencher todos os campos e salvar o perfil. 
-
-**Resultado Esperado:** Perfil criado com sucesso. 
-
-**Situação de teste:** Usuário edita o perfil e altera a foto e a biografia. 
-
-**Teste**: Alterar os campos e salvar novamente. 
-
-**Resultado Esperado:** Alterações salvas corretamente. 
-
-**RF-003: Login de Usuário** 
-
-**Objetivo:** Garantir que os usuários consigam fazer login com e-mail e senha. 
-
-**Situação de teste:** Login com credenciais corretas. 
-
-**Teste:** Inserir e-mail e senha corretos. 
-
-**Resultado Esperado:** Usuário autenticado com sucesso. 
-
-**Situação de teste:** Tentativa de login com senha incorreta. 
-
-**Teste:** Inserir e-mail correto e senha incorreta. 
-
-**Resultado Esperado:** Mensagem de erro informando falha de autenticação. 
-
-**RF-004: Recuperação de Senha** 
-
-**Objetivo:** Testar a função de recuperação de senha. 
-
-**Situação de teste:** Usuário solicita recuperação de senha com e-mail válido. 
-
-**Teste:** Inserir e-mail cadastrado e solicitar redefinição de senha. 
-
-**Resultado Esperado:** E-mail de redefinição enviado. 
-
-**Situação de teste:** Tentativa de recuperação com e-mail não cadastrado. 
-
-**Teste:** Inserir um e-mail que não está registrado. 
-
-**Resultado Esperado:** Mensagem informando que o e-mail não está cadastrado. 
-
-**RF-005: Pesquisa por Profissionais**
-
-**Objetivo:** Verificar se o sistema permite a busca por profissionais de psicologia. 
-
-**Situação de teste:** Pesquisa por profissionais sem filtro. 
-
-**Teste:** Realizar pesquisa simples sem aplicar filtros. 
-
-**Resultado Esperado:** Lista de profissionais exibida. 
-
-**Situação de teste:** Pesquisa com filtros aplicados (ex: abordagem terapêutica).
-
-**Teste:** Aplicar um filtro específico e pesquisar. 
-
-**Resultado Esperado:** Lista de profissionais filtrada de acordo com os critérios. 
-
-**RF-006: Aplicação de Filtros na Pesquisa** 
-
-**Objetivo:** Verificar se os filtros funcionam corretamente. 
-
-**Situação de teste:** Aplicar filtros como faixa de valores e temas de interesse. 
-
-**Teste:** Selecionar valores e temas específicos e realizar a pesquisa. 
-
-**Resultado Esperado:** Resultados retornados conforme os filtros aplicados. 
-
-**RF-007: Envio de Mensagens via WhatsApp** 
-
-**Objetivo:** Verificar a integração com o WhatsApp. 
-
-**Situação de teste:** Usuário envia mensagem diretamente para o profissional. 
-
-**Teste:** Clicar no botão de enviar mensagem via WhatsApp. 
-
-**Resultado Esperado:** WhatsApp aberto com o número do profissional preenchido. 
-
-**RF-008: Agendamento de Datas no Calendário** 
-
-**Objetivo:** Verificar se o paciente pode selecionar uma data no calendário do 
-profissional. 
-
-**Situação de teste:** Paciente seleciona uma data disponível. 
-
-**Teste:** Escolher uma data e confirmar o agendamento. 
-
-**Resultado Esperado:** Data confirmada com sucesso. 
-
-**RF-009: Confirmação de Data por E-mail** 
-
-**Objetivo:** Garantir que o paciente receba a confirmação do agendamento por e-mail. 
-
-**Situação de teste:** Paciente agenda uma consulta e recebe e-mail de confirmação. 
-
-**Teste:** Verificar caixa de entrada após o agendamento. 
-
-**Resultado Esperado:** E-mail de confirmação recebido com os detalhes da consulta. 
-
-**RF-010: Notificação 2 Horas Antes da Sessão**
-
-**Objetivo:** Verificar se o sistema envia a notificação antes da sessão. 
-
-**Situação de teste:** Envio automático de notificação duas horas antes da sessão. 
-
-**Teste:** Simular uma sessão agendada e verificar o recebimento da notificação. 
-
-**Resultado Esperado:** Notificação recebida a tempo. 
-
-**RF-011: Escrita de Textos no Blog** 
-
-**Objetivo:** Verificar se os profissionais podem escrever e publicar textos no blog. 
-
-**Situação de teste:** Publicação de um texto no blog. 
-
-**Teste:** Escrever um texto e publicá-lo. 
-
-**Resultado Esperado:** Texto publicado corretamente. 
-
-**RF-012: Destaque com Pagamento** 
-
-**Objetivo:** Testar a funcionalidade de pagamento para destacar-se nos filtros de 
-pesquisa. 
-
-**Situação de teste:** Profissional realiza pagamento para destaque. 
-
-**Teste:** Realizar o pagamento e verificar se o perfil aparece em destaque nos filtros. 
-
-**Resultado Esperado:** Perfil destacado conforme o pagamento realizado. 
+Cadastro de Psicólogo e Paciente 
+Requisito: RF01 
+Objetivo: Verificar se o sistema permite o cadastro de psicólogos e pacientes. 
+Pré-condições: O sistema deve estar disponível para novos cadastros. 
+Passos: 
+Acessar a página de cadastro. 
+Preencher os campos obrigatórios (nome, e-mail, telefone, senha). 
+Enviar o formulário de cadastro. 
+Resultado Esperado: O cadastro é criado com sucesso e uma mensagem de confirmação é exibida. 
+
+Envio de E-mail de Confirmação Após Cadastro 
+Requisito: RF02 
+Objetivo: Verificar se o sistema envia um e-mail de confirmação após o cadastro. 
+Pré-condições: O cadastro deve ser realizado. 
+Passos: 
+Completar o cadastro (conforme Cenário 1). 
+Verificar a caixa de entrada do e-mail informado no cadastro. 
+Resultado Esperado: O e-mail de confirmação é recebido com sucesso. 
+
+Login com E-mail e Senha 
+Requisito: RF03 
+Objetivo: Verificar se o sistema permite o login com e-mail e senha válidos. 
+Pré-condições: O usuário deve estar cadastrado e com a conta confirmada. 
+Passos: 
+Acessar a página de login. 
+Inserir e-mail e senha válidos. 
+Clicar em "Entrar". 
+Resultado Esperado: O usuário é autenticado e redirecionado para o painel correto (paciente ou psicólogo). 
+
+Recuperação de Senha 
+Requisito: RF04 
+Objetivo: Verificar se o sistema permite a recuperação de senha. 
+Pré-condições: O usuário deve estar cadastrado. 
+Passos: 
+Acessar a página de recuperação de senha. 
+Inserir o e-mail cadastrado. 
+Enviar a solicitação de recuperação. 
+Resultado Esperado: Um e-mail de recuperação de senha é enviado ao usuário. 
+Edição de Perfil do Psicólogo 
+
+Requisito: RF05 
+Objetivo: Verificar se o psicólogo pode editar seu perfil após o cadastro. 
+Pré-condições: O psicólogo deve estar autenticado. 
+Passos: 
+Acessar o perfil do psicólogo. 
+Editar os campos (especialização, foto, preço, agenda, etc.). 
+Salvar as alterações. 
+Resultado Esperado: As informações atualizadas são salvas com sucesso. 
+
+Edição de Perfil do Paciente 
+Requisito: RF06 
+Objetivo: Verificar se o paciente pode editar seu perfil. 
+Pré-condições: O paciente deve estar autenticado. 
+Passos: 
+Acessar o perfil do paciente. 
+Editar as informações relevantes. 
+Salvar as alterações. 
+Resultado Esperado: As alterações são salvas corretamente. 
+
+Solicitação de Agendamento pelo Paciente 
+Requisito: RF07 
+Objetivo: Verificar se o paciente pode solicitar agendamento. 
+Pré-condições: O paciente deve estar autenticado e o psicólogo deve ter horários disponíveis. 
+Passos: 
+Acessar o perfil do psicólogo. 
+Visualizar os horários disponíveis. 
+Selecionar um horário e enviar a solicitação. 
+Resultado Esperado: A consulta é marcada como pendente e o psicólogo recebe a notificação. 
+
+Acesso a Lista de Consultas Pendentes pelo Psicólogo 
+Requisito: RF08 
+Objetivo: Verificar se o psicólogo pode visualizar e gerenciar sua lista de consultas pendentes. 
+Pré-condições: O psicólogo deve estar autenticado e com consultas pendentes. 
+Passos: 
+Acessar a lista de consultas pendentes. 
+Classificar as consultas como "Agendado", "Cancelado" ou "Concluído". 
+Resultado Esperado: As consultas são gerenciadas corretamente. 
+
+Visualização de Agenda pelo Paciente 
+Requisito: RF09 
+Objetivo: Verificar se o paciente pode visualizar a agenda do psicólogo. 
+Pré-condições: O paciente deve estar autenticado. 
+Passos: 
+Acessar o perfil do psicólogo. 
+Visualizar a agenda com os horários disponíveis. 
+Resultado Esperado: O paciente visualiza os horários disponíveis corretamente. 
+
+Envio de E-mail de Confirmação/Cancelamento 
+Requisito: RF10 
+Objetivo: Verificar se o sistema envia e-mails de confirmação ou cancelamento de consultas. 
+Pré-condições: Uma consulta deve estar pendente ou ser confirmada. 
+Passos: 
+O psicólogo confirma ou cancela a consulta. 
+Verificar o e-mail do paciente. 
+Resultado Esperado: O paciente recebe um e-mail com a confirmação ou cancelamento da consulta. 
+
+Busca com Filtros 
+Requisito: RF11 
+Objetivo: Verificar se o paciente pode buscar psicólogos com filtros. 
+Pré-condições: Psicólogos devem estar cadastrados com informações preenchidas. 
+Passos: 
+Acessar a página de busca. 
+Aplicar filtros (especialidade, preço, disponibilidade). 
+Resultado Esperado: A busca retorna os resultados de acordo com os filtros aplicados. 
+
+Histórico de Consultas para Psicólogos 
+Requisito: RF12 
+Objetivo: Verificar se o psicólogo pode manter um histórico de consultas dos pacientes. 
+Pré-condições: Psicólogo autenticado e consultas registradas. 
+Passos: 
+Acessar o histórico de consultas no painel do psicólogo. 
+Adicionar anotações sobre o progresso do paciente. 
+Resultado Esperado: O histórico é atualizado com sucesso. 
 
 # Ferramentas de Teste
 
