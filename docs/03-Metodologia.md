@@ -64,6 +64,8 @@ Etiquetas:
 
 ![Kanban](https://github.com/user-attachments/assets/3346b696-8513-401a-8cb6-cab42f644e82)
 ![Kanban2](https://github.com/user-attachments/assets/ab2608de-85b7-4d65-9bc5-94da378671b6)
+![Kanban3](https://github.com/user-attachments/assets/9a8fcf62-af52-4464-b388-c7795fe0daf7)
+
 
 ### Ferramentas
 
