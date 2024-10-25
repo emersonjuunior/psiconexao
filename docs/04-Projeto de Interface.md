@@ -1,24 +1,29 @@
 # Projeto de Interface
 
-<img width="1000" alt="Página Inicial" src="https://github.com/user-attachments/assets/62802613-59b8-47dd-bd53-d87b1341d540">
-<img width="500" alt="Página Profissionais" src="https://github.com/user-attachments/assets/bcb0f6f5-4b5c-4933-8a98-12554e4c6c13">
-<img width="500" alt="Página Profissional" src="https://github.com/user-attachments/assets/80f2098e-5362-460e-a252-08de787cdc52">
-<img width="500" alt="Página Área do Profissional - Cadastro" src="https://github.com/user-attachments/assets/6631d289-0aaa-4f0a-acbc-237dbc57e0ff">
-<img width="500" alt="Página Área do Profissional - PósCadastro" src="https://github.com/user-attachments/assets/b1e5b9f4-bb87-4ae4-8132-0f90a0758588">
-<img width="700" alt="Página Área do Profissional - Login" src="https://github.com/user-attachments/assets/187179c4-08cf-4210-a7c8-a513b6b98358">
-<img width="500" alt="Página Área do Profissional - Esqueceu a Senha" src="https://github.com/user-attachments/assets/66482d4f-b0fe-40de-aacf-5ae0c75264df">
-<img width="500" alt="Página Área do Profissional - Redefinir Senha" src="https://github.com/user-attachments/assets/909a2834-573c-4097-9826-2ff3bcfbfa5b">
-<img width="500" alt="Página Editar Perfil" src="https://github.com/user-attachments/assets/9dfb9e40-bde4-491d-a08f-4848f5fbf754">
-<img width="500" alt="Página Área do Profissional - Profissional Premium" src="https://github.com/user-attachments/assets/6d3fc197-fa73-4f94-af4b-1297ca9c4366">
+<img width="1000" alt="Página Inicial" src="https://github.com/user-attachments/assets/3d8008b6-a094-40a2-a9a9-1074beccc890">
+<img width="500" alt="Página Cadastro" src="https://github.com/user-attachments/assets/56e6d54e-670d-4154-9aec-418651245bc3">
+<img width="500" alt="Página PósCadastro" src="https://github.com/user-attachments/assets/bf690618-a4d7-4b74-acb4-077000fad4ac">
+<img width="1000" alt="Página Login" src="https://github.com/user-attachments/assets/30c5a3d4-906c-4f1b-b606-678f746ce5fc">
+<img width="500" alt="Página Esqueceu a Senha" src="https://github.com/user-attachments/assets/6ffbdb1a-00ed-4f42-a959-5b364a5920c9">
+<img width="500" alt="Página Redefinir Senha" src="https://github.com/user-attachments/assets/053d4106-a0e7-437d-8f32-34e54f7bb365">
+<img width="500" alt="Página Psicólogos" src="https://github.com/user-attachments/assets/066a3de4-bc6b-4bde-a6b9-c3634ea879bb">
+<img width="500" alt="Página Psicólogo" src="https://github.com/user-attachments/assets/e9731033-1687-45db-a1c9-d613c2ebb500">
+<img width="500" alt="Página Agendamento (visão do paciente)" src="https://github.com/user-attachments/assets/de1ca900-7088-4cea-bd64-84f8fa7e670c">
+<img width="500" alt="Página Agenda (visão do paciente)" src="https://github.com/user-attachments/assets/faf59b92-bdc2-4403-91ec-05324057f2ab">
+<img width="500" alt="Página Editar Perfil (visão do paciente)" src="https://github.com/user-attachments/assets/3078a8d4-24c5-4057-9828-9dd67d2441ce">
+<img width="500" alt="Página Paciente" src="https://github.com/user-attachments/assets/4bca3e2b-adc0-4a0b-a03a-aa1962a7f807">
+<img width="1000" alt="Página Editar Perfil" src="https://github.com/user-attachments/assets/45744f12-4042-4c6c-b27c-12fd9b1339b2">
+<img width="500" alt="Página Disponibilidade" src="https://github.com/user-attachments/assets/e1e42590-bbfe-46e7-a536-9241e0946699">
+<img width="500" alt="Página Agenda (visão do psicólogo)" src="https://github.com/user-attachments/assets/b9c7ceac-ce28-4882-a30c-84c7e7b5c99e">
 
-- [Interfaces - Desktop](https://www.figma.com/design/PwpcCW3HL5v6EaedC2yNbK/Projeto-PUC?node-id=0-1&node-type=canvas&t=2AnTaCPYb3yNe0Wm-0)
-- [Interfaces - Mobile](https://www.figma.com/design/PwpcCW3HL5v6EaedC2yNbK/Projeto-PUC?node-id=27-114&node-type=canvas&t=2AnTaCPYb3yNe0Wm-0)
+- [Interfaces - Versão Desktop](https://www.figma.com/design/PwpcCW3HL5v6EaedC2yNbK/Projeto-PUC?node-id=0-1&node-type=canvas&t=2AnTaCPYb3yNe0Wm-0)
+- [Interfaces - Versão Mobile](https://www.figma.com/design/PwpcCW3HL5v6EaedC2yNbK/Projeto-PUC?node-id=27-114&node-type=canvas&t=2AnTaCPYb3yNe0Wm-0)
 
 ## Diagrama de Fluxo
 
 O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema interativo e muitas vezes sem a necessidade do desenho do design das telas da interface. Isso permite que o design das interações seja bem planejado e gere impacto na qualidade no design do wireframe interativo que será desenvolvido logo em seguida.
 
-![Diagrama de fluxo](./img/user-flow.png)
+<img width="1000" alt="User Flow - PsiConexão" src="https://github.com/user-attachments/assets/69595634-f62a-47e7-8446-ad2181e1614a">
 
 ## Wireframes
 
