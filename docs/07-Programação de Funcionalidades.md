@@ -8,9 +8,18 @@ Por exemplo: a tabela a seguir deverá ser preenchida considerando os artefatos 
 
 |ID    | Descrição do Requisito  | Artefatos produzidos | Aluno(a) responsável |
 |------|-----------------------------------------|----|----|
-|RF-001| A aplicação deve permitir que o usuário avalie uma agência de intercâmbio com base na sua experiência|  |  |
-|RF-002| A aplicação deve permitir que o usuário inclua comentários ao fazer uma avaliação de uma agência de intercâmbio     |  |  |
-|RF-003| A aplicação deve permitir que o usuário consulte todas as agências de intercâmbio cadastradas ordenando-as com base em suas notas |  |  |
+|RF-001| O sistema deve permitir o cadastro de Psicólogos e pacientes incluindo dados como nome, e-mail, telefone e senha e outras informações essenciais para identificação e autenticação. | Controller `AuthController` e View `Auth`/`Cadastro` | Karina Nunes |
+|RF-002| O sistema deve enviar um e-mail de confirmação após cadastro para garantir a autenticidade dos usuários. | Controller `AuthController` e View `Auth`/`CadastroEmAnalise` | Matheus Bacelar |
+|RF-003| O sistema deve permitir que os usuários consigam logar na aplicação com e-mail e senha e em seguida ter acesso ao seu perfil e menu disponível correspondente a sua autenticação. | Controller `AuthController` e View `Auth`/`Login` | Karina Nunes |
+|RF-004| O sistema deve permitir que os usuários recuperem sua senha por e-mail em casos de esquecimento ou outro pertinente. | Controller `AuthController`, View `Auth`/`EsqueceuSenha` e View `Auth`/`RedefinirSenha` | Karina Nunes |
+|RF-005| O sistema deve permitir que o psicólogo edite seu perfil posteriormente ao cadastro, podendo atualizar informações como áreas de especialização, foto de perfil, descrição profissional, preço de consulta, disponibilidade de agenda e preencher um histórico de consulta dos pacientes atendidos. | Controller `PsicologoController` e View `Psicologo`/`Editar` | Karina Nunes |
+|RF-006| O sistema deve permitir que o paciente edite seu perfil posteriormente ao cadastro, podendo atualizar informações relevantes ao seu perfil. |  | Matheus Bacelar |
+|RF-007| O sistema deve permitir ao paciente enviar solicitação de agendamento de acordo com a disponibilidade do profissional. |  | Patrick Breno, Safira Garcia e Vanessa André |
+|RF-008| O sistema de permitir que o psicólogo tenha acesso a uma lista pendente de consultas que estarão pendentes de avaliação por ele e que poderão ser classificadas em agendar, cancelar ou concluir. Bem como visualizar, de preferência na mesma tela, consultas confirmadas. |  | Emerson Junior e Nayana Loivos |
+|RF-009| O sistema deve permitir que o paciente visualize a agenda com dias e horários disponíveis do profissional desejado e solicite a consultada que ficará pendente até a confirmação ou cancelamento. |  | Emerson Junior e Nayana Loivos |
+|RF-0010| O sistema deve enviar e-mail de confirmação/cancelamento ao paciente que possui uma consulta pendente. |  | Matheus Bacelar |
+|RF-0011| O sistema deve permitir que o paciente realize buscas na aplicação contando com filtros adicionais como especialidade, preço da consulta e horários e datas disponíveis. |  | Patrick Breno, Safira Garcia e Vanessa André |
+|RF-0012|  O sistema deve permitir que os psicólogos acessem e mantenham um histórico das consultas dos pacientes, incluindo anotações e progresso para um acompanhamento contínuo e personalização do atendimento. No entanto, devido à priorização de funcionalidades essenciais, o desenvolvimento desse requisito está planejado para fases futuras do projeto. |  | Patrick Breno, Safira Garcia e Vanessa André |
 
 
 # Instruções de acesso
