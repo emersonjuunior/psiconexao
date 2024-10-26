@@ -13,7 +13,7 @@
 - Plataforma testada: Plataforma de 
 
 - Duração média por sessão: 30 minutos
-- 
+
 
 ## 2. Participantes 
 
@@ -28,7 +28,7 @@
 
 ### Cadastro de Usuário e Login (RF01, RF02, RF03, RF04) 
 
-#### - Tarefa 1: Cadastro de novo usuário e confirmação de e-mail 
+#### Tarefa 1: Cadastro de novo usuário e confirmação de e-mail 
 
 - Tempo médio de execução: 5 minutos 
 
@@ -41,7 +41,7 @@
 - Feedback qualitativo: "Fiquei confuso no início, mas depois achei o fluxo razoável." 
 
 
-#### - Tarefa 2: Login com credenciais criadas 
+#### Tarefa 2: Login com credenciais criadas 
 
 - Tempo médio de execução: 2 minutos 
 
@@ -56,7 +56,7 @@
 
 ### Edição de Perfil (RF05, RF06) 
 
-#### - Tarefa 1: Atualização de perfil de psicólogo 
+#### Tarefa 1: Atualização de perfil de psicólogo 
 
 - Tempo médio de execução: 4 minutos 
 
@@ -84,7 +84,7 @@
 - Feedback qualitativo: "Achei que foi tranquilo utilizar os filtros para fazer a pesquisa, só fiquei um pouco confusa para chegar na página para pesquisar os profissionais." 
 
 
-#### - Tarefa 2: Agendamento de consulta com confirmação de e-mail 
+#### Tarefa 2: Agendamento de consulta com confirmação de e-mail 
 
 - Tempo médio de execução: 2 minutos 
 
