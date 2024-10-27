@@ -50,6 +50,27 @@
                            placeholder="Exemplo: 00/123456"
                            value="@ViewBag.Crp" />
                 </div>
+                <div class="card-col-2 filter-form">
+                    <label for="precoMin">Valor Mínimo</label>
+                    <input type="number"
+                           name="precoMin"
+                           class="input filter-input"
+                           placeholder="Ex.: 50"
+                           min="0"
+                           step="0.01"
+                           value="@ViewBag.PrecoMin" />
+                </div>
+                <div class="card-col-2 filter-form">
+                    <label for="precoMax">Valor Máximo</label>
+                    <input type="number"
+                           name="precoMax"
+                           class="input filter-input"
+                           placeholder="Ex.: 300"
+                           min="0"
+                           step="0.01"
+                           value="@ViewBag.PrecoMax" />
+                </div>
+
                 <input type="submit" class="button filter-button" value="Filtrar" />
             </form>
             <image src="../images/psicologas.png"

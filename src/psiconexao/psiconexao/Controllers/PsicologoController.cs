@@ -87,7 +87,7 @@ namespace psiconexao.Controllers
         }
 
         [AllowAnonymous]
-        public async Task<IActionResult> Lista(string nome, string abordagem, string especialidade, string crp)
+        public async Task<IActionResult> Lista(string nome, string abordagem, string especialidade, string crp, float? precoMin,float? precoMax)
         {
             var psicologos = await _context.Psicologos.ToListAsync();
 
@@ -125,6 +125,19 @@ namespace psiconexao.Controllers
                 consulta = consulta.Where(p => p.TAbordagem.Equals(valorAbordagem));
                 ViewBag.Abordagem = abordagem;
             }
+
+            if (precoMin.HasValue)
+            {
+                consulta = consulta.Where(p => p.PrecoConsulta >= precoMin.Value);
+                ViewBag.PrecoMin = precoMin;
+            }
+
+            if (precoMax.HasValue)
+            {
+                consulta = consulta.Where(p => p.PrecoConsulta <= precoMax.Value);
+                ViewBag.PrecoMax = precoMax;
+            }
+
             Console.WriteLine(consulta.ToString());
             Console.WriteLine(consulta.Where(p => p.TAbordagem.ToString() == abordagem));
 
