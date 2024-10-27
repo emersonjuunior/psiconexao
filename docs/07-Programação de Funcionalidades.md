@@ -18,7 +18,8 @@ Por exemplo: a tabela a seguir deverá ser preenchida considerando os artefatos 
 |RF-008| O sistema de permitir que o psicólogo tenha acesso a uma lista pendente de consultas que estarão pendentes de avaliação por ele e que poderão ser classificadas em agendar, cancelar ou concluir. Bem como visualizar, de preferência na mesma tela, consultas confirmadas. |  | Emerson Junior e Nayana Loivos |
 |RF-009| O sistema deve permitir que o paciente visualize a agenda com dias e horários disponíveis do profissional desejado e solicite a consultada que ficará pendente até a confirmação ou cancelamento. |  | Emerson Junior e Nayana Loivos |
 |RF-0010| O sistema deve enviar e-mail de confirmação/cancelamento ao paciente que possui uma consulta pendente. |  | Matheus Bacelar |
-|RF-0011| O sistema deve permitir que o paciente realize buscas na aplicação contando com filtros adicionais como especialidade, preço da consulta e horários e datas disponíveis. |  | Patrick Breno, Safira Garcia e Vanessa André |
+|RF-0011| O sistema deve permitir que o paciente realize buscas na aplicação contando com filtros adicionais como especialidade, preço da consulta e horários e datas disponíveis. | Controller PsicologoController
+view Psicologo/Lista  | Patrick Breno, Safira Garcia e Vanessa André |
 |RF-0012|  O sistema deve permitir que os psicólogos acessem e mantenham um histórico das consultas dos pacientes, incluindo anotações e progresso para um acompanhamento contínuo e personalização do atendimento. No entanto, devido à priorização de funcionalidades essenciais, o desenvolvimento desse requisito está planejado para fases futuras do projeto. |  | Patrick Breno, Safira Garcia e Vanessa André |
 
 
