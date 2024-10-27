@@ -70,6 +70,24 @@
                            step="0.01"
                            value="@ViewBag.PrecoMax" />
                 </div>
+                <div class="card-col-2 filter-form">
+                    <label for="dataDisponivel">Data Desejada</label>
+                    <input type="date"
+                           name="dataDisponivel"
+                           class="input filter-input"
+                           value="@ViewBag.DataDisponivel" />
+                </div>
+
+                <div class="card-col-2 filter-form">
+                    <label for="horaDisponivel">Hora Desejada</label>
+                    <select name="horaDisponivel" class="input filter-input">
+                        <option value="">Selecione um horário</option>
+                        @for (int hora = 0; hora < 24; hora++)
+                        {
+                            <option value="@hora:00">@hora:00</option>
+                        }
+                    </select>
+                </div>
 
                 <input type="submit" class="button filter-button" value="Filtrar" />
             </form>

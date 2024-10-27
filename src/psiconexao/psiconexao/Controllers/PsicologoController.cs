@@ -87,7 +87,7 @@ namespace psiconexao.Controllers
         }
 
         [AllowAnonymous]
-        public async Task<IActionResult> Lista(string nome, string abordagem, string especialidade, string crp, float? precoMin,float? precoMax)
+        public async Task<IActionResult> Lista(string nome, string abordagem, string especialidade, string crp, float? precoMin,float? precoMax, DateTime? dataDisponivel, TimeSpan? horaDisponivel)
         {
             var psicologos = await _context.Psicologos.ToListAsync();
 
@@ -136,6 +136,20 @@ namespace psiconexao.Controllers
             {
                 consulta = consulta.Where(p => p.PrecoConsulta <= precoMax.Value);
                 ViewBag.PrecoMax = precoMax;
+            }
+
+            if (dataDisponivel.HasValue)
+            {
+                consulta = consulta.Where(p => p.Disponibilidades.Any(d =>
+                    d.DataInicio <= dataDisponivel && d.DataFim >= dataDisponivel));
+                ViewBag.DataDisponivel = dataDisponivel.Value.ToString("yyyy-MM-dd");
+            }
+
+            if (horaDisponivel.HasValue)
+            {
+                consulta = consulta.Where(p => p.Disponibilidades.Any(d =>
+                    d.HoraInicio <= horaDisponivel && d.HoraFim >= horaDisponivel));
+                ViewBag.HoraDisponivel = horaDisponivel.Value.ToString(@"hh\:mm");
             }
 
             Console.WriteLine(consulta.ToString());
