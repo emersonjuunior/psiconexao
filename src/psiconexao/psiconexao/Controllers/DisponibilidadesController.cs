@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -163,7 +163,8 @@ namespace psiconexao.Controllers
                 .Select(d => new {
                     title = d.Estado ? "Disponível" : "Indisponível",
                     start = d.DataInicio.ToString("yyyy-MM-dd") + "T" + d.HoraInicio.ToString(@"hh\:mm\:ss"),
-                    end = d.DataFim.ToString("yyyy-MM-dd") + "T" + d.HoraFim.ToString(@"hh\:mm\:ss")
+                    end = d.DataFim.ToString("yyyy-MM-dd") + "T" + d.HoraFim.ToString(@"hh\:mm\:ss"),
+                    backgroundColor = d.Estado ? "rgb(100 231 153)" : "rgb(229 229 229)"
                 }).ToList();
 
             return new JsonResult(disponibilidades);

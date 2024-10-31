@@ -58,7 +58,10 @@
                 var calendarEl = document.getElementById('calendar');
                 var calendar = new FullCalendar.Calendar(calendarEl, {
                     initialView: 'dayGridMonth',
-                    events: '/Disponibilidades/GetDisponibilidades?psicologoId=@Model.UsuarioId' // Passar o ID do psicólogo
+                    events: '/Disponibilidades/GetDisponibilidades?psicologoId=@Model.UsuarioId', // Passar o ID do psicólogo
+                    dateClick: function(info) {
+                        window.location.href = '/Consultas/Create?date=' + info.dateStr;
+                    },
                 });
                 calendar.render();
             });

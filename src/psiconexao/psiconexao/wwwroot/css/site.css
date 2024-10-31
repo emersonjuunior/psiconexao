@@ -379,6 +379,16 @@ a, a:hover {
     padding: 12px 0;
 }
 
+.create-container {
+    margin: 0 20px;
+}
+
+.btn-full-width {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 @media (max-width: 1280px) {
     .card-item {
         max-width: 100%;

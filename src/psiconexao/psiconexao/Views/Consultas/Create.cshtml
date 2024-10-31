@@ -2,8 +2,10 @@
 
 @{
     ViewData["Title"] = "Create";
+    var queryDate = Context.Request.Query["date"];
 }
 
+<div class="create-container">
 <h1>Create</h1>
 
 <h4>Consulta</h4>
@@ -14,21 +16,31 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Data" class="control-label"></label>
-                <input asp-for="Data" class="form-control" />
+                <input asp-for="Data" class="form-control" value="@queryDate" />
                 <span asp-validation-for="Data" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Hora" class="control-label"></label>
-                <input asp-for="Hora" class="form-control" />
+                <input type="text" id="horaInput" class="form-control" />
+                <select asp-for="Hora" class="form-control" id="horaSelect" style="display:none;">
+                    @for (int hour = 0; hour < 24; hour++)
+                    {
+                        for (int minute = 0; minute < 60; minute += 30)
+                        {
+                            var time = $"{hour:D2}:{minute:D2}";
+                            <option value="@time">@time</option>
+                        }
+                    }
+                </select>
                 <span asp-validation-for="Hora" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PsicologoId" class="control-label"></label>
-                <select asp-for="PsicologoId" class ="form-control" asp-items="ViewBag.PsicologoId"></select>
+                <label asp-for="Psicologo" class="control-label"></label>
+                <select asp-for="Psicologo" class ="form-control" asp-items="ViewBag.PsicologoId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="PacienteId" class="control-label"></label>
-                <select asp-for="PacienteId" class ="form-control" asp-items="ViewBag.PacienteId"></select>
+                <label asp-for="Paciente" class="control-label"></label>
+                <select asp-for="Paciente" class ="form-control" asp-items="ViewBag.PacienteId"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Estado" class="control-label"></label>
@@ -36,7 +48,7 @@
                 <span asp-validation-for="Estado" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-primary btn-full-width" />
             </div>
         </form>
     </div>
@@ -45,7 +57,30 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
+</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <script>
+        $(function() {
+            var availableTimes = [];
+            for (var hour = 0; hour < 24; hour++) {
+                for (var minute = 0; minute < 60; minute += 30) {
+                    availableTimes.push(('0' + hour).slice(-2) + ':' + ('0' + minute).slice(-2));
+                }
+            }
+            $("#horaInput").autocomplete({
+                source: availableTimes,
+                select: function(event, ui) {
+                    $("#horaSelect").val(ui.item.value);
+                },
+                minLength: 0
+            }).focus(function() {
+                $(this).autocomplete("search", "");
+            });
+        });
+    </script>
 }
