@@ -1,25 +1,66 @@
 ﻿document.addEventListener('DOMContentLoaded', function () {
     const calendarEl = document.getElementById('calendar');
-    const today = new Date().toISOString().split('T')[0]; 
+    const today = new Date().toISOString().split('T')[0];
+
+    const mesesEmPortugues = [
+        'Janeiro', 'Fevereiro', 'Março', 'Abril',
+        'Maio', 'Junho', 'Julho', 'Agosto',
+        'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+    ];
+
+    const diasSemanaEmPortugues = [
+        'Domingo', 'Segunda-feira', 'Terça-feira',
+        'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'
+    ];
 
     const calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth', // Exibe o calendário mensalmente
-
-        //apenas datas a partir de hoje são permitidas
+        initialView: 'dayGridMonth',
         validRange: {
-            start: today, 
+            start: today,
         },
-
-        selectable: true, // Permite selecionar uma data no calendário
+        selectable: true,
 
         dateClick: function (info) {
-            const selectedDate = info.dateStr
+            const selectedDate = info.dateStr;
             localStorage.setItem("date", selectedDate);
+            console.log("Data selecionada: ", selectedDate);
         },
 
+        headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+        },
+
+        titleFormat: {
+            month: 'long',
+            year: 'numeric'
+        },
+
+        dayHeaderContent: (args) => {
+            return diasSemanaEmPortugues[args.date.getUTCDay()];
+        },
+
+        datesSet: function (dateInfo) {
+            const centerDate = new Date(
+                (dateInfo.start.getTime() + dateInfo.end.getTime()) / 2
+            );
+            const monthIndex = centerDate.getMonth();
+            const year = centerDate.getFullYear();
+
+            const titleElement = document.querySelector('.fc-toolbar-title');
+            titleElement.innerText = `${mesesEmPortugues[monthIndex]} ${year}`;
+        },
+
+        buttonText: {
+            today: 'Hoje',
+            month: 'Mês',
+            week: 'Semana',
+            day: 'Dia',
+            prev: 'Anterior',
+            next: 'Próximo'
+        }
     });
 
     calendar.render();
 });
-
-
