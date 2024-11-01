@@ -20,10 +20,12 @@
         },
         selectable: true,
 
+        events: '/Disponibilidades/GetDisponibilidades?psicologoId=@Model.UsuarioId', // Passar o ID do psicólogo
+   
         dateClick: function (info) {
             const selectedDate = info.dateStr;
             localStorage.setItem("date", selectedDate);
-            console.log("Data selecionada: ", selectedDate);
+            window.location.href = '/Consultas/Create?date=' + info.dateStr;
         },
 
         headerToolbar: {
