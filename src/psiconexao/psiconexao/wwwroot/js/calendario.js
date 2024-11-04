@@ -4,7 +4,7 @@
 
     const mesesEmPortugues = [
         'Janeiro', 'Fevereiro', 'Março', 'Abril',
-        'Maio', 'Junho', 'Julho', 'Agosto',
+        'Maio', 'Junho', 'Julho', 'Agosto', 
         'Setembro', 'Outubro', 'Novembro', 'Dezembro'
     ];
 
@@ -20,8 +20,9 @@
         },
         selectable: true,
 
-        events: '/Disponibilidades/GetDisponibilidades?psicologoId=@Model.UsuarioId', // Passar o ID do psicólogo
-   
+        // Configura o endpoint dos eventos para buscar disponibilidades
+        events: '/Disponibilidades/GetDisponibilidades?psicologoId=@Model.UsuarioId',
+
         dateClick: function (info) {
             const selectedDate = info.dateStr;
             localStorage.setItem("date", selectedDate);

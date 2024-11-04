@@ -1,10 +1,10 @@
 ﻿@model psiconexao.Models.Consulta
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Criar Consulta";
 }
 
-<h1>Create</h1>
+<h1>Criar Consulta</h1>
 
 <h4>Consulta</h4>
 <hr />
@@ -19,7 +19,9 @@
             </div>
             <div class="form-group">
                 <label asp-for="Hora" class="control-label"></label>
-                <input asp-for="Hora" class="form-control" />
+                <select asp-for="Hora" class="form-control" id="input-hora-consulta">
+                    <option value="">Selecione um horário</option>
+                </select>
                 <span asp-validation-for="Hora" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -36,20 +38,109 @@
                 <span asp-validation-for="Estado" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Criar" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Voltar para a Lista</a>
 </div>
 
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
-        <script defer src="~/js/createConsulta.js"></script>
     }
-}
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            const inputDataConsulta = document.querySelector("#input-data-consulta");
+            const inputHoraConsulta = document.querySelector("#input-hora-consulta");
+            const today = new Date().toISOString().split("T")[0]; // Data de hoje no formato yyyy-mm-dd
+            const selectedDate = localStorage.getItem("selectedDate");
 
+            // Define a data mínima como hoje para impedir datas passadas
+            inputDataConsulta.setAttribute("min", today);
+
+            // Carregar datas e horários disponíveis do profissional
+            const psicologoId = document.querySelector("select[name='PsicologoId']").value;
+            let availableDates = [];
+            let disponibilidadeHorarios = {};
+
+            if (psicologoId) {
+                const response = await fetch(`/Disponibilidades/GetDisponibilidades?psicologoId=${psicologoId}`);
+                const disponibilidades = await response.json();
+
+                // Expandir intervalos de datas e horários
+                disponibilidades.forEach(d => {
+                    const startDate = new Date(d.start.split("T")[0]);
+                    const endDate = new Date(d.end.split("T")[0]);
+                    const startTime = d.start.split("T")[1];
+                    const endTime = d.end.split("T")[1];
+
+                    for (let date = new Date(startDate); date <= endDate; date.setDate(date.getDate() + 1)) {
+                        const formattedDate = date.toISOString().split("T")[0];
+                        if (formattedDate >= today) { // Apenas incluir datas futuras ou iguais a hoje
+                            availableDates.push(formattedDate);
+
+                            // Armazenar horários disponíveis para cada data
+                            if (!disponibilidadeHorarios[formattedDate]) {
+                                disponibilidadeHorarios[formattedDate] = { start: startTime, end: endTime };
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Função para preencher os horários disponíveis no campo de horário
+            function preencherHorariosDisponiveis(data) {
+                inputHoraConsulta.innerHTML = '<option value="">Selecione um horário</option>';
+                if (disponibilidadeHorarios[data]) {
+                    const { start, end } = disponibilidadeHorarios[data];
+                    const startTime = new Date(`1970-01-01T${start}`);
+                    const endTime = new Date(`1970-01-01T${end}`);
+
+                    for (let time = new Date(startTime); time <= endTime; time.setMinutes(time.getMinutes() + 30)) {
+                        const hours = time.getHours().toString().padStart(2, '0');
+                        const minutes = time.getMinutes().toString().padStart(2, '0');
+                        const formattedTime = `${hours}:${minutes}`;
+                        const option = document.createElement("option");
+                        option.value = formattedTime;
+                        option.textContent = formattedTime;
+                        inputHoraConsulta.appendChild(option);
+                    }
+                }
+            }
+
+            // Preencher campo de data com a data selecionada e atualizar horários, se disponível
+            if (selectedDate && availableDates.includes(selectedDate)) {
+                inputDataConsulta.value = selectedDate;
+                preencherHorariosDisponiveis(selectedDate);
+                localStorage.removeItem("selectedDate");
+            }
+
+            // Validação e preenchimento de horários com base na data selecionada
+            inputDataConsulta.addEventListener('input', function () {
+                const selectedDate = inputDataConsulta.value;
+
+                if (!availableDates.includes(selectedDate)) {
+                    inputDataConsulta.value = ""; // Limpar se a data não for disponível ou é passada
+                    alert("A data selecionada não está disponível ou é uma data passada.");
+                    inputHoraConsulta.innerHTML = '<option value="">Selecione um horário</option>'; // Limpar horários
+                    return;
+                }
+
+                // Preencher horários disponíveis para a data selecionada
+                preencherHorariosDisponiveis(selectedDate);
+            });
+
+            // Configuração de min e max para o campo de data com base nas datas disponíveis futuras
+            inputDataConsulta.addEventListener('focus', function () {
+                if (availableDates.length > 0) {
+                    inputDataConsulta.setAttribute("min", today);
+                    inputDataConsulta.setAttribute("max", availableDates[availableDates.length - 1]);
+                }
+            });
+        });
+    </script>
+}
