@@ -56,22 +56,24 @@
         document.addEventListener('DOMContentLoaded', async function () {
             const inputDataConsulta = document.querySelector("#input-data-consulta");
             const inputHoraConsulta = document.querySelector("#input-hora-consulta");
-            const today = new Date().toISOString().split("T")[0]; // Data de hoje no formato yyyy-mm-dd
+            const today = new Date().toISOString().split("T")[0];
             const selectedDate = localStorage.getItem("selectedDate");
 
             // Define a data mínima como hoje para impedir datas passadas
             inputDataConsulta.setAttribute("min", today);
 
-            // Carregar datas e horários disponíveis do profissional
             const psicologoId = document.querySelector("select[name='PsicologoId']").value;
             let availableDates = [];
             let disponibilidadeHorarios = {};
 
             if (psicologoId) {
+                // Obter disponibilidades do psicólogo
                 const response = await fetch(`/Disponibilidades/GetDisponibilidades?psicologoId=${psicologoId}`);
                 const disponibilidades = await response.json();
 
-                // Expandir intervalos de datas e horários
+                console.log("Disponibilidades recebidas:", disponibilidades);
+
+                // Expandir intervalos de datas e horários para obter apenas datas válidas
                 disponibilidades.forEach(d => {
                     const startDate = new Date(d.start.split("T")[0]);
                     const endDate = new Date(d.end.split("T")[0]);
@@ -80,66 +82,103 @@
 
                     for (let date = new Date(startDate); date <= endDate; date.setDate(date.getDate() + 1)) {
                         const formattedDate = date.toISOString().split("T")[0];
-                        if (formattedDate >= today) { // Apenas incluir datas futuras ou iguais a hoje
+                        if (formattedDate >= today) { // Garantir apenas datas futuras ou iguais a hoje
                             availableDates.push(formattedDate);
-
-                            // Armazenar horários disponíveis para cada data
                             if (!disponibilidadeHorarios[formattedDate]) {
                                 disponibilidadeHorarios[formattedDate] = { start: startTime, end: endTime };
                             }
                         }
                     }
                 });
+                console.log("Datas disponíveis:", availableDates);
+                console.log("Horários de disponibilidade por data:", disponibilidadeHorarios);
             }
 
-            // Função para preencher os horários disponíveis no campo de horário
-            function preencherHorariosDisponiveis(data) {
+            // Função para preencher os horários disponíveis, excluindo horários ocupados
+            async function preencherHorariosDisponiveis(data) {
                 inputHoraConsulta.innerHTML = '<option value="">Selecione um horário</option>';
+
                 if (disponibilidadeHorarios[data]) {
                     const { start, end } = disponibilidadeHorarios[data];
                     const startTime = new Date(`1970-01-01T${start}`);
                     const endTime = new Date(`1970-01-01T${end}`);
+                    let ocupados = new Set();
 
+                    // Formatando a data para passar na URL
+                    const formattedDate = new Date(data).toISOString().split("T")[0];
+
+                    // Carregar horários de consultas já agendadas para essa data
+                    const response = await fetch(`/Disponibilidades/GetConsultasParaData?psicologoId=${psicologoId}&data=${formattedDate}`);
+                    if (response.ok) {
+                        const consultas = await response.json();
+                        console.log("Consultas agendadas para a data:", formattedDate, consultas);
+
+                        // Marcar horários ocupados em intervalos de 59 minutos
+                        consultas.forEach(c => {
+                            const horaInicio = new Date(`1970-01-01T${c.horaInicio}`);
+
+                            // Calcular os minutos de início e fim da consulta
+                            const minutosInicio = horaInicio.getHours() * 60 + horaInicio.getMinutes();
+                            const minutosFim = minutosInicio + 59;
+
+                            // Adicionar cada intervalo de 30 minutos entre o início e o fim ao conjunto de ocupados
+                            for (let minutos = minutosInicio; minutos <= minutosFim; minutos += 30) {
+                                const horas = Math.floor(minutos / 60).toString().padStart(2, '0');
+                                const minutosRestantes = (minutos % 60).toString().padStart(2, '0');
+                                ocupados.add(`${horas}:${minutosRestantes}`);
+                            }
+                        });
+                    } else {
+                        console.error("Erro ao carregar consultas:", response.status);
+                    }
+
+                    console.log("Horários ocupados (atualizado):", Array.from(ocupados));
+
+                    // Preencher horários disponíveis, excluindo os horários ocupados
                     for (let time = new Date(startTime); time <= endTime; time.setMinutes(time.getMinutes() + 30)) {
                         const hours = time.getHours().toString().padStart(2, '0');
                         const minutes = time.getMinutes().toString().padStart(2, '0');
                         const formattedTime = `${hours}:${minutes}`;
-                        const option = document.createElement("option");
-                        option.value = formattedTime;
-                        option.textContent = formattedTime;
-                        inputHoraConsulta.appendChild(option);
+                        if (!ocupados.has(formattedTime)) {
+                            const option = document.createElement("option");
+                            option.value = formattedTime;
+                            option.textContent = formattedTime;
+                            inputHoraConsulta.appendChild(option);
+                        }
                     }
+
+                    console.log("Horários disponíveis para seleção (após exclusão de ocupados):", inputHoraConsulta.innerHTML);
                 }
             }
+
+            // Exibir apenas as datas disponíveis
+            inputDataConsulta.addEventListener('focus', function () {
+                if (availableDates.length > 0) {
+                    inputDataConsulta.setAttribute("min", availableDates[0]);
+                    inputDataConsulta.setAttribute("max", availableDates[availableDates.length - 1]);
+                }
+            });
 
             // Preencher campo de data com a data selecionada e atualizar horários, se disponível
             if (selectedDate && availableDates.includes(selectedDate)) {
                 inputDataConsulta.value = selectedDate;
-                preencherHorariosDisponiveis(selectedDate);
+                await preencherHorariosDisponiveis(selectedDate);
                 localStorage.removeItem("selectedDate");
             }
 
             // Validação e preenchimento de horários com base na data selecionada
-            inputDataConsulta.addEventListener('input', function () {
+            inputDataConsulta.addEventListener('input', async function () {
                 const selectedDate = inputDataConsulta.value;
 
                 if (!availableDates.includes(selectedDate)) {
-                    inputDataConsulta.value = ""; // Limpar se a data não for disponível ou é passada
-                    alert("A data selecionada não está disponível ou é uma data passada.");
+                    inputDataConsulta.value = ""; // Limpar se a data não for disponível
+                    alert("A data selecionada não está disponível.");
                     inputHoraConsulta.innerHTML = '<option value="">Selecione um horário</option>'; // Limpar horários
                     return;
                 }
 
                 // Preencher horários disponíveis para a data selecionada
-                preencherHorariosDisponiveis(selectedDate);
-            });
-
-            // Configuração de min e max para o campo de data com base nas datas disponíveis futuras
-            inputDataConsulta.addEventListener('focus', function () {
-                if (availableDates.length > 0) {
-                    inputDataConsulta.setAttribute("min", today);
-                    inputDataConsulta.setAttribute("max", availableDates[availableDates.length - 1]);
-                }
+                await preencherHorariosDisponiveis(selectedDate);
             });
         });
     </script>

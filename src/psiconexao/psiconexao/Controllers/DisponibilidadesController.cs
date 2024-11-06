@@ -170,6 +170,19 @@ namespace psiconexao.Controllers
             return new JsonResult(disponibilidades);
         }
 
+        public JsonResult GetConsultasParaData(int psicologoId, DateTime data)
+        {
+            var consultas = _context.Consultas
+                .Where(c => c.PsicologoId == psicologoId && c.Data == data)
+                .Select(c => new
+                {
+                    HoraInicio = c.Hora,
+                    HoraFim = c.Hora.Add(new TimeSpan(0, 59, 0)) // Cada consulta dura 59 minutos
+                })
+                .ToList();
+
+            return new JsonResult(consultas);
+        }
         private bool DisponibilidadeExists(int id)
         {
             return _context.Disponibilidades.Any(e => e.DisponibilidadeId == id);

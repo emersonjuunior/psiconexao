@@ -160,7 +160,6 @@ namespace psiconexao.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
         private bool ConsultaExists(int id)
         {
             return _context.Consultas.Any(e => e.ConsultaId == id);
