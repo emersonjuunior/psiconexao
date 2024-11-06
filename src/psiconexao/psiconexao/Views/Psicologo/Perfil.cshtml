@@ -100,7 +100,7 @@
                     // Check if clicked date is in the list of available dates
                     if (availableDates.includes(clickedDate)) {
                         localStorage.setItem("selectedDate", clickedDate);
-                        window.location.href = '/Consultas/Create?date=' + clickedDate;
+                        window.location.href = '/Consultas/Create?data=' + clickedDate;
                     } else {
                         alert('Esta data não está disponível.');
                     }

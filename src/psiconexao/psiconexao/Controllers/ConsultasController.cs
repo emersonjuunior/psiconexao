@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using psiconexao.Models;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace psiconexao.Controllers
 {
@@ -46,11 +48,32 @@ namespace psiconexao.Controllers
         }
 
         // GET: Consultas/Create
-        public IActionResult Create()
+        public IActionResult Create(int psicologoId, string data)
         {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Obter o ID do usuário logado
+            if (!int.TryParse(userId, out int pacienteId))
+            {
+                return NotFound("ID do paciente inválido.");
+            }
+
+            var paciente = _context.Pacientes.FirstOrDefault(p => p.UsuarioId == pacienteId);
+
+            if (paciente == null)
+            {
+                return NotFound("Paciente não encontrado.");
+            }
+           
+            var consulta = new Consulta
+            {
+                PsicologoId = psicologoId,
+                Data = DateTime.Parse(data),
+                PacienteId = paciente.UsuarioId,
+                Estado = Estado.Pendente
+            };
+
             ViewData["PacienteId"] = new SelectList(_context.Pacientes, "UsuarioId", "Email");
             ViewData["PsicologoId"] = new SelectList(_context.Psicologos, "UsuarioId", "Email");
-            return View();
+            return View(consulta);
         }
 
         // POST: Consultas/Create
@@ -159,10 +182,61 @@ namespace psiconexao.Controllers
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+        }              
+
+        //GET: Consultas/Pendentes
+        public async Task<IActionResult> Pendentes()
+        {
+            var consultasPendentes = _context.Consultas
+                    .Include(c => c.Psicologo)
+                    .Include(c => c.Paciente)
+                    .Where(c => c.Estado == Estado.Pendente);
+            return View(await consultasPendentes.ToListAsync());
+        }
+
+        // GET: Consultas/Agendadas
+        public async Task<IActionResult> Agendadas()
+        {
+            var consultasAgendadas = _context.Consultas
+                .Include(c => c.Psicologo)
+                .Include(c => c.Paciente)
+                .Where(c => c.Estado == Estado.Agendada);
+            return View(await consultasAgendadas.ToListAsync());
+        }
+
+        // Método para confirmar uma consulta
+        public async Task<IActionResult> Confirmar(int id)
+        {
+            var consulta = await _context.Consultas.FindAsync(id);
+            if (consulta == null)
+            {
+                return NotFound();
+            }
+
+            consulta.Estado = Estado.Agendada;
+            _context.Update(consulta);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Pendentes));
+        }
+
+        // Método para rejeitar uma consulta
+        public async Task<IActionResult> Rejeitar(int id)
+        {
+            var consulta = await _context.Consultas.FindAsync(id);
+            if (consulta == null)
+            {
+                return NotFound();
+            }
+
+            _context.Consultas.Remove(consulta);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Pendentes));
         }
         private bool ConsultaExists(int id)
         {
             return _context.Consultas.Any(e => e.ConsultaId == id);
         }
-    }
+    }       
 }
