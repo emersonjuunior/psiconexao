@@ -60,7 +60,8 @@ namespace psiconexao.Controllers
 
                         _context.Pacientes.Add(paciente);
                         await _context.SaveChangesAsync();
-                        return RedirectToAction("Agenda");
+
+                        return RedirectToAction("Index", "Consultas");
 
                     }
                     else if (usuario.Perfil == Perfil.Psicologo)
@@ -132,7 +133,7 @@ namespace psiconexao.Controllers
                 }
                 else if (usuario.Perfil == Perfil.Paciente)
                 {
-                    return RedirectToAction("Agenda", "Paciente", new { id = usuario.UsuarioId });
+                    return RedirectToAction("Index", "Consultas");
                 }
             }
 
