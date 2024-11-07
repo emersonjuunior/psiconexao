@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace psiconexao.Controllers
 {
+    [Authorize(Roles = "Psicologo")]
     public class ConsultasController : Controller
     {
         private readonly AppDbContext _context;
@@ -20,6 +22,7 @@ namespace psiconexao.Controllers
             _context = context;
         }
 
+        [AllowAnonymous]
         // GET: Consultas
         public async Task<IActionResult> Index()
         {
@@ -150,6 +153,7 @@ namespace psiconexao.Controllers
         }
 
         // GET: Consultas/Delete/5
+        [AllowAnonymous]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -170,6 +174,7 @@ namespace psiconexao.Controllers
         }
 
         // POST: Consultas/Delete/5
+        [AllowAnonymous]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
