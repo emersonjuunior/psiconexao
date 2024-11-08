@@ -22,9 +22,18 @@ namespace psiconexao.Controllers
         }
 
         // GET: Consultas
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? id)
         {
-            var appDbContext = _context.Consultas.Include(c => c.Paciente).Include(c => c.Psicologo);
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var appDbContext = _context.Consultas
+                .Include(c => c.Paciente)
+                .Include(c => c.Psicologo)
+                .Where(c => c.PacienteId == id.Value || c.PsicologoId == id.Value);
+
             return View(await appDbContext.ToListAsync());
         }
 
@@ -84,11 +93,13 @@ namespace psiconexao.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ConsultaId,Data,Hora,PsicologoId,PacienteId,Estado")] Consulta consulta)
         {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
             if (ModelState.IsValid)
             {
                 _context.Add(consulta);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", new { id = userId });
             }
             ViewData["PacienteId"] = new SelectList(_context.Pacientes, "UsuarioId", "Email", consulta.PacienteId);
             ViewData["PsicologoId"] = new SelectList(_context.Psicologos, "UsuarioId", "Email", consulta.PsicologoId);
@@ -209,6 +220,8 @@ namespace psiconexao.Controllers
         // Método para confirmar uma consulta
         public async Task<IActionResult> Confirmar(int id)
         {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
             var consulta = await _context.Consultas.FindAsync(id);
             if (consulta == null)
             {
@@ -219,12 +232,14 @@ namespace psiconexao.Controllers
             _context.Update(consulta);
             await _context.SaveChangesAsync();
 
-            return RedirectToAction(nameof(Pendentes));
+            return RedirectToAction("Index", new { id = userId });
         }
 
         // Método para rejeitar uma consulta
         public async Task<IActionResult> Rejeitar(int id)
         {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
             var consulta = await _context.Consultas.FindAsync(id);
             if (consulta == null)
             {
@@ -234,7 +249,7 @@ namespace psiconexao.Controllers
             _context.Consultas.Remove(consulta);
             await _context.SaveChangesAsync();
 
-            return RedirectToAction(nameof(Pendentes));
+            return RedirectToAction("Index", new { id = userId });
         }
         private bool ConsultaExists(int id)
         {
