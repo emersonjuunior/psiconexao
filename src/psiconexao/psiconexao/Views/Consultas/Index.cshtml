@@ -30,7 +30,7 @@
                 {
                     if(Model.Where(m => m.Estado == Estado.Pendente).Count() > 0)
                     {
-                        <div class="card-item">
+                        <div class="card-col-4 ps-4 vw-100">
                             <h4>Lista de consultas pendentes</h4>
                             <table class="table">
                                 <thead>
@@ -67,7 +67,7 @@
                                                 </a>
                                             </td>
                                             <td>
-                                                <a asp-action="Confirmar" asp-route-id="@item.ConsultaId">Confirmar</a>
+                                                <a asp-action="Confirmar" asp-route-id="@item.ConsultaId" class="tag">Confirmar</a>
                                             </td>
                                             <td>
                                                 <a asp-action="Rejeitar" asp-route-id="@item.ConsultaId">Recusar</a>
