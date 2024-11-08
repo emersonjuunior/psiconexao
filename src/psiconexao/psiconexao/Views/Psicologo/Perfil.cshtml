@@ -19,7 +19,16 @@
                     <h2>@Model.Nome</h2>
                     <h4 class="profissional-subtitle">CRP: @Model.Crp</h4>
                 </div>
-                <button class="button w-auto">Agendar consulta</button>
+                @{
+                    if (User.IsInRole(Perfil.Paciente.ToString()))
+                    {
+                        <a href="#calendar-container" class="button w-auto">Agendar consulta</a>
+                    }
+                    else if (User.IsInRole(Perfil.Psicologo.ToString()))
+                    {
+                        <a asp-controller="Disponibilidades" asp-action="Create" class="button w-auto">Gerar disponibilidades</a>
+                    }
+                }
             </div>
         </div>
     </div>
