@@ -12,7 +12,6 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace psiconexao.Controllers
 {
-    [Authorize(Roles = "Psicologo")]
     public class ConsultasController : Controller
     {
         private readonly AppDbContext _context;
@@ -22,7 +21,6 @@ namespace psiconexao.Controllers
             _context = context;
         }
 
-        [AllowAnonymous]
         // GET: Consultas
         public async Task<IActionResult> Index()
         {
@@ -174,7 +172,6 @@ namespace psiconexao.Controllers
         }
 
         // POST: Consultas/Delete/5
-        [AllowAnonymous]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

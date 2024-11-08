@@ -10,7 +10,6 @@ using psiconexao.Models;
 
 namespace psiconexao.Controllers
 {
-    [Authorize(Roles = "Psicologo")]
     public class DisponibilidadesController : Controller
     {
         private readonly AppDbContext _context;
