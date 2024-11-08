@@ -41,6 +41,7 @@
                         else if (@User.IsInRole(Perfil.Paciente.ToString()))
                         {
                             <a asp-controller="Paciente" asp-action="Perfil" asp-route-id="@userId">Olá, @User.Identity.Name</a>
+                            <a asp-controller="Psicologo" asp-action="Lista">Psicólogos</a>
                             <a asp-controller="Paciente" asp-action="Editar" asp-route-id="@userId">Editar Perfil</a>
                             <a asp-controller="Consultas" asp-action="Index" asp-route-id="@userId">Agenda</a>
                         }
@@ -68,6 +69,7 @@
                         else if (@User.IsInRole(Perfil.Paciente.ToString()))
                         {
                             <a asp-controller="Paciente" asp-action="Perfil" asp-route-id="@userId">Olá, @User.Identity.Name</a> <span>•</span>
+                            <a asp-controller="Psicologo" asp-action="Lista">Psicólogos</a> <span>•</span>
                             <a asp-controller="Paciente" asp-action="Editar" asp-route-id="@userId">Editar Perfil</a> <span>•</span>
                             <a asp-controller="Consultas" asp-action="Index" asp-route-id="@userId">Agenda</a> <span>•</span>
                         }

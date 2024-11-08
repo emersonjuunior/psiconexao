@@ -489,16 +489,8 @@ a, a:hover {
     .alert-content {
         padding: 20px;
     }
-}
 
-@media (max-width: 768px) {
-    h3 {
-        margin: 0;
-    }
-
-    .principal-header {
-        flex-direction: column-reverse;
-    }
+    /* NAV */
 
     .header-content {
         justify-content: center;
@@ -548,6 +540,16 @@ a, a:hover {
 
     .menu-nav {
         display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    h3 {
+        margin: 0;
+    }
+
+    .principal-header {
+        flex-direction: column-reverse;
     }
 }
 
