@@ -4,48 +4,45 @@
     ViewData["Title"] = "Criar Consulta";
 }
 
-<h1>Criar Consulta</h1>
+<link rel="stylesheet" href="/css/psicologoEditar.css">
 
-<h4>Consulta</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Data" class="control-label"></label>
-                <input asp-for="Data" class="form-control" id="input-data-consulta" />
-                <span asp-validation-for="Data" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Hora" class="control-label"></label>
-                <select asp-for="Hora" class="form-control" id="input-hora-consulta">
-                    <option value="">Selecione um horário</option>
-                </select>
-                <span asp-validation-for="Hora" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PsicologoId" class="control-label"></label>
-                <select asp-for="PsicologoId" class="form-control" asp-items="ViewBag.PsicologoId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="PacienteId" class="control-label"></label>
-                <select asp-for="PacienteId" class="form-control" asp-items="ViewBag.PacienteId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Estado" class="control-label"></label>
-                <select asp-for="Estado" class="form-control" asp-items="Html.GetEnumSelectList<Estado>()" style="pointer-events: none" readonly></select>
-                <span asp-validation-for="Estado" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Criar" class="btn btn-primary" />
-            </div>
-        </form>
+<div class="container container-content">
+    <div class="card flex-row mt-4">
+        <div class="card-col-4 p-4 vw-100">
+            <h3>Agendar Consulta</h3>
+            <form asp-action="Create" class="card-wrap-4 header-content">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="info-form">
+                    <label asp-for="Data" class="control-label"></label>
+                    <input asp-for="Data" class="edit-input" id="input-data-consulta" />
+                    <span asp-validation-for="Data" class="text-danger"></span>
+                </div>
+                <div class="info-form">
+                    <label asp-for="Hora" class="control-label"></label>
+                    <select asp-for="Hora" class="edit-input" id="input-hora-consulta">
+                        <option value="">Selecione um horário</option>
+                    </select>
+                    <span asp-validation-for="Hora" class="text-danger"></span>
+                </div>
+                <div class="info-form">
+                    <label asp-for="PsicologoId" class="control-label"></label>
+                    <select asp-for="PsicologoId" class="edit-input" asp-items="ViewBag.PsicologoId"></select>
+                </div>
+                <div class="info-form">
+                    <label asp-for="PacienteId" class="control-label"></label>
+                    <select asp-for="PacienteId" class="edit-input" asp-items="ViewBag.PacienteId"></select>
+                </div>
+                <input type="hidden" asp-for="Estado" value="Pendente" />
+                @*<label asp-for="Estado" class="control-label"></label>
+                <select asp-for="Estado" class="edit-input" asp-items="Html.GetEnumSelectList<Estado>()" style="pointer-events: none" readonly></select>
+                <span asp-validation-for="Estado" class="text-danger"></span>*@
+                <div class="card-col-2 mt-4 align-items-center full-size">
+                    <input type="submit" value="Adicionar" class="button full-size" />
+                    <a asp-controller="Consultas" asp-action="Index" asp-route-id="ViewBag.PacienteId">Cancelar</a>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Voltar para a Lista</a>
 </div>
 
 @section Scripts {
