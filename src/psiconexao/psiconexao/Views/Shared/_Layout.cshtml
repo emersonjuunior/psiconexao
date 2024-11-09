@@ -32,9 +32,19 @@
                 @{
                     if (User.Identity.IsAuthenticated)
                     {
-                        <span>Olá, @User.Identity.Name</span>
-                        <a asp-controller="Psicologo" asp-action="Editar" asp-route-id="@userId">Editar Perfil</a>
-                        <a asp-controller="Disppnibilidade" asp-action="Agenda" asp-route-id="@userId">Agenda</a>
+                        if (@User.IsInRole(Perfil.Psicologo.ToString()))
+                        {
+                            <a asp-controller="Psicologo" asp-action="Perfil" asp-route-id="@userId">Olá, @User.Identity.Name</a>
+                            <a asp-controller="Psicologo" asp-action="Editar" asp-route-id="@userId">Editar Perfil</a>
+                            <a asp-controller="Consultas" asp-action="Index" asp-route-id="@userId">Agenda</a>
+                        }
+                        else if (@User.IsInRole(Perfil.Paciente.ToString()))
+                        {
+                            <a asp-controller="Paciente" asp-action="Perfil" asp-route-id="@userId">Olá, @User.Identity.Name</a>
+                            <a asp-controller="Psicologo" asp-action="Lista">Psicólogos</a>
+                            <a asp-controller="Paciente" asp-action="Editar" asp-route-id="@userId">Editar Perfil</a>
+                            <a asp-controller="Consultas" asp-action="Index" asp-route-id="@userId">Agenda</a>
+                        }
                         <a asp-controller="Auth" asp-action="Sair">Sair</a>
                     }
                     else
@@ -50,14 +60,16 @@
                 @{
                     if (User.Identity.IsAuthenticated)
                     {
-                        <span>Olá, @User.Identity.Name</span> <span>•</span>
                         if(@User.IsInRole(Perfil.Psicologo.ToString()))
                         {
+                            <a asp-controller="Psicologo" asp-action="Perfil" asp-route-id="@userId">Olá, @User.Identity.Name</a> <span>•</span>
                             <a asp-controller="Psicologo" asp-action="Editar" asp-route-id="@userId">Editar Perfil</a> <span>•</span>
                             <a asp-controller="Consultas" asp-action="Index" asp-route-id="@userId">Agenda</a> <span>•</span>
                         }
                         else if (@User.IsInRole(Perfil.Paciente.ToString()))
                         {
+                            <a asp-controller="Paciente" asp-action="Perfil" asp-route-id="@userId">Olá, @User.Identity.Name</a> <span>•</span>
+                            <a asp-controller="Psicologo" asp-action="Lista">Psicólogos</a> <span>•</span>
                             <a asp-controller="Paciente" asp-action="Editar" asp-route-id="@userId">Editar Perfil</a> <span>•</span>
                             <a asp-controller="Consultas" asp-action="Index" asp-route-id="@userId">Agenda</a> <span>•</span>
                         }

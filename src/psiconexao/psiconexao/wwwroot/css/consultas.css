@@ -1,0 +1,31 @@
+﻿.divisao-tabela {
+    border-bottom: 1px solid #F2F2F0;
+}
+
+.divisao-tabela-2 {
+    border-bottom: 2px solid #F2F2F0;
+}
+
+.link {
+    border-bottom: 1px solid #1e1f24;
+}
+
+    .link:hover {
+        border-bottom: 1px solid #1e1f24;
+    }
+
+.Agendada {
+    background-color: #BBEB9D ;
+}
+
+.cancelada {
+    background-color: #EBAF9D;
+}
+
+.concluida {
+    background-color: #9DBCEB;
+}
+
+.Pendente {
+    background-color: #EBC79D;
+}
