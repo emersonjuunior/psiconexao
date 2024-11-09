@@ -34,7 +34,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Estado" class="control-label"></label>
-                <select asp-for="Estado" class="form-control" asp-items="Html.GetEnumSelectList<Estado>()"></select>
+                <select asp-for="Estado" class="form-control" asp-items="Html.GetEnumSelectList<Estado>()" style="pointer-events: none" readonly></select>
                 <span asp-validation-for="Estado" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -71,8 +71,6 @@
                 const response = await fetch(`/Disponibilidades/GetDisponibilidades?psicologoId=${psicologoId}`);
                 const disponibilidades = await response.json();
 
-                console.log("Disponibilidades recebidas:", disponibilidades);
-
                 // Expandir intervalos de datas e horários para obter apenas datas válidas
                 disponibilidades.forEach(d => {
                     const startDate = new Date(d.start.split("T")[0]);
@@ -90,8 +88,6 @@
                         }
                     }
                 });
-                console.log("Datas disponíveis:", availableDates);
-                console.log("Horários de disponibilidade por data:", disponibilidadeHorarios);
             }
 
             // Função para preencher os horários disponíveis, excluindo horários ocupados
@@ -111,7 +107,6 @@
                     const response = await fetch(`/Disponibilidades/GetConsultasParaData?psicologoId=${psicologoId}&data=${formattedDate}`);
                     if (response.ok) {
                         const consultas = await response.json();
-                        console.log("Consultas agendadas para a data:", formattedDate, consultas);
 
                         // Marcar horários ocupados em intervalos de 59 minutos
                         consultas.forEach(c => {
@@ -128,11 +123,7 @@
                                 ocupados.add(`${horas}:${minutosRestantes}`);
                             }
                         });
-                    } else {
-                        console.error("Erro ao carregar consultas:", response.status);
                     }
-
-                    console.log("Horários ocupados (atualizado):", Array.from(ocupados));
 
                     // Preencher horários disponíveis, excluindo os horários ocupados
                     for (let time = new Date(startTime); time <= endTime; time.setMinutes(time.getMinutes() + 30)) {
@@ -146,8 +137,6 @@
                             inputHoraConsulta.appendChild(option);
                         }
                     }
-
-                    console.log("Horários disponíveis para seleção (após exclusão de ocupados):", inputHoraConsulta.innerHTML);
                 }
             }
 
