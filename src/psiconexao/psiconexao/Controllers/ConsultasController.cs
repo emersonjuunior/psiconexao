@@ -187,6 +187,8 @@ namespace psiconexao.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
             var consulta = await _context.Consultas.FindAsync(id);
             if (consulta != null)
             {
@@ -194,7 +196,7 @@ namespace psiconexao.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index", new { id = userId });
         }              
 
         //GET: Consultas/Pendentes
