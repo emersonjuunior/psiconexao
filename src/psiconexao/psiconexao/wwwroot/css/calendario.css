@@ -3,9 +3,61 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
+    max-width: 1030px;
+    margin-top: 20px;
 }
 
 #calendar {
     width: 80%;
     height: 800px;
+}
+
+:root {
+    --fc-small-font-size: .85em;
+    --fc-page-bg-color: #fff;
+    --fc-neutral-bg-color: rgba(208, 208, 208, 0.15);
+    --fc-neutral-text-color: #1e1f24;
+    --fc-border-color: #ddd;
+    --fc-button-text-color: #1e1f24;
+    --fc-button-bg-color: #e7c864;
+    --fc-button-border-color: #e7c864;
+    --fc-button-hover-bg-color: #e7c248;
+    --fc-button-hover-border-color: #e7c248;
+    --fc-button-active-bg-color: #e7c248;
+    --fc-button-active-border-color: #e7c248;
+    --fc-event-bg-color: #e7c864;
+    --fc-event-border-color: #e7c864;
+    --fc-event-text-color: #fff;
+    --fc-event-selected-overlay-color: rgba(0, 0, 0, 0.25);
+    --fc-more-link-bg-color: #d0d0d0;
+    --fc-more-link-text-color: inherit;
+    --fc-event-resizer-thickness: 8px;
+    --fc-event-resizer-dot-total-width: 8px;
+    --fc-event-resizer-dot-border-width: 1px;
+    --fc-non-business-color: rgba(215, 215, 215, 0.3);
+    --fc-bg-event-color: #e7c864;
+    --fc-bg-event-opacity: 0.3;
+    --fc-highlight-color: rgba(188, 232, 241, 0.3);
+    --fc-today-bg-color: rgba(231, 194, 72, 0.15);
+    --fc-now-indicator-color: red;
+}
+
+.fc-event-main, .fc-event-time, .fc-h-event, .fc-event-title-container {
+    background-color: #e7c864;
+    border: 1px solid #e7c864;
+}
+
+.fc-button-primary:disabled {
+    color: #1e1f24;
+}
+
+@media (max-width: 1080px) {
+    #calendar-container {
+        justify-content: flex-start;
+    }
+
+    .fc-header-toolbar {
+        flex-direction: column;
+        gap: 10px;
+    }
 }

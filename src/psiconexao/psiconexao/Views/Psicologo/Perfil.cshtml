@@ -55,12 +55,12 @@
         <div class="card profissional-card">
             <div class="container card-col-4">
                 <h4>Disponibilidades</h4>
+                <div id="calendar-container">
+                    <div id="calendar" data-url="@Url.Action("GetDisponibilidades", "Disponibilidades", new { psicologoId = Model.UsuarioId })"></div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div id="calendar-container">
-    <div id="calendar" data-url="@Url.Action("GetDisponibilidades", "Disponibilidades", new { psicologoId = Model.UsuarioId })"></div>
 </div>
 
 @section Scripts {
