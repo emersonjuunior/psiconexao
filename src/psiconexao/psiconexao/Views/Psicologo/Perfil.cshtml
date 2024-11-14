@@ -84,6 +84,9 @@
                 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'
             ];
 
+            const psicologo = window.location.href;
+            const psicologoId = psicologo.split('/')[5];
+
             const calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: 'dayGridMonth',
                 validRange: {
@@ -109,7 +112,7 @@
                     // Check if clicked date is in the list of available dates
                     if (availableDates.includes(clickedDate)) {
                         localStorage.setItem("selectedDate", clickedDate);
-                        window.location.href = '/Consultas/Create?data=' + clickedDate;
+                        window.location.href = `/Consultas/Create?psicologoId=${psicologoId}&data=${clickedDate}`;
                     } else {
                         alert('Esta data não está disponível.');
                     }
