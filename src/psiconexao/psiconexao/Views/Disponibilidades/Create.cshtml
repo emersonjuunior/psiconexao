@@ -10,6 +10,8 @@
     <div class="card flex-row mt-4">
         <div class="card-col-4 p-4 vw-100">
             <h3>Adicionar disponibilidade</h3>
+            <span>Por favor, informe sua disponibilidade preenchendo o período em que você estará acessível. Esses dados permitirão que o calendário reflita seus horários disponíveis para agendamentos.</span>
+            <div class="separator-2"></div>
             <form asp-action="Create" class="card-wrap-4 header-content">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="info-form">
@@ -33,15 +35,16 @@
                     <span asp-validation-for="HoraFim" class="text-danger"></span>
                 </div>
                 <div class="info-form">
-                    <label asp-for="PsicologoId" class="control-label">Nome do Psicólogo</label>
-                    <select asp-for="PsicologoId" class="edit-input" asp-items="ViewBag.PsicologoId"></select>
+                    @*<label asp-for="PsicologoId" class="control-label">Psicólogo</label>
+                    <select asp-for="PsicologoId" class="edit-input" asp-items="ViewBag.PsicologoId"></select>*@
+                    <input asp-for="PsicologoId" type="hidden" value="@ViewData["PsicologoId"]" />
                 </div>
                 <div class="info-form">
                     <input type="hidden" asp-for="Estado" value="true" />
                 </div>
                 <div class="card-col-2 mt-4 align-items-center full-size">
                     <input type="submit" value="Adicionar" class="button full-size" />
-                    <a asp-controller="Consultas" asp-action="Index" asp-route-id="ViewBag.PsicologoId">Cancelar</a>
+                    <a href="javascript:history.back()">Cancelar</a>
                 </div>
                 <div class="flex justify-content-center">
                 </div>

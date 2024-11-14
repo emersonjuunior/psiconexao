@@ -1,12 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using psiconexao.Models;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace psiconexao.Controllers
 {
@@ -48,7 +50,8 @@ namespace psiconexao.Controllers
         // GET: Disponibilidades/Create
         public IActionResult Create()
         {
-            ViewData["PsicologoId"] = new SelectList(_context.Psicologos, "UsuarioId", "Nome");
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            ViewData["PsicologoId"] = userId;
             return View();
         }
 
@@ -63,7 +66,7 @@ namespace psiconexao.Controllers
             {
                 _context.Add(disponibilidade);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Perfil", "Psicologo", new { id = disponibilidade.PsicologoId });
             }
             ViewData["PsicologoId"] = new SelectList(_context.Psicologos, "UsuarioId", "Nome", disponibilidade.PsicologoId);
             return View(disponibilidade);
