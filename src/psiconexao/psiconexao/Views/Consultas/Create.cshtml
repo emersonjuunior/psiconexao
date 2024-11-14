@@ -13,32 +13,38 @@
             <form asp-action="Create" class="card-wrap-4 header-content">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="info-form">
-                    <label asp-for="Data" class="control-label"></label>
-                    <input asp-for="Data" class="edit-input" id="input-data-consulta" />
-                    <span asp-validation-for="Data" class="text-danger"></span>
+                    <div class="info-form">
+                        <label asp-for="Data" class="control-label"></label>
+                        <input asp-for="Data" class="edit-input" id="input-data-consulta" />
+                        <span asp-validation-for="Data" class="text-danger"></span>
+                    </div>
+                    <div class="info-form">
+                        <label asp-for="Hora" class="control-label"></label>
+                        <select asp-for="Hora" class="edit-input" id="input-hora-consulta">
+                            <option value="">Selecione um horário</option>
+                        </select>
+                        <span asp-validation-for="Hora" class="text-danger"></span>
+                    </div>
+                    <div class="info-form">
+                        <label asp-for="PsicologoId" class="control-label">Psicólogo</label>
+                        <select asp-for="PsicologoId" class="edit-input" asp-items="ViewBag.PsicologoId" style="pointer-events: none" readonly></select>
+                    </div>
+                    @*<div class="info-form">
+                        <label asp-for="PacienteId" class="control-label"></label>
+                        <select asp-for="PacienteId" class="edit-input" asp-items="ViewBag.PacienteId"></select>
+                    </div>*@
                 </div>
-                <div class="info-form">
-                    <label asp-for="Hora" class="control-label"></label>
-                    <select asp-for="Hora" class="edit-input" id="input-hora-consulta">
-                        <option value="">Selecione um horário</option>
-                    </select>
-                    <span asp-validation-for="Hora" class="text-danger"></span>
-                </div>
-                <div class="info-form">
-                    <label asp-for="PsicologoId" class="control-label"></label>
-                    <select asp-for="PsicologoId" class="edit-input" asp-items="ViewBag.PsicologoId"></select>
-                </div>
-                <div class="info-form">
-                    <label asp-for="PacienteId" class="control-label"></label>
-                    <select asp-for="PacienteId" class="edit-input" asp-items="ViewBag.PacienteId"></select>
-                </div>
+                <input type="hidden" asp-for="PacienteId" />
                 <input type="hidden" asp-for="Estado" value="Pendente" />
-                @*<label asp-for="Estado" class="control-label"></label>
-                <select asp-for="Estado" class="edit-input" asp-items="Html.GetEnumSelectList<Estado>()" style="pointer-events: none" readonly></select>
-                <span asp-validation-for="Estado" class="text-danger"></span>*@
+                @*<div class="info-form">
+                    <label asp-for="Estado" class="control-label"></label>
+                    <select asp-for="Estado" class="edit-input" asp-items="Html.GetEnumSelectList<Estado>()" style="pointer-events: none" readonly></select>
+                    <span asp-validation-for="Estado" class="text-danger"></span>
+                </div>*@
+                <img src="~/images/Online calendar-cuate.png" alt="Ilustração de calendário" width="300px" class="hide-img" />
                 <div class="card-col-2 mt-4 align-items-center full-size">
-                    <input type="submit" value="Adicionar" class="button full-size" />
-                    <a asp-controller="Consultas" asp-action="Index" asp-route-id="ViewBag.PacienteId">Cancelar</a>
+                   <input type="submit" value="Adicionar" class="button full-size" />
+                    <a href="javascript:history.back()">Cancelar</a>
                 </div>
             </form>
         </div>

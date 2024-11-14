@@ -122,6 +122,36 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @{
+                        if (User.IsInRole(Perfil.Paciente.ToString()))
+                        {
+                            @foreach (var item in Model.Where(m => m.Estado == Estado.Pendente))
+                            {
+                                <tr class="divisao-tabela">
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Data)
+                                    </td>
+                                    <td>
+                                        @item.Hora.ToString(@"hh\:mm")
+                                    </td>
+                                    <td>
+                                        <a asp-controller="Psicologo"
+                                           asp-action="Perfil"
+                                           asp-route-id="@item.Psicologo.UsuarioId"
+                                           class="link">
+                                            @Html.DisplayFor(modelItem => item.Psicologo.Nome)
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <span class="tag @item.Estado">@Html.DisplayFor(modelItem => item.Estado)</span>
+                                    </td>
+                                    <td>
+                                        <a asp-action="Delete" asp-route-id="@item.ConsultaId">Excluir</a>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    }
                     @foreach (var item in Model.Where(m => m.Estado == Estado.Agendada || m.Estado == Estado.cancelada || m.Estado == Estado.concluida))
                     {
                         <tr class="divisao-tabela">

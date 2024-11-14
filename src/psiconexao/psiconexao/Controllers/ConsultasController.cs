@@ -81,8 +81,8 @@ namespace psiconexao.Controllers
                 Estado = Estado.Pendente
             };
 
-            ViewData["PacienteId"] = new SelectList(_context.Pacientes, "UsuarioId", "Email");
-            ViewData["PsicologoId"] = new SelectList(_context.Psicologos, "UsuarioId", "Email");
+            ViewData["PacienteId"] = new SelectList(_context.Pacientes, "UsuarioId", "Nome");
+            ViewData["PsicologoId"] = new SelectList(_context.Psicologos, "UsuarioId", "Nome");
             return View(consulta);
         }
 
