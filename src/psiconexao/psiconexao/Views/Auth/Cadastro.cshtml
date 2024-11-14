@@ -58,14 +58,32 @@
                 <label for="confirmarEmail">Confirmar e-mail</label>
                 <input type="email" id="confirmarEmail" name="confirmarEmail" class="input register-input" required />
             </div>
-            <div class="card-col-2 register-form">
+            <div class="card-col-2 register-form position-relative">
                 <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" type="password" class="input register-input" />
+                <input asp-for="Password"
+                    type="password"
+                    class="input register-input"
+                    id="inputPassword" />
+                <img src="~/images/eyes-closed1.svg"
+                     alt="Ícone de visualização"
+                     width="20px"
+                     class="lock-button position-absolute"
+                     id="trocarVisualizacao"
+                     style="bottom: 10px; right: 20px; transform: translateY(-50%); cursor: pointer;" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
-            <div class="card-col-2 register-form">
+            <div class="card-col-2 register-form position-relative">
                 <label for="confirmarSenha">Confirmar senha</label>
-                <input type="password" id="confirmarSenha" name="confirmarSenha" class="input register-input" />
+                <input type="password"
+                    id="inputPasswordConf"
+                    name="confirmarSenha"
+                    class="input register-input" />
+                <img src="~/images/eyes-closed1.svg"
+                     alt="Ícone de visualização"
+                     width="20px"
+                     class="lock-button position-absolute"
+                     id="trocarVisualizacaoConf"
+                     style="bottom: 5px; right: 20px; transform: translateY(-50%); cursor: pointer;" />
             </div>
             <div class="card-col-2 register-form">
                 <label asp-for="Perfil" class="control-label"></label>
@@ -85,3 +103,34 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+
+<script>
+    const trocarVisualizacao = document.querySelector('#trocarVisualizacao');
+    const inputPassword = document.querySelector('#inputPassword');
+    const trocarVisualizacaoConf = document.querySelector('#trocarVisualizacaoConf');
+    const inputPasswordConf = document.querySelector('#inputPasswordConf');
+
+    trocarVisualizacao.addEventListener('click', () => {
+
+        if (inputPassword.getAttribute('type') === 'password') {
+            inputPassword.setAttribute('type', 'text')
+            trocarVisualizacao.src = '@Url.Content("~/images/eye-open1.svg")';
+
+        } else if (inputPassword.getAttribute('type') === 'text') {
+            inputPassword.setAttribute('type', 'password')
+            trocarVisualizacao.src = '@Url.Content("~/images/eyes-closed1.svg")';
+        }
+    });
+
+    trocarVisualizacaoConf.addEventListener('click', () => {
+
+        if (inputPasswordConf.getAttribute('type') === 'password') {
+            inputPasswordConf.setAttribute('type', 'text')
+            trocarVisualizacaoConf.src = '@Url.Content("~/images/eye-open1.svg")';
+
+        } else if (inputPasswordConf.getAttribute('type') === 'text') {
+            inputPasswordConf.setAttribute('type', 'password')
+            trocarVisualizacaoConf.src = '@Url.Content("~/images/eyes-closed1.svg")';
+        }
+    });
+</script>
