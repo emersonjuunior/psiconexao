@@ -1,0 +1,60 @@
+﻿@model psiconexao.Models.Disponibilidade
+
+@{
+    ViewData["Title"] = "Adicionar disponibilidade";
+}
+
+<link rel="stylesheet" href="/css/psicologoEditar.css">
+
+<div class="container container-content">
+    <div class="card flex-row mt-4">
+        <div class="card-col-4 p-4 vw-100">
+            <h3>Adicionar disponibilidade</h3>
+            <span>Por favor, informe sua disponibilidade preenchendo o período em que você estará acessível. Esses dados permitirão que o calendário reflita seus horários disponíveis para agendamentos.</span>
+            <div class="separator-2"></div>
+            <form asp-action="Create" class="card-wrap-4 header-content">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="info-form">
+                    <label asp-for="DataInicio" class="control-label">Data Inicial</label>
+                    <input asp-for="DataInicio" class="edit-input" id="input-selected-date"/>
+                    <span asp-validation-for="DataInicio" class="text-danger"></span>
+                </div>
+                <div class="info-form">
+                    <label asp-for="DataFim" class="control-label">Data Final</label>
+                    <input asp-for="DataFim" class="edit-input" />
+                    <span asp-validation-for="DataFim" class="text-danger"></span>
+                </div>
+                <div class="info-form">
+                    <label asp-for="HoraInicio" class="control-label">Horário Inicial</label>
+                    <input asp-for="HoraInicio" class="edit-input" />
+                    <span asp-validation-for="HoraInicio" class="text-danger"></span>
+                </div>
+                <div class="info-form">
+                    <label asp-for="HoraFim" class="control-label">Horário Final</label>
+                    <input asp-for="HoraFim" class="edit-input" />
+                    <span asp-validation-for="HoraFim" class="text-danger"></span>
+                </div>
+                <div class="info-form">
+                    @*<label asp-for="PsicologoId" class="control-label">Psicólogo</label>
+                    <select asp-for="PsicologoId" class="edit-input" asp-items="ViewBag.PsicologoId"></select>*@
+                    <input asp-for="PsicologoId" type="hidden" value="@ViewData["PsicologoId"]" />
+                </div>
+                <div class="info-form">
+                    <input type="hidden" asp-for="Estado" value="true" />
+                </div>
+                <div class="card-col-2 mt-4 align-items-center full-size">
+                    <input type="submit" value="Adicionar" class="button full-size" />
+                    <a href="javascript:history.back()">Cancelar</a>
+                </div>
+                <div class="flex justify-content-center">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <link rel="stylesheet" href="~/css/disponibilidades.css" />
+    <script defer src="~/js/disponibilidadesCreate.js"></script>
+}
