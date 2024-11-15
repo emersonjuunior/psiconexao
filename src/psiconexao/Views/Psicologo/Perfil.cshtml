@@ -26,11 +26,11 @@
                     <h4 class="profissional-subtitle">CRP: @Model.Crp</h4>
                 </div>
                 @{
-                    if (User.IsInRole(Perfil.Paciente.ToString()))
+                    if (User.IsInRole(Perfil.Paciente.ToString()) || !User.IsInRole(Perfil.Paciente.ToString())  && !User.IsInRole(Perfil.Psicologo.ToString()))
                     {
                         <a href="#calendar-container" class="button w-auto">Agendar consulta</a>
                     }
-                    else if (User.IsInRole(Perfil.Psicologo.ToString()))
+                    else if (User.IsInRole(Perfil.Psicologo.ToString()) && Model.UsuarioId == ViewBag.UsuarioId)
                     {
                         <a asp-controller="Disponibilidades" asp-action="Create" class="button w-auto">Gerar disponibilidades</a>
                     }

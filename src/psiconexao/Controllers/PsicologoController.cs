@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using psiconexao.Models;
 using System.Linq;
+using System.Security.Claims;
 
 namespace psiconexao.Controllers
 {
@@ -20,6 +21,12 @@ namespace psiconexao.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Perfil(int id)
         {
+            var usuario = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (int.TryParse(usuario, out int usuarioId))
+            {
+                ViewBag.UsuarioId = usuarioId;
+            }
+
             var psicologo = await _context.Psicologos
                 .SingleOrDefaultAsync(p => p.UsuarioId == id);
 
