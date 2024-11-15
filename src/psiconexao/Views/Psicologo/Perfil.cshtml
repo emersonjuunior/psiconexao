@@ -7,6 +7,12 @@
 <link rel="stylesheet" href="~/css/psicologoPerfil.css" />
 <link rel="stylesheet" href="~/css/psicologoLista.css" />
 
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert m-0">
+        <h5>@TempData["ErrorMessage"]</h5>
+    </div>
+}
 <div class="profissional">
     <div class="card profissional-card">
         <div class="card-4 profissional-content">

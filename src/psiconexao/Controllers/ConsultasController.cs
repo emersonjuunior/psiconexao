@@ -63,7 +63,16 @@ namespace psiconexao.Controllers
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Obter o ID do usuário logado
             if (!int.TryParse(userId, out int pacienteId))
             {
-                return NotFound("ID do paciente inválido.");
+                TempData["ErrorMessage"] = "Apenas usuários logados podem agendar consulta!";
+
+                return RedirectToAction("Perfil", "Psicologo", new { id = psicologoId });
+            }
+
+            if(User.IsInRole(Perfil.Psicologo.ToString()))
+            {
+                TempData["ErrorMessage"] = "Apenas pacientes podem agendar consulta!";
+
+                return RedirectToAction("Perfil", "Psicologo", new { id = psicologoId });
             }
 
             var paciente = _context.Pacientes.FirstOrDefault(p => p.UsuarioId == pacienteId);
