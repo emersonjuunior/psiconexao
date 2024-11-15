@@ -12,7 +12,6 @@ yarn-error.log*
 bin/
 obj/
 out/
-*.sln
 
 # Arquivos de pacotes NuGet
 *.nupkg
