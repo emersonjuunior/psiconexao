@@ -22,6 +22,7 @@ namespace psiconexao.Controllers
         }
 
         // GET: Disponibilidades
+        [Authorize(Roles = "Psicologo")]
         public async Task<IActionResult> Index()
         {
             var appDbContext = _context.Disponibilidades.Include(d => d.Psicologo);
