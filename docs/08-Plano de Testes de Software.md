@@ -19,6 +19,15 @@ Para garantir que o sistema implemente corretamente a
 autenticação e autorização. 
 # Plano de Testes Detalhado
 
+| Caso de Teste               | CT-01: Verificar o funcionamento do cadastro de Psicólogo e Paciente      |
+| :-------------------------- | :------------------------------------------------------------------------ |
+| Requisitos Associados       | RF-01: O sistema deve permitir o cadastro de Psicólogos e pacientes incluindo dados como nome, e-mail, telefone e senha e outras informações essenciais para identificação e autenticação. |
+| Objetivos do Teste          | Verificar se o sistema permite o cadastro de psicólogos e pacientes.      |
+| Passos                      | 1. Acessar o navegador. <br> 2. Informe o endereço do site. <br> 3. Clique em "Cadastre-se". <br> 4. Preencha todos os campos obrigatorios. <br> 5. Clique em "Cadastre-se" no lado direito inferior do site. |
+| Critérios de êxito          | Paciente - Após o cadastro, a página é direcionada para "Consultas/Index/id". <br> Psicólogo - Após o cadastro, a página é direcionada para "CadastroEmAnalise" |
+
+
+
 Requisitos Funcionais
 Cadastro de Psicólogo e Paciente 
 Requisito: RF01 
