@@ -16,7 +16,31 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 
 ## Avaliação
 
-Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
+### RF-01: 
+#### Pontos Fortes Identificados <br>
+- O sistema conseguiu realizar o cadastro tanto de psicólogos quanto de pacientes, com os dados sendo armazenados corretamente no banco de dados.
+- Redirecionamento após o cadastro, diferenciando entre psicólogos (para página de análise) e pacientes (para consultas). <br>
+
+#### Pontos Fracos Identificados <br>
+- Apesar de o cadastro ser realizado, não houve exibição de uma mensagem de confirmação para o usuário, o que pode gerar dúvidas sobre o sucesso da operação.
+- Ausência de algumas verificações, como força de senha ou formatação de telefone. <br>
+
+#### melhorias para as próximas iterações <br>
+- Incluir uma mensagem de sucesso após o cadastro. Isso pode ser feito adicionando um alerta ou uma mensagem exibida na interface. <br>
+- Incorporar validações mais robustas no back-end para senhas e formatos de dados. <br>
+
+### RF-02: 
+#### Pontos Fortes Identificados <br>
+- 
+- <br>
+
+#### Pontos Fracos Identificados <br>
+- 
+-  <br>
+
+#### melhorias para as próximas iterações <br>
+- 
+- <br>
 
 > **Links Úteis**:
 > - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
