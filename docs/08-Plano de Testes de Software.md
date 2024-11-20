@@ -19,129 +19,114 @@ Para garantir que o sistema implemente corretamente a
 autenticação e autorização. 
 # Plano de Testes Detalhado
 
-| Caso de Teste               | CT-01: Verificar o funcionamento do cadastro de Psicólogo e Paciente      |
+| Caso de Teste               | CT-01: Cadastro de Psicólogo e Paciente       |
+| :-------------------------- | :------------------------------------------------------------------------- |
+| **Requisitos Associados**   | RF01: O sistema deve permitir o cadastro de Psicólogos e pacientes incluindo dados como nome, e-mail, telefone e senha e outras informações essenciais para identificação e autenticação. |
+| **Objetivos do Teste**      | Verificar se o sistema permite o cadastro de psicólogos e pacientes.       |
+| **Passos**                  | 1. Acessar a página de cadastro. <br> 2. Preencher os campos obrigatórios (nome, e-mail, telefone, senha). <br> 3. Clicar em "Cadastre-se". |
+| **Critérios de êxito**      | O cadastro é criado com sucesso e uma mensagem de confirmação é exibida.   |
+
+---
+
+| Caso de Teste               | CT-02: Envio de E-mail de Confirmação Após Cadastro            |
+| :-------------------------- | :------------------------------------------------------------------------- |
+| **Requisitos Associados**   | RF02: O sistema deve enviar um e-mail de confirmação após cadastro para garantir a autenticidade dos usuários.      |
+| **Objetivos do Teste**      | Verificar se o sistema envia um e-mail de confirmação após o cadastro.     |
+| **Passos**                  | 1. Completar o cadastro conforme o CT-01. <br> 2. Verificar a caixa de entrada do e-mail informado no cadastro. |
+| **Critérios de êxito**      | O e-mail de confirmação é recebido com sucesso.                            |
+
+---
+
+| Caso de Teste               | CT-03: Login com E-mail e Senha               |
+| :-------------------------- | :------------------------------------------------------------------------- |
+| **Requisitos Associados**   | RF03: O sistema deve permitir que os usuários consigam logar na aplicação com e-mail e senha e em seguida ter acesso ao seu perfil e menu disponível correspondente a sua autenticação.          |
+| **Objetivos do Teste**      | Verificar se o sistema permite o login com e-mail e senha válidos. |
+| **Passos**                  | 1. Acessar a página de login. <br> 2. Inserir e-mail e senha válidos. <br> 3. Clicar em "Entrar". |
+| **Critérios de êxito**      | O usuário é autenticado e redirecionado para o painel correto (paciente ou psicólogo). |
+
+---
+
+| Caso de Teste               | CT-04: Recuperação de Senha                   |
+| :-------------------------- | :------------------------------------------------------------------------- |
+| **Requisitos Associados**   | RF04: O sistema deve permitir que os usuários recuperem sua senha por e-mail em casos de esquecimento ou outro pertinente.                      |
+| **Objetivos do Teste**      | Verificar se o sistema permite a recuperação de senha.          |
+| **Passos**                  | 1. Acessar a página de recuperação de senha. <br> 2. Inserir o e-mail cadastrado. <br> 3. Enviar a solicitação de recuperação. |
+| **Critérios de êxito**      | Um e-mail de recuperação de senha é enviado ao usuário.                    |
+
+---
+
+| Caso de Teste               | CT-05: Edição de Perfil do Psicólogo                           |
+| :-------------------------- | :------------------------------------------------------------------------- |
+| **Requisitos Associados**   | RF05: O sistema deve permitir que o psicólogo edite seu perfil posteriormente ao cadastro, podendo atualizar informações como áreas de especialização, foto de perfil, descrição profissional, preço de consulta, disponibilidade de agenda e preencher um histórico de consulta dos pacientes atendidos.            |
+| **Objetivos do Teste**      | Verificar se o psicólogo pode editar seu perfil após o cadastro.              |
+| **Passos**                  | 1. Acessar o perfil do psicólogo. <br> 2. Editar os campos (ex.: especialização, foto, preço, agenda, etc). <br> 3. Salvar as alterações. |
+| **Critérios de êxito**      | As informações atualizadas são salvas com sucesso.                        |
+
+---
+
+| Caso de Teste               | CT-06: Edição de Perfil do Paciente                             |
+| :-------------------------- | :------------------------------------------------------------------------- |
+| **Requisitos Associados**   | RF06: O sistema deve permitir que o psicólogo edite o perfil do paciente, podendo atualizar informações relevantes ao perfil.                             |
+| **Objetivos do Teste**      | Verificar se o Psicólogo pode editar o perfil do Paciente.         |
+| **Passos**                  | 1. Acessar o perfil do paciente. <br> 2. Editar as informações relevantes. <br> 3. Salvar as alterações. |
+| **Critérios de êxito**      | As alterações são salvas corretamente.                        |
+
+---
+
+| Caso de Teste               | CT-07: Solicitação de Agendamento pelo Paciente                |
+| :-------------------------- | :------------------------------------------------------------------------- |
+| **Requisitos Associados**   | RF07: O sistema deve permitir ao paciente enviar solicitação de agendamento de acordo com a disponibilidade do profissional.             |
+| **Objetivos do Teste**      | Verificar se o paciente pode solicitar agendamento.  |
+| **Passos**                  | 1. Acessar o perfil do psicólogo. <br> 2. Visualizar os horários disponíveis. <br> 3. Selecionar um horário e enviar a solicitação. |
+| **Critérios de êxito**      | A consulta é marcada como pendente e o psicólogo recebe a notificação.    |
+
+---
+
+| Caso de Teste               | CT-08: Acesso a Lista de Consultas Pendentes pelo Psicólogo     |
+| :-------------------------- | :------------------------------------------------------------------------- |
+| **Requisitos Associados**   | RF08: O sistema de permitir que o psicólogo tenha acesso a uma lista pendente de consultas que estarão pendentes de avaliação por ele e que poderão ser classificadas em agendar, cancelar ou concluir. Bem como visualizar, de preferência na mesma tela, consultas confirmadas.   |
+| **Objetivos do Teste**      | Verificar se o psicólogo pode visualizar e gerenciar sua lista de consultas pendentes.  |
+| **Passos**                  | 1. Acessar a lista de consultas pendentes. <br> 2. Conferir as consultas como "Agendado", "Cancelado" ou "Concluído".  |
+| **Critérios de êxito**      | As consultas são gerenciadas corretamente.                                |
+
+---
+
+| Caso de Teste               | CT-09: Visualização de Agenda pelo Paciente       |
+| :-------------------------- | :------------------------------------------------------------------------- |
+| **Requisitos Associados**   | RF09: O sistema deve permitir que o paciente visualize a agenda com dias e horários disponíveis do profissional desejado e solicite a consultada que ficará pendente até a confirmação ou cancelamento.              |
+| **Objetivos do Teste**      | Verificar se o paciente pode visualizar a agenda do psicólogo. |
+| **Passos**                  | 1. Acessar o perfil do psicólogo. <br> 2. Visualizar a agenda com os horários disponíveis. |
+| **Critérios de êxito**      | O paciente visualiza os horários disponíveis corretamente.                 |
+
+---
+
+| Caso de Teste               | CT-10: Envio de E-mail de Confirmação/Cancelamento         |
+| :-------------------------- | :------------------------------------------------------------------------- |
+| **Requisitos Associados**   | RF10: O sistema deve enviar e-mail de confirmação/cancelamento ao paciente que possui uma consulta pendente.	 |
+| **Objetivos do Teste**      | Verificar se o sistema envia e-mails de confirmação ou cancelamento de consultas.  |
+| **Passos**                  | 1. O psicólogo confirma ou cancela a consulta. <br> 2. Verificar o e-mail do paciente. |
+| **Critérios de êxito**      | O paciente recebe um e-mail com a confirmação ou cancelamento da consulta. |
+
+---
+
+| Caso de Teste               | CT-11: Busca com Filtros                        |
 | :-------------------------- | :------------------------------------------------------------------------ |
-| Requisitos Associados       | RF-01: O sistema deve permitir o cadastro de Psicólogos e pacientes incluindo dados como nome, e-mail, telefone e senha e outras informações essenciais para identificação e autenticação. |
-| Objetivos do Teste          | Verificar se o sistema permite o cadastro de psicólogos e pacientes.      |
-| Passos                      | 1. Acessar o navegador. <br> 2. Informe o endereço do site. <br> 3. Clique em "Cadastre-se". <br> 4. Preencha todos os campos obrigatorios. <br> 5. Clique em "Cadastre-se" no lado direito inferior do site. |
-| Critérios de êxito          | O cadastro é criado com sucesso e uma mensagem de confirmação é exibida.  |
+| **Requisitos Associados**   | RF11: O sistema deve permitir que o paciente realize buscas na aplicação contando com filtros adicionais como especialidade, preço da consulta e horários e datas disponíveis.          |
+| **Objetivos do Teste**      | Verificar se o paciente pode buscar psicólogos com filtros. |
+| **Passos**                  | 1. Acessar a página de busca. <br> 2. Aplicar filtros (ex.: especialidade, preço, disponibilidade). |
+| **Critérios de êxito**      | A busca retorna os resultados conforme os filtros aplicados.              |
+
+---
+
+| Caso de Teste               | CT-12: Histórico de Consultas para Psicólogos                 |
+| :-------------------------- | :------------------------------------------------------------------------ |
+| **Requisitos Associados**   | RF12: O sistema deve permitir que os psicólogos acessem e mantenham um histórico das consultas dos pacientes, incluindo anotações e progresso para um acompanhamento contínuo e personalização do atendimento. No entanto, devido à priorização de funcionalidades essenciais, o desenvolvimento desse requisito está planejado para fases futuras do projeto.    |
+| **Objetivos do Teste**      | Verificar se o psicólogo pode manter um histórico de consultas dos pacientes. |
+| **Passos**                  | 1. Acessar o histórico de consultas no painel do psicólogo. <br> 2. Adicionar anotações sobre o progresso do paciente. |
+| **Critérios de êxito**      | O histórico é atualizado com sucesso.                                    |
 
 
-
-Requisitos Funcionais
-Cadastro de Psicólogo e Paciente 
-Requisito: RF01 
-Objetivo: Verificar se o sistema permite o cadastro de psicólogos e pacientes. 
-Pré-condições: O sistema deve estar disponível para novos cadastros. 
-Passos: 
-Acessar a página de cadastro. 
-Preencher os campos obrigatórios (nome, e-mail, telefone, senha). 
-Enviar o formulário de cadastro. 
-Resultado Esperado: O cadastro é criado com sucesso e uma mensagem de confirmação é exibida. 
-
-Envio de E-mail de Confirmação Após Cadastro 
-Requisito: RF02 
-Objetivo: Verificar se o sistema envia um e-mail de confirmação após o cadastro. 
-Pré-condições: O cadastro deve ser realizado. 
-Passos: 
-Completar o cadastro (conforme Cenário 1). 
-Verificar a caixa de entrada do e-mail informado no cadastro. 
-Resultado Esperado: O e-mail de confirmação é recebido com sucesso. 
-
-Login com E-mail e Senha 
-Requisito: RF03 
-Objetivo: Verificar se o sistema permite o login com e-mail e senha válidos. 
-Pré-condições: O usuário deve estar cadastrado e com a conta confirmada. 
-Passos: 
-Acessar a página de login. 
-Inserir e-mail e senha válidos. 
-Clicar em "Entrar". 
-Resultado Esperado: O usuário é autenticado e redirecionado para o painel correto (paciente ou psicólogo). 
-
-Recuperação de Senha 
-Requisito: RF04 
-Objetivo: Verificar se o sistema permite a recuperação de senha. 
-Pré-condições: O usuário deve estar cadastrado. 
-Passos: 
-Acessar a página de recuperação de senha. 
-Inserir o e-mail cadastrado. 
-Enviar a solicitação de recuperação. 
-Resultado Esperado: Um e-mail de recuperação de senha é enviado ao usuário. 
-Edição de Perfil do Psicólogo 
-
-Requisito: RF05 
-Objetivo: Verificar se o psicólogo pode editar seu perfil após o cadastro. 
-Pré-condições: O psicólogo deve estar autenticado. 
-Passos: 
-Acessar o perfil do psicólogo. 
-Editar os campos (especialização, foto, preço, agenda, etc.). 
-Salvar as alterações. 
-Resultado Esperado: As informações atualizadas são salvas com sucesso. 
-
-Edição de Perfil do Paciente 
-Requisito: RF06 
-Objetivo: Verificar se o paciente pode editar seu perfil. 
-Pré-condições: O paciente deve estar autenticado. 
-Passos: 
-Acessar o perfil do paciente. 
-Editar as informações relevantes. 
-Salvar as alterações. 
-Resultado Esperado: As alterações são salvas corretamente. 
-
-Solicitação de Agendamento pelo Paciente 
-Requisito: RF07 
-Objetivo: Verificar se o paciente pode solicitar agendamento. 
-Pré-condições: O paciente deve estar autenticado e o psicólogo deve ter horários disponíveis. 
-Passos: 
-Acessar o perfil do psicólogo. 
-Visualizar os horários disponíveis. 
-Selecionar um horário e enviar a solicitação. 
-Resultado Esperado: A consulta é marcada como pendente e o psicólogo recebe a notificação. 
-
-Acesso a Lista de Consultas Pendentes pelo Psicólogo 
-Requisito: RF08 
-Objetivo: Verificar se o psicólogo pode visualizar e gerenciar sua lista de consultas pendentes. 
-Pré-condições: O psicólogo deve estar autenticado e com consultas pendentes. 
-Passos: 
-Acessar a lista de consultas pendentes. 
-Classificar as consultas como "Agendado", "Cancelado" ou "Concluído". 
-Resultado Esperado: As consultas são gerenciadas corretamente. 
-
-Visualização de Agenda pelo Paciente 
-Requisito: RF09 
-Objetivo: Verificar se o paciente pode visualizar a agenda do psicólogo. 
-Pré-condições: O paciente deve estar autenticado. 
-Passos: 
-Acessar o perfil do psicólogo. 
-Visualizar a agenda com os horários disponíveis. 
-Resultado Esperado: O paciente visualiza os horários disponíveis corretamente. 
-
-Envio de E-mail de Confirmação/Cancelamento 
-Requisito: RF10 
-Objetivo: Verificar se o sistema envia e-mails de confirmação ou cancelamento de consultas. 
-Pré-condições: Uma consulta deve estar pendente ou ser confirmada. 
-Passos: 
-O psicólogo confirma ou cancela a consulta. 
-Verificar o e-mail do paciente. 
-Resultado Esperado: O paciente recebe um e-mail com a confirmação ou cancelamento da consulta. 
-
-Busca com Filtros 
-Requisito: RF11 
-Objetivo: Verificar se o paciente pode buscar psicólogos com filtros. 
-Pré-condições: Psicólogos devem estar cadastrados com informações preenchidas. 
-Passos: 
-Acessar a página de busca. 
-Aplicar filtros (especialidade, preço, disponibilidade). 
-Resultado Esperado: A busca retorna os resultados de acordo com os filtros aplicados. 
-
-Histórico de Consultas para Psicólogos 
-Requisito: RF12 
-Objetivo: Verificar se o psicólogo pode manter um histórico de consultas dos pacientes. 
-Pré-condições: Psicólogo autenticado e consultas registradas. 
-Passos: 
-Acessar o histórico de consultas no painel do psicólogo. 
-Adicionar anotações sobre o progresso do paciente. 
-Resultado Esperado: O histórico é atualizado com sucesso. 
+ 
 
 # Ferramentas de Teste
 
