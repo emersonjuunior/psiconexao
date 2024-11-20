@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using psiconexao.Models;
+using psiconexao.Services;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace psiconexao.Controllers
@@ -15,10 +16,12 @@ namespace psiconexao.Controllers
     public class ConsultasController : Controller
     {
         private readonly AppDbContext _context;
-
-        public ConsultasController(AppDbContext context)
+        private readonly EmailService _emailService;
+        public ConsultasController(AppDbContext context, EmailService emailService)
         {
             _context = context;
+            _emailService = emailService;
+
         }
 
         // GET: Consultas
@@ -242,6 +245,14 @@ namespace psiconexao.Controllers
             consulta.Estado = Estado.Agendada;
             _context.Update(consulta);
             await _context.SaveChangesAsync();
+
+            // Enviar o e-mail de confirmação
+            var paciente = await _context.Pacientes.FindAsync(consulta.PacienteId);
+            await _emailService.SendEmailAsync(
+                paciente.Email,
+                "Confirmação de Consulta",
+                $"Olá {paciente.Nome}, sua consulta foi confirmada para {consulta.Data.ToString("dd/MM/yyyy")} às {consulta.Hora}."
+            );
 
             return RedirectToAction("Index", new { id = userId });
         }

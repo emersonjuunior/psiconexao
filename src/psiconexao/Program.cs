@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using psiconexao.Models;
+using psiconexao.Services;
 
 namespace psiconexao
 {
@@ -29,6 +30,18 @@ namespace psiconexao
                     options.AccessDeniedPath = "/Auth/AcessoNegado/";
                     options.LoginPath = "/Auth/Login/";
                 });
+
+            builder.Services.AddScoped<EmailService>(sp =>
+            {
+                var config = sp.GetRequiredService<IConfiguration>();
+                var emailSettings = config.GetSection("EmailSettings");
+                return new EmailService(
+                    emailSettings["SmtpServer"],
+                    int.Parse(emailSettings["SmtpPort"]),
+                    emailSettings["SmtpUser"],
+                    emailSettings["SmtpPass"]
+                );
+            });
 
             var app = builder.Build();
 

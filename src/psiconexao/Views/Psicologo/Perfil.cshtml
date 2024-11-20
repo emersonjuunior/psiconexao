@@ -33,7 +33,6 @@
                     else if (User.IsInRole(Perfil.Psicologo.ToString()) && Model.UsuarioId == ViewBag.UsuarioId)
                     {
                         <a asp-controller="Disponibilidades" asp-action="Create" class="button w-auto">Gerar disponibilidades</a>
-                        <a asp-controller="Disponibilidades" asp-action="Index" class="button w-auto">Editar disponibilidades</a>
                     }
                 }
             </div>
