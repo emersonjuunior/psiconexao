@@ -110,9 +110,7 @@
                     if (availableDates.includes(clickedDate)) {
                         localStorage.setItem("selectedDate", clickedDate);
                         window.location.href = '/Consultas/Create?data=' + clickedDate;
-                    } else {
-                        alert('Esta data não está disponível.');
-                    }
+                    } 
                 },
 
                 headerToolbar: {
