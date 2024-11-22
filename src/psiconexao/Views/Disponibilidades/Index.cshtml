@@ -4,62 +4,72 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.DataInicio)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataFim)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoraInicio)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoraFim)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Estado)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Psicologo)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataInicio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataFim)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoraInicio)
-            </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.HoraFim)
-                </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Estado)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Psicologo.Email)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.DisponibilidadeId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.DisponibilidadeId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.DisponibilidadeId">Delete</a>
-            </td>
-        </tr>
-}
+<div id="disponibilidades-container">
+    <div id="disponibilidades-top">
+        <div id="h3-wrapper">
+            <h3>Gerencie sua Disponibilidade</h3>
+        </div>
+        <div id="disponibilidade-create-button">
+            <p>
+                <a asp-action="Create">Adicionar novos horários</a>
+            </p>
+        </div>
+    </div>
+    <div id="disponibilidades-content-wrapper">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        <h6>@Html.DisplayNameFor(model => model.DataInicio)</h6>
+                    </th>
+                    <th>
+                        <h6>@Html.DisplayNameFor(model => model.DataFim)</h6>
+                    </th>
+                    <th>
+                        <h6>@Html.DisplayNameFor(model => model.HoraInicio)</h6>
+                    </th>
+                    <th>
+                        <h6>@Html.DisplayNameFor(model => model.HoraFim)</h6>
+                    </th>
+                    <th>
+                        <h6>Opções</h6>
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DataInicio)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DataFim)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.HoraInicio)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.HoraFim)
+                        </td>
+                        
+                        <td>
+                            <div id="buttons-container">
+                            <a asp-action="Edit" asp-route-id="@item.DisponibilidadeId" id="disponibilidades-edit-button">Editar</a>
+                            
+                            <a asp-action="Delete" asp-route-id="@item.DisponibilidadeId" id="disponibilidades-delete-button">Excluir</a>
+                            </div>
+                        </td>
+                    </tr>
+        
+                }
     </tbody>
-</table>
+    </table>
+</div>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="~/css/disponibilidades.css" />
+}
