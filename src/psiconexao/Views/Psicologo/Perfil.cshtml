@@ -1,0 +1,167 @@
+﻿@model psiconexao.Models.Psicologo
+
+@{
+    ViewData["Title"] = "Perfil de " + Model.Nome;
+}
+
+<link rel="stylesheet" href="~/css/psicologoPerfil.css" />
+<link rel="stylesheet" href="~/css/psicologoLista.css" />
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert m-0">
+        <h5>@TempData["ErrorMessage"]</h5>
+    </div>
+}
+<div class="profissional">
+    <div class="card profissional-card">
+        <div class="card-4 profissional-content">
+            <img src="@Model.UrlFoto"
+                 alt="Profissional"
+                 class="profissional-image"
+                 style="border-radius: 12px;" />
+            <div class="profissional-card-info">
+                <div>
+                    <h2>@Model.Nome</h2>
+                    <h4 class="profissional-subtitle">CRP: @Model.Crp</h4>
+                </div>
+                @{
+                    if (User.IsInRole(Perfil.Paciente.ToString()) || !User.IsInRole(Perfil.Paciente.ToString())  && !User.IsInRole(Perfil.Psicologo.ToString()))
+                    {
+                        <a href="#calendar-container" class="button w-auto">Agendar consulta</a>
+                    }
+                    else if (User.IsInRole(Perfil.Psicologo.ToString()) && Model.UsuarioId == ViewBag.UsuarioId)
+                    {
+                        <a asp-controller="Disponibilidades" asp-action="Create" class="button w-auto">Gerar disponibilidades</a>
+                        <a asp-controller="Disponibilidades" asp-action="Index" class="button w-auto">Editar disponibilidades</a>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container cards p-0">
+    <div class="card card-item">
+        <h6 class="m-0"><b>Especilidade: </b>@Model.TEspecialidade</h6>
+    </div>
+    <div class="card card-item">
+        <h6 class="m-0"><b>Abordagem: </b>@Model.TAbordagem</h6>
+    </div>
+    <div class="card card-item">
+        <h6 class="m-0"><b>Preço: </b>R$@Model.PrecoConsulta,00</h6>
+    </div>
+</div>
+<div class="profissional">
+    <div class="card profissional-card">
+        <div class="container card-col-4">
+            <h4>Biografia</h4>
+            <h6>@Model.Biografia</h6>
+        </div>
+    </div>
+    <div class="profissional">
+        <div class="card profissional-card">
+            <div class="container card-col-4">
+                <h4>Disponibilidades</h4>
+                <div id="calendar-container">
+                    <div id="calendar" data-url="@Url.Action("GetDisponibilidades", "Disponibilidades", new { psicologoId = Model.UsuarioId })"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <link rel="stylesheet" href="~/css/calendario.css" />
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const calendarEl = document.getElementById('calendar');
+            const today = new Date().toISOString().split('T')[0];
+
+            const mesesEmPortugues = [
+                'Janeiro', 'Fevereiro', 'Março', 'Abril',
+                'Maio', 'Junho', 'Julho', 'Agosto',
+                'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+            ];
+
+            const diasSemanaEmPortugues = [
+                'Domingo', 'Segunda-feira', 'Terça-feira',
+                'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'
+            ];
+
+            const psicologo = window.location.href;
+            const psicologoId = psicologo.split('/')[5];
+
+            const calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                validRange: {
+                    start: today,
+                },
+
+                // Fetch events from DisponibilidadesController
+                events: calendarEl.getAttribute('data-url'),
+
+                dateClick: function (info) {
+                    const clickedDate = info.dateStr;
+                    const availableDates = calendar.getEvents()
+                        .flatMap(event => {
+                            const start = new Date(event.start);
+                            const end = new Date(event.end);
+                            const dates = [];
+                            for (let d = start; d <= end; d.setDate(d.getDate() + 1)) {
+                                dates.push(new Date(d).toISOString().split("T")[0]);
+                            }
+                            return dates;
+                        });
+
+                    // Check if clicked date is in the list of available dates
+                    if (availableDates.includes(clickedDate)) {
+                        localStorage.setItem("selectedDate", clickedDate);
+                        window.location.href = `/Consultas/Create?psicologoId=${psicologoId}&data=${clickedDate}`;
+                    } else {
+                        alert('Esta data não está disponível.');
+                    }
+                },
+
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                },
+
+                titleFormat: {
+                    month: 'long',
+                    year: 'numeric'
+                },
+
+                dayHeaderContent: (args) => {
+                    return diasSemanaEmPortugues[args.date.getUTCDay()];
+                },
+
+                datesSet: function (dateInfo) {
+                    const centerDate = new Date(
+                        (dateInfo.start.getTime() + dateInfo.end.getTime()) / 2
+                    );
+                    const monthIndex = centerDate.getMonth();
+                    const year = centerDate.getFullYear();
+
+                    const titleElement = document.querySelector('.fc-toolbar-title');
+                    titleElement.innerText = `${mesesEmPortugues[monthIndex]} ${year}`;
+                },
+
+                buttonText: {
+                    today: 'Hoje',
+                    month: 'Mês',
+                    week: 'Semana',
+                    day: 'Dia',
+                    prev: 'Anterior',
+                    next: 'Próximo'
+                }
+            });
+
+            calendar.render();
+        });
+    </script>
+}
