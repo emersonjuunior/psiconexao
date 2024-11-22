@@ -1,4 +1,5 @@
-﻿#disponibilidades-container {
+﻿/*Disponibilidades Index*/
+#disponibilidades-container, #disponibilidades-delete-container {
     width: 70vw;
     margin: 0 auto;
     border: 1px solid #E0E0E0;
@@ -25,7 +26,7 @@
         font-weight: 600;
     }
 
-        #disponibilidades-top a:hover {
+        #disponibilidades-top a:hover, #disponibilidades-delete-button:hover {
             background-color: #e7c248;
         }
 
@@ -60,5 +61,46 @@ th {
     padding: 4px 12px
 }
 
+/*Disponibilidades Delete*/
+#disponibilidades-delete-container {
+    height: 450px;
+    width: 65vw;
+    background-image: url("../images/disponibilidades-delete.svg");
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: right;
+}
 
+#disponibilidades-delete-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 70%;
+    height: 100%;
+    padding: 32px;
+}
 
+#disponibilidades-delete-container div {
+    width: 75%;
+}
+
+#delete-h3 h3{
+    font-size: 34px;
+}
+
+#delete-buttons-container {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#disponibilidades-delete-button {
+    width: 134px;
+    height: 50px;
+    background-color: #E7C864;
+    border-radius: 16px;
+    font-size: 18px;
+    font-weight: 600;
+}
