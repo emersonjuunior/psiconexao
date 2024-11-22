@@ -28,6 +28,22 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | Registro de evidência | Figura 1: Tela de agendamento preenchida pelo paciente  / Figura 2: Consulta exibida como pendente no perfil do psicólogo. <br> <img src="https://github.com/user-attachments/assets/bab6bdb2-fb4d-4cb0-bcd5-a4a79afb60a7" width="45%" style="display: inline-block;"> <img src="https://github.com/user-attachments/assets/9c436d7c-68c3-4b41-8d1f-895101513a92" width="45%" style="display: inline-block;"> |
 
 
+| **Caso de Teste** 	| **CT-07: Solicitação de Agendamento pelo Paciente** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF07: O sistema deve permitir ao paciente enviar solicitação de agendamento de acordo com a disponibilidade do profissional.|
+| Registro de evidência | Figura 1: Tela de agendamento preenchida pelo paciente  / Figura 2: Consulta exibida como pendente no perfil do psicólogo. <br> <img src="https://github.com/user-attachments/assets/bab6bdb2-fb4d-4cb0-bcd5-a4a79afb60a7" width="45%" style="display: inline-block;"> <img src="https://github.com/user-attachments/assets/9c436d7c-68c3-4b41-8d1f-895101513a92" width="45%" style="display: inline-block;"> |
+
+
+| **Caso de Teste** 	| **CT-08: Acesso a Lista de Consultas Pendentes pelo Psicólogo ** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF08: O sistema de permitir que o psicólogo tenha acesso a uma lista pendente de consultas que estarão pendentes de avaliação por ele e que poderão ser classificadas em agendar, cancelar ou concluir. Bem como visualizar, de preferência na mesma tela, consultas confirmadas|
+| Registro de evidência | Figura 1: Página para gerênciar consultas / Figura 2: Tela de confirmação para excluir uma consulta. <br> <img src="https://github.com/user-attachments/assets/2bf3cdf7-a5ae-43ed-98cc-9baf1e26b9cf" width="45%" style="display: inline-block;"> <img src="https://github.com/user-attachments/assets/2b9918a2-804e-47a1-8351-346f15b08c57" width="45%" style="display: inline-block;"> |
+
+
+| **Caso de Teste** 	| **CT-09: Visualização de Agenda pelo Paciente** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF09: O sistema deve permitir que o paciente visualize a agenda com dias e horários disponíveis do profissional desejado e solicite a consultada que ficará pendente até a confirmação ou cancelamento.|
+| Registro de evidência | Figura 1: Perfil do psicólogo exibindo as datas disponíveis na agenda / Figura 2: Tela para selecionar um horário disponível para o agendamento.<br> <img src="https://github.com/user-attachments/assets/b8ff81f8-8b1f-4ba0-93c7-546338157989" width="45%" style="display: inline-block;"> <img src="https://github.com/user-attachments/assets/a6b7d03b-1372-40ac-a754-11c62ff38c5a" width="45%" style="display: inline-block;"> |
 
 ## Avaliação
 
@@ -79,8 +95,7 @@ Incorporar validações em tempo real para os campos como formato de telefone, c
 ### CT-07: Solicitação de Agendamento pelo Paciente : 
 #### Pontos Fortes Identificados <br>
 - Solicitação Efetuada com Sucesso: O paciente conseguiu selecionar um horário disponível e enviar a solicitação de agendamento e a consulta foi registrada com o estado "Pendente" no sistema.
-- Exibição no Perfil do Psicólogo: As consultas pendentes foram exibidas corretamente no perfil do psicólogo, permitindo sua gestão.
- <br>
+- Exibição no Perfil do Psicólogo: As consultas pendentes foram exibidas corretamente no perfil do psicólogo, permitindo sua gestão.<br>
 
 #### Pontos Fracos Identificados <br>
 - Falta de Notificação ao Psicólogo:
@@ -90,4 +105,56 @@ Apesar de a consulta ser exibida na lista de pendentes, nenhuma notificação fo
 #### melhorias para as próximas iterações <br>
 - Adicionar Notificações ao Psicólogo: Implementar uma notificação via e-mail ou no sistema para informar ao psicólogo sobre a nova solicitação.
 - Corrigir Rótulos na Interface: Revisar e corrigir a identificação de campos na Pendentes.cshtml visualizado pelo psicólogo, ajustando o rótulo para "Paciente" ao exibir o nome correspondente.<br>
+---
+
+### CT-08: Acesso a Lista de Consultas Pendentes pelo Psicólogo : 
+#### Pontos Fortes Identificados <br>
+- O psicólogo consegue acessar e gerenciar suas consultas pendentes, confirmadas ou concluídas.
+- As ações de "Recusar" e "Confirmar" funcionam adequadamente, permitindo a classificação das consultas pendentes.
+- Quando o psicólogo confirma uma consulta, o paciente recebe um e-mail automático com os detalhes da consulta confirmada.
+- O sistema altera automaticamente o status das consultas para "Concluído" após a data e horário da consulta, otimizando o processo de gerenciamento.<br>
+
+#### Pontos Fracos Identificados <br>
+- A confirmação para exclusão depende de navegação para uma nova página, em vez de um modal pop-up que poderia melhorar a fluidez da interface.
+- Não há filtros ou ordenação que facilitem a busca por consultas em listas extensas.<br>
+
+#### melhorias para as próximas iterações <br>
+- Substituir a navegação para página de exclusão por um modal pop-up para confirmar a ação diretamente.
+- Adicionar a opção de filtro por status, data, e paciente, e permitir ordenação por ordem cronológica ou alfabética.<br>
+---
+
+### CT-09: Visualização de Agenda pelo Paciente : 
+#### Pontos Fortes Identificados <br>
+- O sistema permite que o paciente acesse o perfil do psicólogo e visualize as datas disponíveis em sua agenda, destacando horários livres.
+- Após selecionar uma data, o sistema apresenta os horários disponíveis para agendamento, facilitando a escolha.
+- Horários já selecionados para agendamento deixam de ser exibidos como disponíveis, evitando duplicidade de marcações.<br>
+
+#### Pontos Fracos Identificados <br>
+- Caso o psicólogo tenha muitas disponibilidades, não há uma funcionalidade explícita para filtrar horários por preferência ou intervalo de tempo.
+- <br>
+
+#### melhorias para as próximas iterações <br>
+- Adicionar filtros que permitam aos pacientes buscar horários disponíveis por período (manhã, tarde, noite) ou intervalos de data.<br>
+---
+
+### CT-09: Visualização de Agenda pelo Paciente : 
+#### Pontos Fortes Identificados <br>
+- <br>
+
+#### Pontos Fracos Identificados <br>
+- <br>
+
+#### melhorias para as próximas iterações <br>
+-<br>
+---
+
+### CT-09: Visualização de Agenda pelo Paciente : 
+#### Pontos Fortes Identificados <br>
+- <br>
+
+#### Pontos Fracos Identificados <br>
+- <br>
+
+#### melhorias para as próximas iterações <br>
+-<br>
 ---
