@@ -27,7 +27,7 @@
 
 O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema interativo e muitas vezes sem a necessidade do desenho do design das telas da interface. Isso permite que o design das interações seja bem planejado e gere impacto na qualidade no design do wireframe interativo que será desenvolvido logo em seguida.
 
-<img width="1000" alt="User Flow - PsiConexão" src="https://github.com/user-attachments/assets/69595634-f62a-47e7-8446-ad2181e1614a">
+<img width="1000" alt="User Flow - PsiConexão" src="https://github.com/user-attachments/assets/20e901db-1e7d-49dc-a7f2-9bcd67eca4ef">
 
 ## Wireframes
 
