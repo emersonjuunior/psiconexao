@@ -16,7 +16,6 @@ namespace psiconexao.Controllers
     {
         private readonly AppDbContext _context;
 
-
         public DisponibilidadesController(AppDbContext context)
         {
             _context = context;
@@ -26,20 +25,9 @@ namespace psiconexao.Controllers
         [Authorize(Roles = "Psicologo")]
         public async Task<IActionResult> Index()
         {
-            var usuarioIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
-
-            IQueryable<Disponibilidade> disponibilidadesQuery = _context.Disponibilidades.Include(d => d.Psicologo);
-
-            if (usuarioIdClaim != null)
-            {
-                int usuarioId = int.Parse(usuarioIdClaim);
-                disponibilidadesQuery = disponibilidadesQuery.Where(d => d.PsicologoId == usuarioId);
-            }
-
-            // retorna a view com as disponibilidades filtradas
-            return View(await disponibilidadesQuery.ToListAsync());
+            var appDbContext = _context.Disponibilidades.Include(d => d.Psicologo);
+            return View(await appDbContext.ToListAsync());
         }
-
 
         // GET: Disponibilidades/Details/5
         public async Task<IActionResult> Details(int? id)
