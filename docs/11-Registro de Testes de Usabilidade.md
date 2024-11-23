@@ -1,6 +1,6 @@
 # Registro de Testes de Usabilidade
 
-### Teste Pacientes
+### *Teste Visão Pacientes*
 
 #### Participante: P1
 
