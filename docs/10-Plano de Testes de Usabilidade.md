@@ -86,7 +86,7 @@ As tarefas foram criadas para testar cada requisito funcional da plataforma. A o
 - O processo de recuperação de senha foi intuitivo e fácil de seguir? 
  
 
-#### 2- Edição de Perfil (RF05, RF06)  
+### 2- Edição de Perfil (RF05, RF06)  
 
 - Tarefa 1: Atualize o perfil de psicólogo, adicionando informações como especializações, foto de perfil, descrição profissional e disponibilidade. 
 
@@ -103,7 +103,7 @@ As tarefas foram criadas para testar cada requisito funcional da plataforma. A o
 - Houve alguma parte do fluxo de edição que você achou confusa? 
 
 
-#### 3. Busca e Agendamento de Consultas (RF07, RF08, RF09, RF10, RF11)  
+### 3. Busca e Agendamento de Consultas (RF07, RF08, RF09, RF10, RF11)  
 
 - Tarefa 1: Realize uma busca por psicólogos, aplicando filtros como especialidade e faixa de preço. 
 
@@ -124,7 +124,7 @@ As tarefas foram criadas para testar cada requisito funcional da plataforma. A o
 - O fluxo de confirmação ou cancelamento foi compreensível para ambos (paciente e psicólogo)?
 
 
-#### 4. Gestão de Histórico de Consultas (RF12 - Funcionalidade Planejada para Fases Futuras)  
+### 4. Gestão de Histórico de Consultas (RF12 - Funcionalidade Planejada para Fases Futuras)  
 
 - Tarefa 1: O psicólogo acessa o histórico de consultas e verifica as anotações sobre os pacientes (caso a funcionalidade esteja disponível em uma versão preliminar). 
 
