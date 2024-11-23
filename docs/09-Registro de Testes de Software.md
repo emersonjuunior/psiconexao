@@ -173,7 +173,7 @@ Apesar de a consulta ser exibida na lista de pendentes, nenhuma notificação fo
 ### CT-12: Histórico de Consultas para Psicólogos : 
 #### Pontos Fortes Identificados <br>
 - O psicólogo consegue acessar e manter o histórico das consultas dos pacientes.
--  <br>
+- É possível visualizar a data e a hora da consulta agendada e o nome do paciente. <br>
 
 #### Pontos Fracos Identificados <br>
 - <br>
