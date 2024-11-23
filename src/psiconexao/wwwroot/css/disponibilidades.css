@@ -1,10 +1,12 @@
 ﻿/*Disponibilidades Index*/
-#disponibilidades-container, #disponibilidades-delete-container {
+#disponibilidades-container, #disponibilidades-delete-container, #disponibilidades-edit-container {
     width: 70vw;
     margin: 0 auto;
     border: 1px solid #E0E0E0;
     border-radius: 16px;
     margin-top: 3%;
+    background-color: #FFF;
+    margin-bottom: 3%;
 }
 
 #disponibilidades-top {
@@ -96,11 +98,62 @@ th {
     align-items: center;
 }
 
-#disponibilidades-delete-button {
+#disponibilidades-delete-button, #edit-button {
     width: 134px;
     height: 50px;
     background-color: #E7C864;
     border-radius: 16px;
     font-size: 18px;
     font-weight: 600;
+}
+
+/*Disponibilidades edit*/
+#disponibilidades-edit-container {
+    height: 400px;
+}
+
+#disponibilidades-edit-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    padding: 32px;
+}
+
+#edit-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    gap: 20px;
+}
+
+#edit-content > div {
+    flex-basis: 100%;
+}
+
+.form-group {
+    width: 90%;
+    margin-bottom: 1.5%;
+}
+
+.form-group label {
+    font-weight: 600;
+}
+
+.form-group input {
+    height: 42px;
+}
+
+#edit-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#edit-button {
+    width: 90%;
+    margin-top: 2%;
 }
