@@ -4,8 +4,8 @@
     ViewData["Title"] = "Perfil de " + Model.Nome;
 }
 
-<link rel="stylesheet" href="~/css/psicologoPerfil.css" />
 <link rel="stylesheet" href="~/css/psicologoLista.css" />
+<link rel="stylesheet" href="~/css/psicologoPerfil.css" />
 
 @if (TempData["ErrorMessage"] != null)
 {
@@ -32,14 +32,14 @@
                     }
                     else if (User.IsInRole(Perfil.Psicologo.ToString()) && Model.UsuarioId == ViewBag.UsuarioId)
                     {
-                        <a asp-controller="Disponibilidades" asp-action="Create" class="button w-auto">Gerar disponibilidades</a>
+                        <a asp-controller="Disponibilidades" asp-action="Index" class="button w-auto">Gerenciar disponibilidades</a>
                     }
                 }
             </div>
         </div>
     </div>
 </div>
-<div class="container cards p-0">
+<div class="profissional card-row-2 p-0">
     <div class="card card-item">
         <h6 class="m-0"><b>Especilidade: </b>@Model.TEspecialidade</h6>
     </div>
@@ -57,13 +57,11 @@
             <h6>@Model.Biografia</h6>
         </div>
     </div>
-    <div class="profissional">
-        <div class="card profissional-card">
-            <div class="container card-col-4">
-                <h4>Disponibilidades</h4>
-                <div id="calendar-container">
-                    <div id="calendar" data-url="@Url.Action("GetDisponibilidades", "Disponibilidades", new { psicologoId = Model.UsuarioId })"></div>
-                </div>
+    <div class="card calendar-card">
+        <div class="card-col-2">
+            <h4>Disponibilidades</h4>
+            <div id="calendar-container">
+                <div id="calendar" data-url="@Url.Action("GetDisponibilidades", "Disponibilidades", new { psicologoId = Model.UsuarioId })"></div>
             </div>
         </div>
     </div>

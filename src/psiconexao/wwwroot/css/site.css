@@ -243,6 +243,12 @@ a, a:hover {
     gap: 4px;
 }
 
+.card-row-2 {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
 .alert {
     background-color: #e7c864;
     display: flex;
@@ -569,5 +575,10 @@ a, a:hover {
         gap: 40px;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 12px;
     }
 }
