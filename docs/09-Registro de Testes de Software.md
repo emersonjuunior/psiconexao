@@ -28,12 +28,6 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | Registro de evidência | Figura 1: Tela de agendamento preenchida pelo paciente  / Figura 2: Consulta exibida como pendente no perfil do psicólogo. <br> <img src="https://github.com/user-attachments/assets/bab6bdb2-fb4d-4cb0-bcd5-a4a79afb60a7" width="45%" style="display: inline-block;"> <img src="https://github.com/user-attachments/assets/9c436d7c-68c3-4b41-8d1f-895101513a92" width="45%" style="display: inline-block;"> |
 
 
-| **Caso de Teste** 	| **CT-07: Solicitação de Agendamento pelo Paciente** 	|
-|:---:	|:---:	|
-|	Requisito Associado 	| RF07: O sistema deve permitir ao paciente enviar solicitação de agendamento de acordo com a disponibilidade do profissional.|
-| Registro de evidência | Figura 1: Tela de agendamento preenchida pelo paciente  / Figura 2: Consulta exibida como pendente no perfil do psicólogo. <br> <img src="https://github.com/user-attachments/assets/bab6bdb2-fb4d-4cb0-bcd5-a4a79afb60a7" width="45%" style="display: inline-block;"> <img src="https://github.com/user-attachments/assets/9c436d7c-68c3-4b41-8d1f-895101513a92" width="45%" style="display: inline-block;"> |
-
-
 | **Caso de Teste** 	| **CT-08: Acesso a Lista de Consultas Pendentes pelo Psicólogo ** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF08: O sistema de permitir que o psicólogo tenha acesso a uma lista pendente de consultas que estarão pendentes de avaliação por ele e que poderão ser classificadas em agendar, cancelar ou concluir. Bem como visualizar, de preferência na mesma tela, consultas confirmadas|
@@ -44,6 +38,22 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 |:---:	|:---:	|
 |	Requisito Associado 	| RF09: O sistema deve permitir que o paciente visualize a agenda com dias e horários disponíveis do profissional desejado e solicite a consultada que ficará pendente até a confirmação ou cancelamento.|
 | Registro de evidência | Figura 1: Perfil do psicólogo exibindo as datas disponíveis na agenda / Figura 2: Tela para selecionar um horário disponível para o agendamento.<br> <img src="https://github.com/user-attachments/assets/b8ff81f8-8b1f-4ba0-93c7-546338157989" width="45%" style="display: inline-block;"> <img src="https://github.com/user-attachments/assets/a6b7d03b-1372-40ac-a754-11c62ff38c5a" width="45%" style="display: inline-block;"> |
+
+| **Caso de Teste** 	| **CT-10: Envio de E-mail de Confirmação/Cancelamento ** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	|RF10: O sistema deve enviar e-mail de confirmação/cancelamento ao paciente que possui uma consulta pendente. |
+| Registro de evidência | Figura 1: Paciente recebendo email confirmando sua consulta. <br> <img src="https://github.com/user-attachments/assets/d72ae7f4-1e99-4ce0-a892-932159937671" > |
+
+
+| **Caso de Teste** 	| **CT-11: Busca com Filtros ** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF11: O sistema deve permitir que o paciente realize buscas na aplicação contando com filtros adicionais como especialidade, preço da consulta e horários e datas disponíveis.|
+| Registro de evidência | Figura 1: Selecionando filtros para encontrar psicólogos / Figura 2: psicólogos encontrados.<br> <img src="https://github.com/user-attachments/assets/1538f6f7-b3ac-4830-aa9f-a0d732fb493a" width="45%" style="display: inline-block;"> <img src="https://github.com/user-attachments/assets/71c29e38-ef09-46cd-871c-4674261f1d8d" width="45%" style="display: inline-block;"> |
+
+| **Caso de Teste** 	| **CT-12: Histórico de Consultas para Psicólogos** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF12: O sistema deve permitir que os psicólogos acessem e mantenham um histórico das consultas dos pacientes, incluindo anotações e progresso para um acompanhamento contínuo e personalização do atendimento. No entanto, devido à priorização de funcionalidades essenciais, o desenvolvimento desse requisito está planejado para fases futuras do projeto. |
+| Registro de evidência | Figura 1:  / Figura 2: <br> <img src="" width="45%" style="display: inline-block;"> <img src="" width="45%" style="display: inline-block;"> |
 
 ## Avaliação
 
@@ -137,7 +147,30 @@ Apesar de a consulta ser exibida na lista de pendentes, nenhuma notificação fo
 - Adicionar filtros que permitam aos pacientes buscar horários disponíveis por período (manhã, tarde, noite) ou intervalos de data.<br>
 ---
 
-### CT-09: Visualização de Agenda pelo Paciente : 
+### CT-10: Envio de E-mail de Confirmação/Cancelamento : 
+#### Pontos Fortes Identificados <br>
+- Quando o psicólogo confirma uma consulta, o paciente recebe corretamente um e-mail contendo detalhes da consulta, como data e horário. <br>
+
+#### Pontos Fracos Identificados <br>
+- Quando o psicólogo recusa uma consulta, nenhum e-mail é enviado ao paciente, o que pode gerar dúvidas ou falta de comunicação sobre o status.<br>
+
+#### melhorias para as próximas iterações <br>
+- Implementar o envio de e-mails para informar o paciente quando uma consulta é recusada.<br>
+---
+
+### CT-11: Busca com Filtros: 
+#### Pontos Fortes Identificados <br>
+- Todos os filtros aplicados funcionaram corretamente, retornando os resultados esperados.
+- A página de busca apresenta uma interface organizada, permitindo que o paciente selecione múltiplos filtros de forma clara e objetiva. <br>
+
+#### Pontos Fracos Identificados <br>
+- Não há sugestões automáticas de ajuste de filtros quando os resultados são escassos, o que poderia melhorar a experiência em casos de buscas restritivas.<br>
+
+#### melhorias para as próximas iterações <br>
+- Sugerir ao usuário filtros menos restritivos se houver poucos resultados encontrados, como ampliar a faixa de preço ou incluir mais especialidades.<br>
+---
+
+### CT-12: Histórico de Consultas para Psicólogos : 
 #### Pontos Fortes Identificados <br>
 - <br>
 
@@ -145,16 +178,4 @@ Apesar de a consulta ser exibida na lista de pendentes, nenhuma notificação fo
 - <br>
 
 #### melhorias para as próximas iterações <br>
--<br>
----
-
-### CT-09: Visualização de Agenda pelo Paciente : 
-#### Pontos Fortes Identificados <br>
 - <br>
-
-#### Pontos Fracos Identificados <br>
-- <br>
-
-#### melhorias para as próximas iterações <br>
--<br>
----

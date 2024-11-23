@@ -112,18 +112,17 @@ else
     {
         <div class="profissional">
             <div class="card profissional-card">
-                <div class="card-4 profissional-content">
+                <div class="card-wrap-4">
                     <img src="@Html.DisplayFor(modelItem => item.UrlFoto)"
                         alt="Profissional"
                         class="profissional-img"
                         style="border-radius: 12px;"/>
-                    <div class="profissional-card-info">
-                        <div>
-                            <div class="profissional-title">
-                                <h4>@Html.DisplayFor(modelItem => item.Nome)</h4>
-                                <h6>CRP: @Html.DisplayFor(modelItem => item.Crp)</h6>
-                            </div>
-                        </div>
+                    <div class="card-col-2 flex-grow-1">
+                    <div class="profissional-title">
+                        <h4>@Html.DisplayFor(modelItem => item.Nome)</h4>
+                        <h6>CRP: @Html.DisplayFor(modelItem => item.Crp)</h6>
+                    </div>
+                    <div class="card-col-2 flex-grow-1">
                         <div class="card-col">
                             <h6>
                                 <b>Abordagem: </b>@Html.DisplayFor(modelItem => item.TAbordagem)
@@ -132,7 +131,8 @@ else
                             <a href="/Psicologo/Perfil/@Html.DisplayFor(modelItem => item.UsuarioId)" class="button button-profile">
                                 Ver Perfil Completo
                                 <img src="../images/arrow2.svg" alt="Seta" class="min-svg" style="width: 14px;" />
-                            </a>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
