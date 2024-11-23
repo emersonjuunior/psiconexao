@@ -37,7 +37,7 @@
         <h4>Cadastre-se e Conecte-se com Mais Pacientes!</h4>
     </div>
     <div class="card card-box separator">
-        <form asp-action="Cadastro" class="card-wrap-8 container-content">
+        <form asp-action="Cadastro" class="card-wrap-8 container-content" id="register-form">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="card-col-2 register-form">
                 <label asp-for="Nome" class="control-label"></label>
@@ -59,7 +59,8 @@
                 <input type="email" id="confirmarEmail" name="confirmarEmail" class="input register-input" required />
             </div>
             <div class="card-col-2 register-form position-relative">
-                <label asp-for="Password" class="control-label"></label>
+                <label asp-for="Password" class="control-label">Senha</label>
+                <span id="password-requirements-span">Sua senha deve conter ao menos 8 caracteres, um número e uma letra maiúscula.</span>
                 <input asp-for="Password"
                     type="password"
                     class="input register-input"
@@ -69,8 +70,13 @@
                      width="20px"
                      class="lock-button position-absolute"
                      id="trocarVisualizacao"
-                     style="bottom: 10px; right: 20px; transform: translateY(-50%); cursor: pointer;" />
+                     style="bottom: 23px; right: 20px; transform: translateY(-50%); cursor: pointer;" />
                 <span asp-validation-for="Password" class="text-danger"></span>
+                <div id="password-strength-container">
+                    <div id="password-weak" class="password-strength-items"></div>
+                    <div id="password-medium" class="password-strength-items"></div>
+                    <div id="password-strong" class="password-strength-items"></div>
+                </div>
             </div>
             <div class="card-col-2 register-form position-relative">
                 <label for="confirmarSenha">Confirmar senha</label>
@@ -83,8 +89,14 @@
                      width="20px"
                      class="lock-button position-absolute"
                      id="trocarVisualizacaoConf"
-                     style="bottom: 5px; right: 20px; transform: translateY(-50%); cursor: pointer;" />
-            </div>
+                     style="bottom: 23px; right: 20px; transform: translateY(-50%); cursor: pointer;" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+                <div id="password-strength-container">
+                    <div id="password-weak-conf" class="password-strength-items"></div>
+                    <div id="password-medium-conf" class="password-strength-items"></div>
+                    <div id="password-strong-conf" class="password-strength-items"></div>
+                </div>
+                 </div>
             <div class="card-col-2 register-form">
                 <label asp-for="Perfil" class="control-label"></label>
                 <select asp-for="Perfil" class="input register-input" asp-items="@(new SelectList(Enum.GetValues(typeof(Perfil))))">
@@ -102,6 +114,7 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <link rel="stylesheet" href="~/css/senha.css">
 }
 
 <script>
@@ -133,4 +146,77 @@
             trocarVisualizacaoConf.src = '@Url.Content("~/images/eyes-closed1.svg")';
         }
     });
+
+    // validação de senha
+    const weak = document.querySelector("#password-weak");
+    const medium = document.querySelector("#password-medium");
+    const strong = document.querySelector("#password-strong");
+    const weakConf = document.querySelector("#password-weak-conf");
+    const mediumConf = document.querySelector("#password-medium-conf");
+    const strongConf = document.querySelector("#password-strong-conf");
+    const registerForm = document.querySelector("#register-form");
+    const passwordRequirementsSpan = document.querySelector("#password-requirements-span")
+
+    inputPassword.addEventListener("input", (e) => {
+      let strength = verifyPassword(e.target.value);
+
+      if (strength === 0) {
+        weak.classList.remove("active");
+        medium.classList.remove("active");
+        strong.classList.remove("active");
+      } else if (strength === 1) {
+        weak.classList.add("active");
+        medium.classList.remove("active");
+        strong.classList.remove("active");
+      } else if (strength === 2) {
+        medium.classList.add("active");
+        strong.classList.remove("active");
+      } else if (strength === 3) {
+        strong.classList.add("active");
+      }
+    });
+
+    inputPasswordConf.addEventListener("input", (e) => {
+        let strength = verifyPassword(e.target.value);
+
+      if (strength === 0) {
+        weakConf.classList.remove("active");
+        mediumConf.classList.remove("active");
+        strongConf.classList.remove("active")
+      } else if (strength === 1) {
+        weakConf.classList.add("active");
+        mediumConf.classList.remove("active");
+        strongConf.classList.remove("active");
+      } else if (strength === 2) {
+        mediumConf.classList.add("active");
+        strongConf.classList.remove("active");
+      } else if (strength === 3) {
+        strongConf.classList.add("active");
+      }
+    })
+    
+
+    function verifyPassword(password) {
+      let strength = 0;
+      let numberRegex = /\d/;
+      let upperCaseRegex = /[A-Z]/;
+      if (password.length >= 8) {
+        strength++;
+      }
+      if (numberRegex.test(password)) {
+        strength++;
+      }
+      if (upperCaseRegex.test(password)) {
+        strength++;
+      }
+      return strength;
+    }
+
+    registerForm.addEventListener("submit", (e) => {
+        if(verifyPassword(inputPassword.value) < 3){
+            e.preventDefault();
+            passwordRequirementsSpan.style.display = "block";
+        }
+    });
+
 </script>
