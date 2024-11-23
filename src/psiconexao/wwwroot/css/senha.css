@@ -1,0 +1,25 @@
+﻿#password-strength-container {
+    display: flex;
+    width: 96%;
+    height: 5px;
+    background-color: gray;
+}
+
+.password-strength-items {
+    height: 5px;
+    width: 0; /* Começa sem largura */
+    background-color: black;
+    transition: width 1s ease-in-out, background-color 0.5s ease;
+}
+
+    /* Classe para ativar a animação */
+    .password-strength-items.active {
+        width: 34%; /* Largura final */
+        background-color: green; /* Cor final */
+    }
+
+#password-requirements-span {
+    font-size: 12px;
+    display: none;
+    color: #F4796B;
+}
