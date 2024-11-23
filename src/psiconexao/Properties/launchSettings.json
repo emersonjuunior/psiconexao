@@ -23,6 +23,10 @@
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "iisSettings": {
+        "windowsAuthentication": false,
+        "anonymousAuthentication": true
       }
     },
     "Container (Dockerfile)": {
@@ -42,8 +46,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:64389",
-      "sslPort": 44364
+      "applicationUrl": "http://localhost:62948/",
+      "sslPort": 44383
     }
   }
 }
