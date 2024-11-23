@@ -38,7 +38,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | RF-003 | O sistema deve permitir que os usuários consigam logar na aplicação com e-mail e senha e em seguida ter acesso ao seu perfil e menu disponível correspondente a sua autenticação.  | ALTA       |
 | RF-004 | O sistema deve permitir que os usuários recuperem sua senha por e-mail em casos de esquecimento ou outro pertinente.       | ALTA       |
 | RF-005 |O sistema deve permitir que o psicólogo edite seu perfil posteriormente ao cadastro, podendo atualizar informações como áreas de especialização, foto de perfil, descrição profissional, preço de consulta, disponibilidade de agenda e preencher um histórico de consulta dos pacientes atendidos. | ALTA       |
-| RF-006 |  O sistema deve permitir que o paciente edite seu perfil posteriormente ao cadastro, podendo atualizar informações relevantes ao seu perfil. | MÉDIA      |
+| RF-006 |  O sistema deve permitir que o psicólogo edite o perfil do paciente, podendo atualizar informações relevantes ao perfil. | MÉDIA      |
 | RF-007 | O sistema deve permitir ao paciente enviar solicitação de agendamento de acordo com a disponibilidade do profissional. | MÉDIA      |
 | RF-008 |O sistema de permitir que o psicólogo tenha acesso a uma lista pendente de consultas que estarão pendentes de avaliação por ele e que poderão ser classificadas em agendar, cancelar ou concluir. Bem como visualizar, de preferência na mesma tela, consultas confirmadas. | MÉDIA      |
 | RF-009 | O sistema deve permitir que o paciente visualize a agenda com dias e horários disponíveis do profissional desejado e solicite a consultada que ficará pendente até a confirmação ou cancelamento. | MÉDIA      |
