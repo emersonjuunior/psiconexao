@@ -1,4 +1,7 @@
 # Registro de Testes de Usabilidade
+Após a realização dos testes de usabilidade, foi gerado um relatório com base nas análises conduzidas. O Registro de Testes de Usabilidade apresenta as evidências coletadas durante os testes, incluindo relatos e feedbacks dos usuários participantes, fundamentados no Plano de Testes de Usabilidade desenvolvido para os casos de uso desta etapa.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### *Teste Visão Pacientes*
 
