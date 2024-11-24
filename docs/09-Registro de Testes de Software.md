@@ -139,7 +139,19 @@ Em caso de erro, exibir uma notificação específica informando o problema.
 - Validação no Front-end:
 Incorporar validações em tempo real para os campos como formato de telefone, crp, preço da consulta.<br>
 ---
+### CT-06: Edição de Perfil do Paciente: 
+#### Pontos Fortes Identificados <br>
+- O psicólogo consegue acessar o perfil do paciente e editar informações relevantes com sucesso.
+- As informações editadas são salvas de forma eficaz no banco de dados, mantendo a integridade dos dados.<br>
 
+#### Pontos Fracos Identificados <br>
+- Não há um histórico ou registro das edições feitas no perfil do paciente, o que pode ser necessário para auditoria.
+- Não há validações robustas nos campos editados, como formatos de telefone, e-mail ou dados pessoais.<br>
+
+#### melhorias para as próximas iterações <br>
+- Registrar as edições feitas no perfil do paciente, incluindo o campo alterado, o valor anterior e o novo valor, bem como a data e o responsável pela alteração.
+- Adicionar validações nos campos editáveis, garantindo que informações como e-mail, CPF e telefone sigam formatos corretos.<br>
+---
 
 
 ### CT-07: Solicitação de Agendamento pelo Paciente : 
