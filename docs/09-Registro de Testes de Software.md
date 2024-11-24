@@ -61,7 +61,6 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 |	Requisito Associado 	|RF10: O sistema deve enviar e-mail de confirmação/cancelamento ao paciente que possui uma consulta pendente. |
 | Registro de evidência | Figura 1: Paciente recebendo email confirmando sua consulta. <br> <img src="https://github.com/user-attachments/assets/d72ae7f4-1e99-4ce0-a892-932159937671" > |
 
-
 | **Caso de Teste** 	| **CT-11: Busca com Filtros ** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF11: O sistema deve permitir que o paciente realize buscas na aplicação contando com filtros adicionais como especialidade, preço da consulta e horários e datas disponíveis.|
@@ -70,7 +69,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | **Caso de Teste** 	| **CT-12: Histórico de Consultas para Psicólogos** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF12: O sistema deve permitir que os psicólogos acessem e mantenham um histórico das consultas dos pacientes, incluindo anotações e progresso para um acompanhamento contínuo e personalização do atendimento. No entanto, devido à priorização de funcionalidades essenciais, o desenvolvimento desse requisito está planejado para fases futuras do projeto. |
-| Registro de evidência | Figura 1:  / Figura 2: <br> <img src="" width="45%" style="display: inline-block;"> <img src="" width="45%" style="display: inline-block;"> |
+| Registro de evidência | Figura 1: Edição de histórico e traumas / Figura 2: Perfil do pacinte atualizado <br> <img src="https://github.com/user-attachments/assets/69942942-b884-481a-9ec4-e414d42373e8" width="45%" style="display: inline-block;"> <img src="https://github.com/user-attachments/assets/0bb369eb-502f-4729-ac8a-cb0b8bd0492a" width="45%" style="display: inline-block;"> |
 
 ## Avaliação
 
