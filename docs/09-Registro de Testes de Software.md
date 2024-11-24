@@ -33,6 +33,11 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 |	Requisito Associado 	| RF05: O sistema deve permitir que o psicólogo edite seu perfil posteriormente ao cadastro, podendo atualizar informações como áreas de especialização, foto de perfil, descrição profissional, preço de consulta, disponibilidade de agenda e preencher um histórico de consulta dos pacientes atendidos. |
 | Registro de evidência | Figura 1: Mostra a página de edição de perfil com os dados já preenchidos. / Figura 2: Mostra o perfil com os dados atualizados e salvos. <br> <img src="https://github.com/user-attachments/assets/83904e54-51c7-4318-a567-ccd9b7fa6e5e" width="45%" style="display: inline-block;"> <img src="https://github.com/user-attachments/assets/27631905-3e73-43ea-8394-8f698d057792" width="45%" style="display: inline-block;"> |
 
+| **Caso de Teste** 	| **CT-06: Edição de Perfil do Paciente** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF06: O sistema deve permitir que o psicólogo edite o perfil do paciente, podendo atualizar informações relevantes ao perfil. |
+| Registro de evidência | Figura 1: Edição do perfil do paciente / Figura 2: Perfil do pacinte atualizado <br> <img src="https://github.com/user-attachments/assets/69942942-b884-481a-9ec4-e414d42373e8" width="45%" style="display: inline-block;"> <img src="https://github.com/user-attachments/assets/0bb369eb-502f-4729-ac8a-cb0b8bd0492a" width="45%" style="display: inline-block;"> |
+
 
 | **Caso de Teste** 	| **CT-07: Solicitação de Agendamento pelo Paciente** 	|
 |:---:	|:---:	|
