@@ -39,7 +39,7 @@
         </div>
     </div>
 </div>
-<div class="profissional card-row-2 p-0">
+<div class="profissional justify-content-between profissional-items p-0">
     <div class="card card-item">
         <h6 class="m-0"><b>Especilidade: </b>@Model.TEspecialidade</h6>
     </div>
@@ -58,7 +58,7 @@
         </div>
     </div>
     <div class="card calendar-card">
-        <div class="card-col-2">
+        <div class="card-col-2 calendar-item">
             <h4>Disponibilidades</h4>
             <div id="calendar-container">
                 <div id="calendar" data-url="@Url.Action("GetDisponibilidades", "Disponibilidades", new { psicologoId = Model.UsuarioId })"></div>
