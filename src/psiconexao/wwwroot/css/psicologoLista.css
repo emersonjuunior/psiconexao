@@ -42,8 +42,10 @@
     gap: 12px;
 }
 
-.profissional-content {
-    position: relative;
+.profissional-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .profissional-card-info {
@@ -56,7 +58,7 @@
 
 .profissional-img {
     width: 140px;
-    height: 140px;
+    height: 100%;
 }
 
 .profissional-title {
@@ -94,17 +96,28 @@
     .profissional-title {
         flex-direction: column;
         align-items: start;
-        max-width: 165px;
+        justify-content: flex-start;
+        max-width: 150px;
     }
 
     .profissional-img {
         width: 100px;
-        height: 100px;
-        position: absolute;
-        right: 0;
+        height: 100%;
     }
 
     .profissional-card-info {
-        gap: 48px;
+        gap: 12px;
+        flex-direction: row;
+        justify-content: flex-start;
     }
+}
+
+
+@media (max-width: 540px) {
+    .profissional-title {
+        position: absolute;
+        top: 24px;
+        left: 140px;
+    }
+
 }

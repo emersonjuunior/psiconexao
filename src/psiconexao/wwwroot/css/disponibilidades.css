@@ -1,0 +1,281 @@
+﻿/* Disponibilidades Index */
+#disponibilidades-container, #disponibilidades-delete-container, #disponibilidades-edit-container {
+    width: 70vw;
+    margin: 0 auto;
+    border: 1px solid #E0E0E0;
+    border-radius: 16px;
+    margin-top: 3%;
+    background-color: #FFF;
+    margin-bottom: 3%;
+}
+
+#disponibilidades-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3% 0;
+}
+
+    #disponibilidades-top div {
+        padding: 8px 32px;
+       
+    }
+
+    #disponibilidades-top a {
+        background-color: #E7C864;
+        border-radius: 16px;
+        padding: 10px 30px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+        #disponibilidades-top a:hover, #disponibilidades-delete-button:hover {
+            background-color: #e7c248;
+        }
+
+
+#disponibilidades-create-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#disponibilidades-container table {
+   width: 95%;
+   margin: 0 auto;
+   border-collapse: separate;
+   border-spacing: 5px;
+}
+
+#disponibilidades-container h6 {
+    font-weight: 600;
+}
+
+table, td {
+    border: none;
+}
+
+th {
+    border-bottom: 2px solid #F2F2F0 !important;
+}
+
+#buttons-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#disponibilidades-edit-button {
+    background-color: #EBDE9D;
+    border-radius: 12px;
+    padding: 4px 12px
+}
+ 
+/* Disponibilidades Delete */
+#disponibilidades-delete-container {
+    height: fit-content;
+    width: 65vw;
+    background-image: url("../images/disponibilidades-delete.svg");
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: right;
+}
+
+#disponibilidades-delete-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 70%;
+    height: 100%;
+    padding: 32px;
+}
+
+#disponibilidades-delete-container div {
+    width: 75%;
+}
+
+#delete-h3 h3{
+    font-size: 34px;
+}
+
+#delete-content dd, #delete-content dt {
+    width: 250px;
+}
+
+#delete-buttons-container {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#disponibilidades-delete-button, #edit-button {
+    width: 134px;
+    height: 50px;
+    background-color: #E7C864;
+    border-radius: 16px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Disponibilidades Edit */
+#disponibilidades-edit-container {
+    height: 400px;
+}
+
+#disponibilidades-edit-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    padding: 32px;
+}
+
+#edit-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    gap: 20px;
+}
+
+#edit-content > div {
+    flex-basis: 100%;
+}
+
+.form-group {
+    width: 90%;
+    margin-bottom: 1.5%;
+}
+
+.form-group label {
+    font-weight: 600;
+}
+
+.form-group input {
+    height: 42px;
+}
+
+#edit-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#edit-button {
+    width: 95%;
+    margin-top: 2%;
+}
+
+/* Responsividade Tablet */
+@media (min-width: 767px) and (max-width: 1024px) {
+    /* Index */
+    #disponibilidades-container, #disponibilidades-delete-container, #disponibilidades-edit-container {
+        width: 85vw;
+    }
+
+    #disponibilidades-create-button {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #disponibilidades-top a {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+/* Responsividade Mobile */
+@media (max-width: 766px) {
+    /* Index */
+    #disponibilidades-container, #disponibilidades-delete-container, #disponibilidades-edit-container {
+        width: 95vw;
+    }
+
+    #disponibilidades-top {
+        flex-direction: column;
+    }
+
+        #disponibilidades-top a {
+            padding: 8px 16px;
+            font-size: 14px;
+
+        }
+
+    #disponibilidades-create-button {
+        justify-content: start;
+    }
+
+    #disponibilidades-top > div {
+        width: 100%;
+    }
+
+    #disponibilidades-container table {
+        width: 100%; 
+        table-layout: fixed; 
+        border-collapse: collapse; 
+        text-align: center;
+    }
+
+    th, td {
+        width: 20%; 
+    }
+
+    th h6{
+        text-align: center;
+        font-size: 14px;
+    }
+
+    td {
+        text-align: left;
+        white-space: normal; 
+        word-wrap: break-word; 
+        font-size: 14px;
+    }
+
+    #buttons-container {
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    #disponibilidades-edit-button {
+        padding: 2px 8px;
+    }
+
+    /* Delete */
+    #disponibilidades-delete-container {
+        background-image: none;
+    }
+
+    #disponibilidades-delete-container div {
+        width: 100%;
+    }
+
+    #disponibilidades-delete-wrapper {
+        padding: 16px;
+    }
+
+    #delete-h3 h3 {
+        font-size: 24px;
+        margin-bottom: 2%;
+    }
+
+    /* Edit */
+    #disponibilidades-edit-container {
+        height: 500px;
+    }
+
+    #edit-content {
+        flex-direction: column;
+        gap: 2px;
+    }
+    
+    
+
+}

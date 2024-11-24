@@ -1,20 +1,24 @@
 # Projeto de Interface
 
-<img width="1000" alt="Página Inicial" src="https://github.com/user-attachments/assets/3d8008b6-a094-40a2-a9a9-1074beccc890">
-<img width="500" alt="Página Cadastro" src="https://github.com/user-attachments/assets/56e6d54e-670d-4154-9aec-418651245bc3">
-<img width="500" alt="Página PósCadastro" src="https://github.com/user-attachments/assets/bf690618-a4d7-4b74-acb4-077000fad4ac">
-<img width="1000" alt="Página Login" src="https://github.com/user-attachments/assets/30c5a3d4-906c-4f1b-b606-678f746ce5fc">
-<img width="500" alt="Página Esqueceu a Senha" src="https://github.com/user-attachments/assets/6ffbdb1a-00ed-4f42-a959-5b364a5920c9">
-<img width="500" alt="Página Redefinir Senha" src="https://github.com/user-attachments/assets/053d4106-a0e7-437d-8f32-34e54f7bb365">
-<img width="500" alt="Página Psicólogos" src="https://github.com/user-attachments/assets/066a3de4-bc6b-4bde-a6b9-c3634ea879bb">
-<img width="500" alt="Página Psicólogo" src="https://github.com/user-attachments/assets/e9731033-1687-45db-a1c9-d613c2ebb500">
-<img width="500" alt="Página Agendamento (visão do paciente)" src="https://github.com/user-attachments/assets/de1ca900-7088-4cea-bd64-84f8fa7e670c">
-<img width="500" alt="Página Agenda (visão do paciente)" src="https://github.com/user-attachments/assets/faf59b92-bdc2-4403-91ec-05324057f2ab">
-<img width="500" alt="Página Editar Perfil (visão do paciente)" src="https://github.com/user-attachments/assets/3078a8d4-24c5-4057-9828-9dd67d2441ce">
-<img width="500" alt="Página Paciente" src="https://github.com/user-attachments/assets/4bca3e2b-adc0-4a0b-a03a-aa1962a7f807">
-<img width="1000" alt="Página Editar Perfil" src="https://github.com/user-attachments/assets/45744f12-4042-4c6c-b27c-12fd9b1339b2">
-<img width="500" alt="Página Disponibilidade" src="https://github.com/user-attachments/assets/e1e42590-bbfe-46e7-a536-9241e0946699">
-<img width="500" alt="Página Agenda (visão do psicólogo)" src="https://github.com/user-attachments/assets/b9c7ceac-ce28-4882-a30c-84c7e7b5c99e">
+<img width="1000" alt="Página Inicial" src="https://github.com/user-attachments/assets/5d5ea69b-cdff-4219-94eb-752e1ee16b1c">
+<img width="1000" alt="Página Cadastro" src="https://github.com/user-attachments/assets/575c75d9-a44d-450a-bf6c-153e9ed3e1d3">
+<img width="500" alt="Página CadastroEmAnalise" src="https://github.com/user-attachments/assets/049a32bb-591d-44fe-a7ab-c7a17bf9d3f0">
+<img width="500" alt="Página Login" src="https://github.com/user-attachments/assets/8edd67e0-e490-40df-816a-517ff7176427">
+<img width="500" alt="Página Esqueceu a Senha" src="https://github.com/user-attachments/assets/2f83d3c3-c66d-44b9-aab5-c3ae2b503368">
+<img width="500" alt="Página Redefinir Senha" src="https://github.com/user-attachments/assets/5e287e30-1037-4b52-a7fe-25ca61a20363">
+<img width="500" alt="Página Psicólogos" src="https://github.com/user-attachments/assets/b0c01ce2-93ae-4202-9b5a-58be692dc21a">
+<img width="500" alt="Página Psicólogo" src="https://github.com/user-attachments/assets/79fb77f3-6e65-4a0b-b8d4-61c4d7d708a9">
+<img width="500" alt="Página Agendar Consulta" src="https://github.com/user-attachments/assets/567c7d31-8047-4aa0-bdb0-863649295586">
+<img width="500" alt="Página Consultas (visão do paciente)" src="https://github.com/user-attachments/assets/b5552b4a-5f82-471c-8155-0b327d9c8222">
+<img width="500" alt="Página Deletar Consulta" src="https://github.com/user-attachments/assets/fa68cdaf-1f7a-4a91-9b2c-a033c76a12df">
+<img width="500" alt="Página Editar Perfil (Visão do Psicólogo)" src="https://github.com/user-attachments/assets/d4d14847-855b-42f1-8dd6-12cb1fca200f">
+<img width="500" alt="Página Disponibilidades" src="https://github.com/user-attachments/assets/e1d3362e-d5b6-48fc-b55a-42343f9052e1">
+<img width="500" alt="Página Adicionar Disponibilidade" src="https://github.com/user-attachments/assets/4eec66e7-1b5f-48c3-bd39-e9d85be44e7f">
+<img width="500" alt="Página Editar Disponibilidade" src="https://github.com/user-attachments/assets/d80803bf-40dd-4155-80d5-da13d3a05fd4">
+<img width="500" alt="Página Excluir Disponibilidade" src="https://github.com/user-attachments/assets/464f6c66-683d-41a3-844f-45497f1a3736">
+<img width="1000" alt="Página Consultas (visão do psicólogo)" src="https://github.com/user-attachments/assets/c0d49cdf-d4bc-4b2d-95d8-d121e489e067">
+<img width="500" alt="Página Perfil Paciente" src="https://github.com/user-attachments/assets/f5b36a13-42d1-44d4-a2e9-a7ec472edefc">
+<img width="500" alt="Página Editar Perfil Paciente" src="https://github.com/user-attachments/assets/cd717352-43b5-4674-972e-c712b544eef1">
 
 - [Interfaces - Versão Desktop](https://www.figma.com/design/PwpcCW3HL5v6EaedC2yNbK/Projeto-PUC?node-id=0-1&node-type=canvas&t=2AnTaCPYb3yNe0Wm-0)
 - [Interfaces - Versão Mobile](https://www.figma.com/design/PwpcCW3HL5v6EaedC2yNbK/Projeto-PUC?node-id=27-114&node-type=canvas&t=2AnTaCPYb3yNe0Wm-0)
@@ -23,7 +27,7 @@
 
 O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema interativo e muitas vezes sem a necessidade do desenho do design das telas da interface. Isso permite que o design das interações seja bem planejado e gere impacto na qualidade no design do wireframe interativo que será desenvolvido logo em seguida.
 
-<img width="1000" alt="User Flow - PsiConexão" src="https://github.com/user-attachments/assets/69595634-f62a-47e7-8446-ad2181e1614a">
+<img width="1000" alt="User Flow - PsiConexão" src="https://github.com/user-attachments/assets/20e901db-1e7d-49dc-a7f2-9bcd67eca4ef">
 
 ## Wireframes
 
