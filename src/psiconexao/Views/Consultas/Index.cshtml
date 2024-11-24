@@ -2,6 +2,13 @@
 
 @{
     ViewData["Title"] = "Agenda de " + User.Identity.Name;
+
+    var paciente = User.IsInRole(Perfil.Paciente.ToString());
+    var psicologo = User.IsInRole(Perfil.Psicologo.ToString());
+
+    var consultas = Model.Where(m => m.Estado == Estado.Agendada || m.Estado == Estado.concluida || m.Estado == Estado.cancelada || m.Estado == Estado.Pendente);
+    var consultasNaoPendentes = Model.Where(m => m.Estado == Estado.Agendada || m.Estado == Estado.concluida || m.Estado == Estado.cancelada);
+    var consultasPendentes = Model.Where(m => m.Estado == Estado.Pendente);
 }
 
 @using System.Security.Claims;
@@ -12,7 +19,7 @@
     <div class="container card-col-4">
         <div class="container-content">
             @{
-                if (User.IsInRole(Perfil.Paciente.ToString()))
+                if (paciente)
                 {
                     <div class="card-item">
                         <h2>Conte-nos como está sendo sua experiência!</h2>
@@ -26,9 +33,9 @@
                          width="350px"
                     class="hide-img" />
                 }
-                else if (User.IsInRole(Perfil.Psicologo.ToString()))
+                else if (psicologo)
                 {
-                    if(Model.Where(m => m.Estado == Estado.Pendente).Count() > 0)
+                    if(consultasPendentes.Count() > 0)
                     {
                         <div class="card-col-4 ps-4 vw-100">
                             <h4>Lista de consultas pendentes</h4>
@@ -99,7 +106,7 @@
                     <h2>Agenda</h2>
                     <h6>Lista de consultas agendadas</h6>
                 </div>
-                @if (User.IsInRole(Perfil.Psicologo.ToString()))
+                @if (psicologo)
                 {
                     <a asp-controller="Disponibilidades" asp-action="Index" class="button">Gerenciar Disponibilidades</a>
                 }
@@ -115,7 +122,16 @@
                             <b>@Html.DisplayNameFor(model => model.Hora)</b>
                         </th>
                         <th>
-                            <b>@Html.DisplayNameFor(model => model.Psicologo)</b>
+                            @{
+                                if (psicologo)
+                                {
+                                    <b>@Html.DisplayNameFor(model => model.Psicologo)</b>
+                                }
+                                else if (paciente)
+                                {
+                                    <b>@Html.DisplayNameFor(model => model.Paciente)</b>
+                                }
+                            }
                         </th>
                         <th>
                             <b>@Html.DisplayNameFor(model => model.Estado)</b>
@@ -125,7 +141,7 @@
                 </thead>
                 <tbody>
                     @{
-                        if (User.IsInRole(Perfil.Paciente.ToString()))
+                        if (paciente)
                         {
                             @foreach (var item in Model
                                 .Where(m => m.Estado == Estado.Pendente)
@@ -155,52 +171,58 @@
                                 </tr>
                             }
                         }
-                    }
-                    @foreach (var item in Model
-                        .Where(m => m.Estado == Estado.Agendada || m.Estado == Estado.cancelada || m.Estado == Estado.concluida)
-                        .OrderBy(m => m.Data).ThenBy(m => m.Hora))
-                    {
-                        <tr class="divisao-tabela">
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Data)
-                            </td>
-                            <td>
-                                @item.Hora.ToString(@"hh\:mm")
-                            </td>
-                            <td>
-                                @{
-                                    if (User.IsInRole(Perfil.Paciente.ToString()))
-                                    {
-                                        <a asp-controller="Psicologo"
-                                           asp-action="Perfil"
-                                           asp-route-id="@item.Psicologo.UsuarioId"
-                                           class="link">
-                                            @Html.DisplayFor(modelItem => item.Psicologo.Nome)
-                                        </a>
-                                    } else if (User.IsInRole(Perfil.Psicologo.ToString()))
-                                    {
-                                        <a asp-controller="Paciente"
-                                           asp-action="Perfil"
-                                           asp-route-id="@item.Paciente.UsuarioId"
-                                           class="link">
-                                            @Html.DisplayFor(modelItem => item.Paciente.Nome)
-                                        </a>
+                        @foreach (var item in Model
+                            .Where(m => m.Estado == Estado.Agendada || m.Estado == Estado.cancelada || m.Estado == Estado.concluida)
+                            .OrderBy(m => m.Data).ThenBy(m => m.Hora))
+                        {
+                            <tr class="divisao-tabela">
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Data)
+                                </td>
+                                <td>
+                                    @item.Hora.ToString(@"hh\:mm")
+                                </td>
+                                <td>
+                                    @{
+                                        if (paciente)
+                                        {
+                                            <a asp-controller="Psicologo"
+                                               asp-action="Perfil"
+                                               asp-route-id="@item.Psicologo.UsuarioId"
+                                               class="link">
+                                                @Html.DisplayFor(modelItem => item.Psicologo.Nome)
+                                            </a>
+                                        } else if (psicologo)
+                                        {
+                                            <a asp-controller="Paciente"
+                                               asp-action="Perfil"
+                                               asp-route-id="@item.Paciente.UsuarioId"
+                                               class="link">
+                                                @Html.DisplayFor(modelItem => item.Paciente.Nome)
+                                            </a>
+                                        }
                                     }
-                                }
-                            </td>
-                            <td>
-                                @{
-                                    if(item.Estado == Estado.Agendada && item.Data < DateTime.Now)
-                                    {
-                                        item.Estado = Estado.concluida;
+                                </td>
+                                <td>
+                                    @{
+                                        if(item.Estado == Estado.Agendada && item.Data < DateTime.Now)
+                                        {
+                                            item.Estado = Estado.concluida;
+                                        }
                                     }
-                                }
-                                <span class="tag @item.Estado">@Html.DisplayFor(modelItem => item.Estado)</span>
-                            </td>
-                            <td>
-                                <a asp-action="Delete" asp-route-id="@item.ConsultaId">Excluir</a>
-                            </td>
-                        </tr>
+                                    <span class="tag @item.Estado">@Html.DisplayFor(modelItem => item.Estado)</span>
+                                </td>
+                                <td>
+                                    <a asp-action="Delete" asp-route-id="@item.ConsultaId">Excluir</a>
+                                </td>
+                            </tr>
+                        }
+                        if (consultas.Count() == 0 || psicologo && consultasNaoPendentes.Count() == 0)
+                        {
+                            <tr class="text-center" role="alert">
+                                <td colspan="5">Não há nenhuma consulta marcada no momento.</td>
+                            </tr>
+                        }
                     }
                 </tbody>
             </table>
