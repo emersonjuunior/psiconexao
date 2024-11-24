@@ -224,11 +224,13 @@ Apesar de a consulta ser exibida na lista de pendentes, nenhuma notificação fo
 
 ### CT-12: Histórico de Consultas para Psicólogos : 
 #### Pontos Fortes Identificados <br>
-- 
-- <br>
+- O psicólogo consegue acessar o perfil do paciente e editar informações relacionadas ao histórico de consultas e traumas.
+- As alterações feitas no histórico são refletidas no perfil do paciente, permitindo acompanhamento contínuo e personalização do atendimento.<br>
 
 #### Pontos Fracos Identificados <br>
-- <br>
+- Não há um registro cronológico detalhado das consultas anteriores, o que limita o acompanhamento de longo prazo do paciente.
+- As anotações sobre o progresso do paciente não são associadas a datas específicas ou consultas individuais.<br>
 
 #### melhorias para as próximas iterações <br>
-- <br>
+- Criar um modelo para armazenar anotações específicas de cada consulta, incluindo data e hora.
+- Registrar mudanças no histórico, incluindo o responsável pela edição e a data da alteração.<br>
