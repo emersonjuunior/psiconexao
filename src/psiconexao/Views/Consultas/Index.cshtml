@@ -68,8 +68,8 @@
                                                 @item.Hora.ToString(@"hh\:mm")
                                             </td>
                                             <td>
-                                                <a asp-controller="Paciente"
-                                                   asp-action="Perfil"
+                                                <a asp-controller="Pacientes"
+                                                   asp-action="Details"
                                                    asp-route-id="@item.Paciente.UsuarioId"
                                                    class="link">
                                                     @Html.DisplayFor(modelItem => item.Paciente.Nome)
@@ -194,8 +194,8 @@
                                             </a>
                                         } else if (psicologo)
                                         {
-                                            <a asp-controller="Paciente"
-                                               asp-action="Perfil"
+                                            <a asp-controller="Pacientes"
+                                               asp-action="Details"
                                                asp-route-id="@item.Paciente.UsuarioId"
                                                class="link">
                                                 @Html.DisplayFor(modelItem => item.Paciente.Nome)
