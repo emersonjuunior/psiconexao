@@ -6,7 +6,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 
 | Caso de Teste         | CT-01: Verificar o funcionamento do cadastro de Psicólogo e Paciente      |
 |:--------------------:	|:-----------------------------------------------------------------------:	|
-|	Requisito Associado 	| RF-01: O sistema deve permitir o cadastro de Psicólogos e pacientes incluindo dados como nome, e-mail, telefone e senha e outras informações essenciais para identificação e autenticação. |
+|	Requisito Associado 	| RF-01: O sistema deve permitir o cadastro de psicólogos e pacientes incluindo dados como nome, e-mail, telefone e senha e outras informações essenciais para identificação e autenticação. |
 | Registro de evidência | Figura abaixo apresenta a tela de cadastro preenchida. <br> ![Captura de tela 2024-11-19 190141](https://github.com/user-attachments/assets/5c649075-9358-4f46-bbee-144fe006c179) |
 
 
@@ -172,7 +172,8 @@ Apesar de a consulta ser exibida na lista de pendentes, nenhuma notificação fo
 
 ### CT-12: Histórico de Consultas para Psicólogos : 
 #### Pontos Fortes Identificados <br>
-- <br>
+- O psicólogo consegue acessar e manter o histórico das consultas dos pacientes.
+- É possível visualizar a data e a hora da consulta agendada e o nome do paciente. <br>
 
 #### Pontos Fracos Identificados <br>
 - <br>
