@@ -122,6 +122,7 @@ Após o envio, a página de redefinição de senha é exibida, permitindo que o 
 ---
 
 
+
 ### CT-05: Edição de Perfil do Psicólogo : 
 #### Pontos Fortes Identificados <br>
 - Edição Funcional: Todas as informações editadas foram salvas com sucesso e exibidas corretamente no perfil.
@@ -138,6 +139,8 @@ Em caso de erro, exibir uma notificação específica informando o problema.
 - Validação no Front-end:
 Incorporar validações em tempo real para os campos como formato de telefone, crp, preço da consulta.<br>
 ---
+
+
 
 ### CT-07: Solicitação de Agendamento pelo Paciente : 
 #### Pontos Fortes Identificados <br>
