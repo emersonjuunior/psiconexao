@@ -94,7 +94,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 
 #### melhorias para as próximas iterações <br>
 - Após o cadastro, gerar um token único e enviar um e-mail com um link para ativação da conta:<br>
-
+---
 
 ### CT-03: Login com E-mail e Senha: 
 #### Pontos Fortes Identificados <br>
