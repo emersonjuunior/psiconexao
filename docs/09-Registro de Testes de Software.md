@@ -22,6 +22,11 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 |	Requisito Associado 	| RF03: O sistema deve permitir que os usuários consigam logar na aplicação com e-mail e senha e em seguida ter acesso ao seu perfil e menu disponível correspondente a sua autenticação. |
 | Registro de evidência | Figura 1: Tela de erro (E-mail ou senha inválidos) / Figura 2: Redirecionamento para a página após o login. <br>	 <img src="https://github.com/user-attachments/assets/36b01327-4522-4b0e-be90-f4415843062b" width="45%" style="display: inline-block;"> <img src="https://github.com/user-attachments/assets/ca88439e-6bd4-453b-8a68-c923ffae50e1" width="45%" style="display: inline-block;"> |
 
+| **Caso de Teste** 	| **CT-04: Recuperação de Senha** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF04: O sistema deve permitir que os usuários recuperem sua senha por e-mail em casos de esquecimento ou outro pertinente. |
+| Registro de evidência | Figura 1: Página para informar E-mail cadastrado / Figura 2: Pàgina para redefinição de senha <br>	 <img src="https://github.com/user-attachments/assets/29856758-ea08-41b7-bd52-dd44b23c109f" width="45%" style="display: inline-block;"> <img src="https://github.com/user-attachments/assets/7cd5607e-b03b-44ba-8aaf-a9cf1984c422" width="45%" style="display: inline-block;"> |
+
 
 | **Caso de Teste** 	| **CT-05: Edição de Perfil do Psicólogo** 	|
 |:---:	|:---:	|
