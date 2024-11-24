@@ -108,6 +108,19 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 #### melhorias para as próximas iterações <br>
 - Implementar mensagens mais específicas com base no problema detectado.<br>
 ---
+### CT-04: Recuperação de Senha: 
+#### Pontos Fortes Identificados <br>
+- Ao clicar em "Esqueceu senha?", o sistema direciona para uma página onde o e-mail cadastrado é informado.
+Após o envio, a página de redefinição de senha é exibida, permitindo que o usuário insira e confirme uma nova senha.
+- Após a redefinição, o sistema redireciona o usuário para a página de login, sinalizando a conclusão do processo.<br>
+
+#### Pontos Fracos Identificados <br>
+- Sem o envio de e-mail ou código, qualquer pessoa com acesso ao e-mail cadastrado pode redefinir a senha sem validação adicional.<br>
+
+#### melhorias para as próximas iterações <br>
+- Enviar um e-mail ao usuário com um link seguro para redefinir a senha, contendo um token único.<br>
+---
+
 
 ### CT-05: Edição de Perfil do Psicólogo : 
 #### Pontos Fortes Identificados <br>
