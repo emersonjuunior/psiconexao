@@ -87,6 +87,14 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 - Incluir uma mensagem de sucesso após o cadastro. Isso pode ser feito adicionando um alerta ou uma mensagem exibida na interface. <br>
 - Incorporar validações mais robustas no back-end para senhas e formatos de dados. <br>
 ---
+###	CT-02: Envio de E-mail de Confirmação Após Cadastro: 
+#### Pontos Fracos Identificados <br>
+- Após a conclusão do cadastro, o sistema não enviou o e-mail de confirmação para o endereço informado pelo usuário
+- <br>
+
+#### melhorias para as próximas iterações <br>
+- Após o cadastro, gerar um token único e enviar um e-mail com um link para ativação da conta:<br>
+
 
 ### CT-03: Login com E-mail e Senha: 
 #### Pontos Fortes Identificados <br>
