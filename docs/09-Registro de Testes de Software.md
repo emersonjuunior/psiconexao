@@ -10,6 +10,13 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | Registro de evidência | Figura abaixo apresenta a tela de cadastro preenchida. <br> ![Captura de tela 2024-11-19 190141](https://github.com/user-attachments/assets/5c649075-9358-4f46-bbee-144fe006c179) |
 
 
+| **Caso de Teste** 	| **CT-02: Envio de E-mail de Confirmação Após Cadastro** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF02: O sistema deve enviar um e-mail de confirmação após cadastro para garantir a autenticidade dos usuários. |
+| Registro de evidência | Figura 1: Página redirecionada para "consultas" após o cadastro" <br> <img src="https://github.com/user-attachments/assets/f16c7e45-6e9a-4633-ae7d-cb4650595fec" style="display: inline-block;"> |
+
+
+
 | **Caso de Teste** 	| **CT-03: Login com E-mail e Senha** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF03: O sistema deve permitir que os usuários consigam logar na aplicação com e-mail e senha e em seguida ter acesso ao seu perfil e menu disponível correspondente a sua autenticação. |
