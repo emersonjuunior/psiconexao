@@ -20,6 +20,12 @@
 /*    gap: 40px;*/
 }
 
+.profissional-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .card-item {
     width: 100%;
     max-width: fit-content;
@@ -51,6 +57,10 @@
     max-width: 465px;
 }
 
+.calendar-item {
+    padding: 24px;
+}
+
 @media (max-width: 1024px) {
     .cards {
         flex-direction: column;
@@ -58,6 +68,10 @@
         width: 95%;
         min-width: 95%;
         margin: 0 20px;
+    }
+
+    .profissional-items {
+        flex-direction: column;
     }
 
     .card-item {
@@ -93,6 +107,10 @@
     .profissional-subtitle {
         font-size: 18px;
     }
+
+    .profissional-card-info {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 600px) {
@@ -118,5 +136,11 @@
 
     .calendar-card {
         padding: 24px;
+    }
+
+    .calendar-item {
+        text-align: left;
+        align-items: flex-start;
+        padding: 0;
     }
 }
