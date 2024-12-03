@@ -10,16 +10,33 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | Registro de evidência | Figura abaixo apresenta a tela de cadastro preenchida. <br> ![Captura de tela 2024-11-19 190141](https://github.com/user-attachments/assets/5c649075-9358-4f46-bbee-144fe006c179) |
 
 
+| **Caso de Teste** 	| **CT-02: Envio de E-mail de Confirmação Após Cadastro** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF02: O sistema deve enviar um e-mail de confirmação após cadastro para garantir a autenticidade dos usuários. |
+| Registro de evidência | Figura 1: Página redirecionada para "consultas" após o cadastro" <br> <img src="https://github.com/user-attachments/assets/f16c7e45-6e9a-4633-ae7d-cb4650595fec" style="display: inline-block;"> |
+
+
+
 | **Caso de Teste** 	| **CT-03: Login com E-mail e Senha** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF03: O sistema deve permitir que os usuários consigam logar na aplicação com e-mail e senha e em seguida ter acesso ao seu perfil e menu disponível correspondente a sua autenticação. |
 | Registro de evidência | Figura 1: Tela de erro (E-mail ou senha inválidos) / Figura 2: Redirecionamento para a página após o login. <br>	 <img src="https://github.com/user-attachments/assets/36b01327-4522-4b0e-be90-f4415843062b" width="45%" style="display: inline-block;"> <img src="https://github.com/user-attachments/assets/ca88439e-6bd4-453b-8a68-c923ffae50e1" width="45%" style="display: inline-block;"> |
+
+| **Caso de Teste** 	| **CT-04: Recuperação de Senha** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF04: O sistema deve permitir que os usuários recuperem sua senha por e-mail em casos de esquecimento ou outro pertinente. |
+| Registro de evidência | Figura 1: Página para informar E-mail cadastrado / Figura 2: Pàgina para redefinição de senha <br>	 <img src="https://github.com/user-attachments/assets/29856758-ea08-41b7-bd52-dd44b23c109f" width="45%" style="display: inline-block;"> <img src="https://github.com/user-attachments/assets/7cd5607e-b03b-44ba-8aaf-a9cf1984c422" width="45%" style="display: inline-block;"> |
 
 
 | **Caso de Teste** 	| **CT-05: Edição de Perfil do Psicólogo** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF05: O sistema deve permitir que o psicólogo edite seu perfil posteriormente ao cadastro, podendo atualizar informações como áreas de especialização, foto de perfil, descrição profissional, preço de consulta, disponibilidade de agenda e preencher um histórico de consulta dos pacientes atendidos. |
 | Registro de evidência | Figura 1: Mostra a página de edição de perfil com os dados já preenchidos. / Figura 2: Mostra o perfil com os dados atualizados e salvos. <br> <img src="https://github.com/user-attachments/assets/83904e54-51c7-4318-a567-ccd9b7fa6e5e" width="45%" style="display: inline-block;"> <img src="https://github.com/user-attachments/assets/27631905-3e73-43ea-8394-8f698d057792" width="45%" style="display: inline-block;"> |
+
+| **Caso de Teste** 	| **CT-06: Edição de Perfil do Paciente** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF06: O sistema deve permitir que o psicólogo edite o perfil do paciente, podendo atualizar informações relevantes ao perfil. |
+| Registro de evidência | Figura 1: Edição do perfil do paciente / Figura 2: Perfil do pacinte atualizado <br> <img src="https://github.com/user-attachments/assets/69942942-b884-481a-9ec4-e414d42373e8" width="45%" style="display: inline-block;"> <img src="https://github.com/user-attachments/assets/0bb369eb-502f-4729-ac8a-cb0b8bd0492a" width="45%" style="display: inline-block;"> |
 
 
 | **Caso de Teste** 	| **CT-07: Solicitação de Agendamento pelo Paciente** 	|
@@ -44,7 +61,6 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 |	Requisito Associado 	|RF10: O sistema deve enviar e-mail de confirmação/cancelamento ao paciente que possui uma consulta pendente. |
 | Registro de evidência | Figura 1: Paciente recebendo email confirmando sua consulta. <br> <img src="https://github.com/user-attachments/assets/d72ae7f4-1e99-4ce0-a892-932159937671" > |
 
-
 | **Caso de Teste** 	| **CT-11: Busca com Filtros ** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF11: O sistema deve permitir que o paciente realize buscas na aplicação contando com filtros adicionais como especialidade, preço da consulta e horários e datas disponíveis.|
@@ -53,7 +69,7 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | **Caso de Teste** 	| **CT-12: Histórico de Consultas para Psicólogos** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF12: O sistema deve permitir que os psicólogos acessem e mantenham um histórico das consultas dos pacientes, incluindo anotações e progresso para um acompanhamento contínuo e personalização do atendimento. No entanto, devido à priorização de funcionalidades essenciais, o desenvolvimento desse requisito está planejado para fases futuras do projeto. |
-| Registro de evidência | Figura 1:  / Figura 2: <br> <img src="" width="45%" style="display: inline-block;"> <img src="" width="45%" style="display: inline-block;"> |
+| Registro de evidência | Figura 1: Edição de histórico e traumas / Figura 2: Perfil do pacinte atualizado <br> <img src="https://github.com/user-attachments/assets/69942942-b884-481a-9ec4-e414d42373e8" width="45%" style="display: inline-block;"> <img src="https://github.com/user-attachments/assets/0bb369eb-502f-4729-ac8a-cb0b8bd0492a" width="45%" style="display: inline-block;"> |
 
 ## Avaliação
 
@@ -71,6 +87,14 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 - Incluir uma mensagem de sucesso após o cadastro. Isso pode ser feito adicionando um alerta ou uma mensagem exibida na interface. <br>
 - Incorporar validações mais robustas no back-end para senhas e formatos de dados. <br>
 ---
+###	CT-02: Envio de E-mail de Confirmação Após Cadastro: 
+#### Pontos Fracos Identificados <br>
+- Após a conclusão do cadastro, o sistema não enviou o e-mail de confirmação para o endereço informado pelo usuário
+- <br>
+
+#### melhorias para as próximas iterações <br>
+- Após o cadastro, gerar um token único e enviar um e-mail com um link para ativação da conta:<br>
+---
 
 ### CT-03: Login com E-mail e Senha: 
 #### Pontos Fortes Identificados <br>
@@ -84,6 +108,20 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 #### melhorias para as próximas iterações <br>
 - Implementar mensagens mais específicas com base no problema detectado.<br>
 ---
+### CT-04: Recuperação de Senha: 
+#### Pontos Fortes Identificados <br>
+- Ao clicar em "Esqueceu senha?", o sistema direciona para uma página onde o e-mail cadastrado é informado.
+Após o envio, a página de redefinição de senha é exibida, permitindo que o usuário insira e confirme uma nova senha.
+- Após a redefinição, o sistema redireciona o usuário para a página de login, sinalizando a conclusão do processo.<br>
+
+#### Pontos Fracos Identificados <br>
+- Sem o envio de e-mail ou código, qualquer pessoa com acesso ao e-mail cadastrado pode redefinir a senha sem validação adicional.<br>
+
+#### melhorias para as próximas iterações <br>
+- Enviar um e-mail ao usuário com um link seguro para redefinir a senha, contendo um token único.<br>
+---
+
+
 
 ### CT-05: Edição de Perfil do Psicólogo : 
 #### Pontos Fortes Identificados <br>
@@ -101,6 +139,20 @@ Em caso de erro, exibir uma notificação específica informando o problema.
 - Validação no Front-end:
 Incorporar validações em tempo real para os campos como formato de telefone, crp, preço da consulta.<br>
 ---
+### CT-06: Edição de Perfil do Paciente: 
+#### Pontos Fortes Identificados <br>
+- O psicólogo consegue acessar o perfil do paciente e editar informações relevantes com sucesso.
+- As informações editadas são salvas de forma eficaz no banco de dados, mantendo a integridade dos dados.<br>
+
+#### Pontos Fracos Identificados <br>
+- Não há um histórico ou registro das edições feitas no perfil do paciente, o que pode ser necessário para auditoria.
+- Não há validações robustas nos campos editados, como formatos de telefone, e-mail ou dados pessoais.<br>
+
+#### melhorias para as próximas iterações <br>
+- Registrar as edições feitas no perfil do paciente, incluindo o campo alterado, o valor anterior e o novo valor, bem como a data e o responsável pela alteração.
+- Adicionar validações nos campos editáveis, garantindo que informações como e-mail, CPF e telefone sigam formatos corretos.<br>
+---
+
 
 ### CT-07: Solicitação de Agendamento pelo Paciente : 
 #### Pontos Fortes Identificados <br>
@@ -172,11 +224,13 @@ Apesar de a consulta ser exibida na lista de pendentes, nenhuma notificação fo
 
 ### CT-12: Histórico de Consultas para Psicólogos : 
 #### Pontos Fortes Identificados <br>
-- O psicólogo consegue acessar e manter o histórico das consultas dos pacientes.
-- É possível visualizar a data e a hora da consulta agendada e o nome do paciente. <br>
+- O psicólogo consegue acessar o perfil do paciente e editar informações relacionadas ao histórico de consultas e traumas.
+- As alterações feitas no histórico são refletidas no perfil do paciente, permitindo acompanhamento contínuo e personalização do atendimento.<br>
 
 #### Pontos Fracos Identificados <br>
-- <br>
+- Não há um registro cronológico detalhado das consultas anteriores, o que limita o acompanhamento de longo prazo do paciente.
+- As anotações sobre o progresso do paciente não são associadas a datas específicas ou consultas individuais.<br>
 
 #### melhorias para as próximas iterações <br>
-- <br>
+- Criar um modelo para armazenar anotações específicas de cada consulta, incluindo data e hora.
+- Registrar mudanças no histórico, incluindo o responsável pela edição e a data da alteração.<br>
