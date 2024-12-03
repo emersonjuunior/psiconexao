@@ -1,62 +1,69 @@
 ﻿@model psiconexao.Models.Paciente
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar Perfil do Paciente " + Model.Nome;
 }
 
-<h1>Edit</h1>
+<link rel="stylesheet" href="~/css/psicologoPerfil.css" />
+<link rel="stylesheet" href="~/css/psicologoLista.css" />
+<link rel="stylesheet" href="~/css/psicologoEditar.css" />
 
-<h4>Paciente</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Cpf" class="control-label"></label>
-                <input asp-for="Cpf" class="form-control" />
-                <span asp-validation-for="Cpf" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Trauma" class="control-label"></label>
-                <input asp-for="Trauma" class="form-control" />
-                <span asp-validation-for="Trauma" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="HistoricoConsulta" class="control-label"></label>
-                <input asp-for="HistoricoConsulta" class="form-control" />
-                <span asp-validation-for="HistoricoConsulta" class="text-danger"></span>
-            </div>
-            <input type="hidden" asp-for="UsuarioId" />
-            <div class="form-group">
-                <label asp-for="Nome" class="control-label"></label>
-                <input asp-for="Nome" class="form-control" />
-                <span asp-validation-for="Nome" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Telefone" class="control-label"></label>
-                <input asp-for="Telefone" class="form-control" />
-                <span asp-validation-for="Telefone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>           
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+<div class="profissional">
+    <div class="card profissional-card">
+        <div class="profissional-content">
+            <h2>Adicionar histórico</h2>
+            <div class="separator-2"></div>
+            <form asp-action="Edit" class="profissional-card-info">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="card-wrap-2 justify-content-between">
+                    <h5 class="full-size mt-2">Dados Pessoais</h5>
+                    <input type="hidden" asp-for="UsuarioId" />
+                    <input type="hidden" asp-for="Password" />
+                    <input type="hidden" asp-for="Perfil" />
+                    <div class="info-form">
+                        <label asp-for="Nome" class="control-label"></label>
+                        <input asp-for="Nome" class="edit-input" />
+                        <span asp-validation-for="Nome" class="text-danger"></span>
+                    </div>
+                    <div class="info-form">
+                        <label asp-for="Cpf" class="control-label"></label>
+                        <input asp-for="Cpf" class="edit-input" />
+                        <span asp-validation-for="Cpf" class="text-danger"></span>
+                    </div>
+                    <div class="info-form">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="edit-input" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="info-form">
+                        <label asp-for="Telefone" class="control-label"></label>
+                        <input asp-for="Telefone" class="edit-input" />
+                        <span asp-validation-for="Telefone" class="text-danger"></span>
+                    </div>
+                    <div class="info-form flex-grow-1 vw-100 mw-100">
+                        <label asp-for="Trauma" class="control-label"></label>
+                        <input asp-for="Trauma" class="edit-input mw-100" />
+                        <span asp-validation-for="Trauma" class="text-danger"></span>
+                    </div>
+                    <input name="__RequestVerificationToken" type="hidden" value="...">
+                </div>
+                <div class="separator-2"></div>
+                <hr />
+                <div class="separator-2"></div>
+                <div class="card-wrap-2 justify-content-between">
+                    <div class="info-textarea">
+                        <label asp-for="HistoricoConsulta" class="control-label"></label>
+                        <textarea asp-for="HistoricoConsulta" class="form-textarea"></textarea>
+                        <span asp-validation-for="HistoricoConsulta" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="m-auto pt-4 card-col-2 align-items-center">
+                    <input type="submit" value="Salvar" class="button" />
+                    <a href="/Pacientes/Details/@Model.UsuarioId">Voltar para Perfil</a>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

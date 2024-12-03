@@ -4,57 +4,33 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
-
-<div>
-    <h4>Paciente</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cpf)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cpf)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Trauma)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Trauma)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.HistoricoConsulta)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.HistoricoConsulta)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Telefone)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Telefone)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Password)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Password)
-        </dd>        
-    </dl>
+<div class="white-container">
+    <div class="container card-col-4">
+        <div class="container-content">
+            <div>
+                <h3>@Html.DisplayFor(model => model.Nome)</h3>
+                <br />
+                <div class="card-col-2">
+                    <h6><b>@Html.DisplayNameFor(model => model.Email):</b> @Html.DisplayFor(model => model.Email)</h6>
+                    <h6><b>@Html.DisplayNameFor(model => model.Cpf):</b> @Html.DisplayFor(model => model.Cpf)</h6>
+                    <h6><b>@Html.DisplayNameFor(model => model.Telefone):</b> @Html.DisplayFor(model => model.Telefone)</h6>
+                    <h6><b>@Html.DisplayNameFor(model => model.Trauma):</b> @Html.DisplayFor(model => model.Trauma)</h6>
+                </div>
+            </div>
+            <img src="/images/Personal-data-cuate.png" alt="Ilustração de menina com dados flutuando" width="260px" class="hide-img">
+        </div>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.UsuarioId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+<div class="separator-2"></div>
+<div class="separator-2"></div>
+<div class="container">
+    <div class="card">
+        <div class="p-4">
+            <div class="header-content mb-4">
+                <h3>Histórico</h3>
+                <a asp-action="Edit" asp-route-id="@Model?.UsuarioId" class="button">Adicionar histórico</a>
+            </div>
+            <span>@Html.DisplayFor(model => model.HistoricoConsulta)</span>
+        </div>
+    </div>
 </div>

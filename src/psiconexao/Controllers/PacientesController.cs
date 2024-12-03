@@ -72,7 +72,9 @@ namespace psiconexao.Controllers
                 return NotFound();
             }
 
-            var paciente = await _context.Pacientes.FindAsync(id);
+            var paciente = await _context.Pacientes
+                .SingleOrDefaultAsync(p => p.UsuarioId == id);
+
             if (paciente == null)
             {
                 return NotFound();
@@ -84,33 +86,39 @@ namespace psiconexao.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Cpf,Trauma,HistoricoConsulta,UsuarioId,Nome,Email,Telefone,Password,Perfil")] Paciente paciente)
+        public async Task<IActionResult> Edit(Paciente paciente)
         {
-            if (id != paciente.UsuarioId)
+            var pacienteP = await _context.Pacientes
+                .SingleOrDefaultAsync(p => p.UsuarioId == paciente.UsuarioId);
+
+            if (pacienteP == null)
             {
                 return NotFound();
             }
 
             if (ModelState.IsValid)
             {
-                try
+                pacienteP.Nome = paciente.Nome;
+                pacienteP.Cpf = paciente.Cpf;
+                pacienteP.Telefone = paciente.Telefone;
+                pacienteP.Trauma = paciente.Trauma;
+                pacienteP.HistoricoConsulta = paciente.HistoricoConsulta;
+
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction("Details", "Pacientes", new { id = paciente.UsuarioId });
+            }
+            else if (!ModelState.IsValid)
+            {
+                foreach (var modelState in ModelState.Values)
                 {
-                    _context.Update(paciente);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!PacienteExists(paciente.UsuarioId))
+                    foreach (var error in modelState.Errors)
                     {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
+                        Console.WriteLine(error.ErrorMessage);
                     }
                 }
-                return RedirectToAction(nameof(Index));
+
+                return View(paciente);
             }
             return View(paciente);
         }
