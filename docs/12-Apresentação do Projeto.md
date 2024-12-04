@@ -6,16 +6,16 @@ Conjunto de slides em um arquivo PowerPoint ou PDF com a apresentação do proje
 
 ## Título do Projeto
 
-Nome e marca do projeto
+### PsiConexão
+<img width="1500" alt="Apresentação" src="https://github.com/user-attachments/assets/4c759903-9dda-4bc1-9df8-ed3f5435af61">
 
 ## Identidade Visual (Marca, Design)
 
-O grupo deve ter o cuidado em utilizar figuras, imagens, e cores dentro do contexto da solução proposta, de forma a manter a temática do problema.
-
-> **Links Úteis**:
-> - [10 dicas de design para slides](https://rockcontent.com/blog/design-para-slides/)
-> - [7 dicas de design para criar apresentações de PowerPoint incríveis e eficientes](https://www.shutterstock.com/pt/blog/7-dicas-de-design-para-criar-apresentacoes-de-powerpoint-incriveis-e-eficientes)
-> - [Especialista do TED dá 10 dicas para criar slides eficazes e bonitos](https://soap.com.br/blog/especialista-do-ted-da-10-dicas-para-criar-slides-eficazes-e-bonitos)
+<img src="https://github.com/user-attachments/assets/f4b95d32-b23e-4c95-b720-79b0c4ea71f4" alt="Fontes" width="900" />
+<div style="display: flex;">
+  <img src="https://github.com/user-attachments/assets/ec7fb304-fd6a-4be6-81e3-3112c4851c59" alt="Cores" width="350"/>
+  <img src="https://github.com/user-attachments/assets/02ffc6df-39d5-45d8-b61a-de4a04315a96" alt="Ícones" width="350"/>
+</div>
 
 ## Conjunto de Slides (Estrutura)
 
